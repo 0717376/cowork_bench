@@ -1,0 +1,27 @@
+# hr1c — российский HR-MCP (1С:ЗУП-подобный).
+# Самостоятельный сервер: local_servers/hr1c-mcp-server.
+# Backing schema в PostgreSQL: hr1c_data (создаётся миграцией
+# db/zzz_hr1c_after_init.sql). Интерфейс инструментов — list_tables /
+# describe_table / read_query / write_query с 3-частной нотацией
+# БАЗА.СХЕМА.ТАБЛИЦА (привычной по корпоративным DWH/1C).
+type: stdio
+name: hr1c
+params:
+  command: uv
+  args:
+    - "--directory"
+    - "${local_servers_paths}/hr1c-mcp-server"
+    - "run"
+    - "hr1c_mcp_server"
+    - "--allow_write"
+    - "--exclude-json-results"
+  env:
+    PG_USER: eigent
+    PG_PASSWORD: camel
+    PG_HOST: cowork_pg
+    PG_PORT: "5432"
+    PG_DATABASE: cowork_gym
+    PG_SCHEMA: hr1c_data
+  cwd: "${agent_workspace}"
+client_session_timeout_seconds: 120
+cache_tools_list: true

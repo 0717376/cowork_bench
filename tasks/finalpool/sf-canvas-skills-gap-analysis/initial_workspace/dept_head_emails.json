@@ -1,0 +1,11 @@
+{
+  "department_heads": [
+    {"department": "Инженерия", "name": "Сергей Чернов", "email": "s.chen@company.com"},
+    {"department": "Продажи", "name": "Михаил Родин", "email": "m.rodriguez@company.com"},
+    {"department": "Финансы", "name": "Евгения Парк", "email": "j.park@company.com"},
+    {"department": "Кадры", "name": "Дмитрий Томин", "email": "d.thompson@company.com"},
+    {"department": "НИОКР", "name": "Лариса Ванина", "email": "l.wang@company.com"},
+    {"department": "Операции", "name": "Роман Климов", "email": "r.kim@company.com"},
+    {"department": "Поддержка", "name": "Анна Фомина", "email": "a.foster@company.com"}
+  ]
+}

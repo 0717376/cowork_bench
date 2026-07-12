@@ -1,0 +1,45 @@
+{
+  "note": "Reference derived from moex.* seed (moex-finance). Ranking is by fiveYearAvgDividendYield (%) descending. trailingAnnualDividendYield is a fraction (*100 = %); trailingAnnualDividendRate and previousClose are in RUB. previousClose matches MCP get_stock_info (second-most-recent close from moex.stock_prices). The evaluation re-reads these values live and does NOT depend on this file.",
+  "currency": "RUB",
+  "stocks": [
+    {
+      "symbol": "MGNT.ME",
+      "longName": "ПАО Магнит",
+      "sector": "Consumer Defensive",
+      "trailingAnnualDividendYield": 0.0,
+      "trailingAnnualDividendRate": 0.0,
+      "fiveYearAvgDividendYield": 7.01,
+      "previousClose": 4110.18
+    },
+    {
+      "symbol": "LKOH.ME",
+      "longName": "ПАО ЛУКОЙЛ",
+      "sector": "Energy",
+      "trailingAnnualDividendYield": 0.1367543,
+      "trailingAnnualDividendRate": 541.0,
+      "fiveYearAvgDividendYield": 6.96,
+      "previousClose": 3655.13
+    },
+    {
+      "symbol": "GAZP.ME",
+      "longName": "ПАО Газпром",
+      "sector": "Energy",
+      "trailingAnnualDividendYield": 0.0,
+      "trailingAnnualDividendRate": 0.0,
+      "fiveYearAvgDividendYield": 6.13,
+      "previousClose": 210.72
+    },
+    {
+      "symbol": "SBER.ME",
+      "longName": "ПАО Сбербанк",
+      "sector": "Financial Services",
+      "trailingAnnualDividendYield": 0.0,
+      "trailingAnnualDividendRate": 0.0,
+      "fiveYearAvgDividendYield": 3.64,
+      "previousClose": 122.92
+    }
+  ],
+  "avg_five_year_yield_pct": 5.94,
+  "total_annual_dividend_rate": 541.0,
+  "highest_five_year_yield_symbol": "MGNT.ME"
+}

@@ -1,0 +1,18 @@
+{
+  "commodity_sensitivity": {
+    "Часы": 0.40,
+    "Электроника": 0.15,
+    "Аудио": 0.10,
+    "Камеры": 0.10,
+    "ТВ и домашний кинотеатр": 0.05,
+    "Бытовая техника": 0.08
+  },
+  "gold_ticker": "GLDRUB_TOM",
+  "ecommerce_comparators": ["OZON.ME", "YNDX.ME"],
+  "analysis_period_days": 20,
+  "review_threshold_pct": 20,
+  "output_files": {
+    "spreadsheet_title": "Commodity Pricing Dashboard",
+    "word_document": "Pricing_Strategy_Report.docx"
+  }
+}

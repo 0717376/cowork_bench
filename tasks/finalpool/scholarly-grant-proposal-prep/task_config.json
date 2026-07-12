@@ -1,0 +1,16 @@
+{
+  "needed_mcp_servers": [
+    "fetch",
+    "terminal",
+    "scholarly",
+    "excel",
+    "emails",
+    "google_calendar"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ]
+}

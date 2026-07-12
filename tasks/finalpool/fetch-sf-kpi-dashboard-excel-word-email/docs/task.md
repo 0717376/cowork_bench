@@ -1,0 +1,11 @@
+Мне нужно сверить наши внутренние целевые показатели KPI с фактическими данными по эффективности. По адресу http://localhost:30342/api/kpi_targets.json расположена исполнительная KPI-панель с нашими квартальными целями по выручке, разрешению обращений, удовлетворённости сотрудников и другим ключевым метрикам.
+
+Извлеки фактические данные по эффективности из корпоративного облачного хранилища данных ClickHouse: выручку от продаж, метрики обращений в поддержку и оценки удовлетворённости HR. Используй логические базы данных SALES_DW, SUPPORT_CENTER и HR_ANALYTICS.
+
+С помощью терминала создай и запусти в рабочей директории Python-скрипт под названием kpi_reconciler.py, который читает kpi_targets.json и actual_metrics.json (сначала создай оба файла), сравнивает цели с фактом, рассчитывает проценты достижения и выводит результат в kpi_reconciliation.json.
+
+Создай файл Excel под названием KPI_Dashboard_Report.xlsx с четырьмя листами. Первый лист KPI_Scorecard должен содержать столбцы KPI_Name, Target, Actual (округли до 2 знаков), Achievement_Pct (округли до 1 знака) и Status ("Met", если достижение >= 100%, "Near", если >= 90%, иначе "Missed"), отсортированные по Achievement_Pct по возрастанию. Второй лист Revenue_Detail должен содержать столбцы Region, Target_Revenue (округли до 2 знаков), Actual_Revenue (округли до 2 знаков) и Variance_Pct (округли до 1 знака), отсортированные по Region. Третий лист Support_Detail должен содержать столбцы Priority, Target_Response_Hours, Actual_Avg_Hours (округли до 1 знака) и Met_SLA ("Yes" или "No"). Четвёртый лист Executive_Summary должен содержать столбцы Metric и Value со значениями KPIs_Met, KPIs_Near, KPIs_Missed, Overall_Achievement_Pct (округли до 1 знака) и Top_Risk_Area.
+
+Создай документ Word под названием KPI_Review.docx с заголовком "Quarterly KPI Performance Review" и разделами "Executive Summary", "Revenue Performance", "Support Center KPIs" и "Action Items for Missed Targets". При работе с инструментом Word передавай АБСОЛЮТНЫЙ путь к файлу .docx внутри рабочей директории агента.
+
+Отправь письмо на адрес executive-team@company.com с темой "Q1 KPI Performance Summary", в котором отрази общий процент достижения целей и перечисли все непройденные KPI с указанием процента отставания.

@@ -1,0 +1,5 @@
+Cost_Center,Department,Location,Budget_Owner,Manager_Email
+10,Operations,Головной офис,Роберт Кларк,robert.clark@company.com
+20,Sales,Несколько локаций,Томас Ли,thomas.lee@company.com
+30,Marketing,Головной офис,Сьюзан Ким,susan.kim@company.com
+40,IT,Головной офис,Джеймс Джонсон,james.johnson@company.com

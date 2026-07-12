@@ -1,0 +1,28 @@
+{
+  "name": "kulinar-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "kulinar-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "start:stdio": "node build/index.js --transport stdio"
+  },
+  "description": "MCP-сервер русской кулинарной базы — рецепты, категории, подбор меню.",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "commander": "^14.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}

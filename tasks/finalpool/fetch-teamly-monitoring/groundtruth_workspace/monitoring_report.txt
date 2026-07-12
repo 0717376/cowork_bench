@@ -1,0 +1,16 @@
+Service Monitoring Report - Week of Feb 27 (2026-02-27 .. 2026-03-05)
+====================================================================
+
+Availability Summary:
+- API Gateway: Uptime 97.6% (164/168 up, 4 down) - инциденты простоя
+- Auth Service: Uptime 98.8% (166/168 up, 2 degraded) - деградация производительности
+- Database: Uptime 100.0% (168/168 up) - без инцидентов
+
+Сервисы с доступностью ниже 99%:
+- API Gateway: 97.6%
+- Auth Service: 98.8%
+
+Incident windows:
+- API Gateway down 2026-03-01 02:00 .. 03:00 (60 min): Connection timeout - upstream server not responding
+- API Gateway down 2026-03-04 00:00 .. 01:00 (60 min): 502 Bad Gateway - backend service unavailable
+- Auth Service degraded 2026-03-02 08:00 .. 09:00 (60 min): High latency detected on authentication requests

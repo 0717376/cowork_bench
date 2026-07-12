@@ -1,0 +1,34 @@
+{
+  "common_restrictions": [
+    "Вегетарианец",
+    "Без свинины",
+    "Без морепродуктов",
+    "Без глютена",
+    "Без ограничений"
+  ],
+  "allergens_to_consider": [
+    "Морепродукты",
+    "Орехи",
+    "Соя",
+    "Глютен"
+  ],
+  "cuisine_categories": [
+    "горячее",
+    "салат",
+    "гарнир",
+    "суп",
+    "закуска"
+  ],
+  "cost_per_serving": {
+    "горячее": 8.00,
+    "закуска": 7.00,
+    "гарнир": 6.00,
+    "салат": 5.00,
+    "суп": 4.00
+  },
+  "servings_per_day": 50,
+  "program_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  "email_recipients": {
+    "all_staff": "all_staff@company.com"
+  }
+}

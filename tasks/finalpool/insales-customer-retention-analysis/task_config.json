@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "fetch",
+    "terminal",
+    "insales",
+    "excel",
+    "emails",
+    "google_sheet",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "python_execute",
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history"
+  ],
+  "meta": {}
+}

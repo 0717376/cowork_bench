@@ -1,0 +1,33 @@
+{
+  "program": "Корпоративная велнес-программа 2026",
+  "daily_targets": {
+    "calories": {
+      "min": 1800,
+      "max": 2200
+    },
+    "protein_pct": {
+      "min": 20,
+      "max": 30
+    },
+    "carb_pct": {
+      "min": 45,
+      "max": 55
+    },
+    "fat_pct": {
+      "min": 25,
+      "max": 35
+    }
+  },
+  "food_groups": {
+    "vegetables": "5+ порций в день",
+    "fruits": "2-3 порции в день",
+    "whole_grains": "3+ порции в день",
+    "lean_protein": "2-3 порции в день"
+  },
+  "budget_per_meal": 750.0,
+  "restrictions": [
+    "низкое содержание натрия",
+    "сбалансированные макросы",
+    "цельные продукты"
+  ]
+}

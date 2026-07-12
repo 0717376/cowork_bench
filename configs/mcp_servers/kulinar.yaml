@@ -1,0 +1,13 @@
+# Kulinar — русская кулинарная база рецептов.
+# Cowork_Bench: ../../local_servers/kulinar-mcp
+# 50 рецептов классики РФ-кухни, категории: салат, закуска, суп, горячее,
+# гарнир, выпечка, десерт, напиток. Источник правды: scripts/generate_recipes.py.
+type: stdio
+name: kulinar
+params:
+  command: node
+  args:
+    - "${local_servers_paths}/kulinar-mcp/build/index.js"
+  cwd: "${agent_workspace}"
+client_session_timeout_seconds: 1000
+cache_tools_list: true

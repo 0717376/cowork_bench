@@ -1,0 +1,160 @@
+"""
+Preprocess for scholarly-fetch-gsheet-citation task.
+
+Clears gsheet and scholarly schemas, then injects known paper data
+into scholarly.scholar_papers so the task is deterministic.
+
+Prerequisites:
+  - PostgreSQL cowork_gym database running on localhost:5432
+"""
+
+import os
+import argparse
+import json
+import psycopg2
+
+DB_CONFIG = {
+    "host": os.environ.get("PGHOST", "localhost"),
+    "port": 5432,
+    "dbname": "cowork_gym",
+    "user": "eigent",
+    "password": "camel",
+}
+
+PAPERS = [
+    {
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "authors": [{"name": "Jacob Devlin"}, {"name": "Ming-Wei Chang"}, {"name": "Kenton Lee"}, {"name": "Kristina Toutanova"}],
+        "citation_count": 2800,
+        "pub_year": 2019,
+        "venue": "Труды конференции NAACL",
+        "abstract": "Мы представляем новую модель языкового представления под названием BERT.",
+    },
+    {
+        "title": "GPT-4 Technical Report",
+        "authors": [{"name": "OpenAI Team"}, {"name": "Josh Achiam"}, {"name": "Steven Adler"}],
+        "citation_count": 1500,
+        "pub_year": 2023,
+        "venue": "Препринт arXiv",
+        "abstract": "Мы сообщаем о разработке GPT-4 — крупномасштабной мультимодальной модели.",
+    },
+    {
+        "title": "Attention Is All You Need",
+        "authors": [{"name": "Ashish Vaswani"}, {"name": "Noam Shazeer"}, {"name": "Niki Parmar"}, {"name": "Jakob Uszkoreit"}],
+        "citation_count": 5200,
+        "pub_year": 2017,
+        "venue": "Труды конференции NeurIPS",
+        "abstract": "Доминирующие модели преобразования последовательностей основаны на сложных рекуррентных или свёрточных нейронных сетях.",
+    },
+    {
+        "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "authors": [{"name": "Yinhan Liu"}, {"name": "Myle Ott"}, {"name": "Naman Goyal"}, {"name": "Jingfei Du"}],
+        "citation_count": 1100,
+        "pub_year": 2019,
+        "venue": "Препринт arXiv",
+        "abstract": "Предобучение языковых моделей привело к значительному росту качества.",
+    },
+    {
+        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "authors": [{"name": "Colin Raffel"}, {"name": "Noam Shazeer"}, {"name": "Adam Roberts"}, {"name": "Katherine Lee"}],
+        "citation_count": 900,
+        "pub_year": 2020,
+        "venue": "Журнал JMLR",
+        "abstract": "Перенос обучения, при котором модель сначала предобучается на задаче с большим объёмом данных.",
+    },
+    {
+        "title": "Training language models to follow instructions with human feedback",
+        "authors": [{"name": "Long Ouyang"}, {"name": "Jeff Wu"}, {"name": "Xu Jiang"}, {"name": "Josh Achiam"}],
+        "citation_count": 650,
+        "pub_year": 2022,
+        "venue": "Труды конференции NeurIPS",
+        "abstract": "Увеличение размера языковых моделей само по себе не делает их лучше в следовании инструкциям.",
+    },
+    {
+        "title": "Deep Learning for 3D Point Clouds: A Survey",
+        "authors": [{"name": "Yulan Guo"}, {"name": "Hanyun Wang"}],
+        "citation_count": 80,
+        "pub_year": 2020,
+        "venue": "Журнал TPAMI",
+        "abstract": "Обучение на облаках точек привлекает внимание благодаря широкому спектру применений.",
+    },
+    {
+        "title": "Structure and Function of the Global Soil Microbiome",
+        "authors": [{"name": "Manuel Delgado-Baquerizo"}, {"name": "Angela Oliverio"}],
+        "citation_count": 45,
+        "pub_year": 2018,
+        "venue": "Журнал Nature",
+        "abstract": "Почвенные микроорганизмы критически важны для поддержания функционирования экосистем.",
+    },
+    {
+        "title": "Neural Approaches to Russian Morphological Analysis",
+        "authors": [{"name": "Ivan Petrov"}, {"name": "Ashish Vaswani"}, {"name": "Maria Sokolova"}],
+        "citation_count": 320,
+        "pub_year": 2021,
+        "venue": "Труды конференции Диалог",
+        "abstract": "Мы исследуем нейросетевые подходы к морфологическому анализу русского языка и их влияние на качество разбора.",
+    },
+    {
+        "title": "Large-Scale Pretraining for Low-Resource Slavic Languages",
+        "authors": [{"name": "Dmitry Ivanov"}, {"name": "Ivan Petrov"}],
+        "citation_count": 210,
+        "pub_year": 2022,
+        "venue": "Препринт arXiv",
+        "abstract": "В работе предложен метод крупномасштабного предобучения языковых моделей для малоресурсных славянских языков.",
+    },
+]
+
+
+def clear_schemas(conn):
+    """Clear gsheet and scholarly tables."""
+    with conn.cursor() as cur:
+        # Clear gsheet
+        cur.execute("DELETE FROM gsheet.cells")
+        cur.execute("DELETE FROM gsheet.permissions")
+        cur.execute("DELETE FROM gsheet.sheets")
+        cur.execute("DELETE FROM gsheet.spreadsheets")
+        # Clear scholarly
+        cur.execute("DELETE FROM scholarly.scholar_papers")
+    conn.commit()
+    print("[preprocess] Cleared gsheet and scholarly tables.")
+
+
+def inject_scholarly_data(conn):
+    """Insert known papers into scholarly.scholar_papers."""
+    with conn.cursor() as cur:
+        for p in PAPERS:
+            cur.execute(
+                """INSERT INTO scholarly.scholar_papers
+                   (title, authors, citation_count, pub_year, venue, abstract)
+                   VALUES (%s, %s, %s, %s, %s, %s)""",
+                (
+                    p["title"],
+                    json.dumps(p["authors"]),
+                    p["citation_count"],
+                    p["pub_year"],
+                    p["venue"],
+                    p["abstract"],
+                ),
+            )
+    conn.commit()
+    print(f"[preprocess] Injected {len(PAPERS)} papers into scholarly.scholar_papers.")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--agent_workspace", type=str, required=False)
+    parser.add_argument("--launch_time", type=str, required=False)
+    args = parser.parse_args()
+
+    conn = psycopg2.connect(**DB_CONFIG)
+    try:
+        clear_schemas(conn)
+        inject_scholarly_data(conn)
+    finally:
+        conn.close()
+
+    print("\n[preprocess] Preprocessing completed successfully!")
+
+
+if __name__ == "__main__":
+    main()

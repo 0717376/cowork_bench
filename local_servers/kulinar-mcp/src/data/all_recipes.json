@@ -1,0 +1,4747 @@
+[
+  {
+    "id": "salat-salat-olive",
+    "name": "Салат Оливье",
+    "description": "Классический праздничный салат с варёным картофелем, морковью, яйцами, маринованными огурцами, варёной колбасой и зелёным горошком, заправленный майонезом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 2,
+    "tags": [
+      "салат",
+      "праздничное",
+      "холодная закуска"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Картофель",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Картофель 4 шт — среднего размера",
+        "notes": "среднего размера"
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Варёная колбаса",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Варёная колбаса 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Огурцы маринованные",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Огурцы маринованные 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Горошек зелёный консервированный",
+        "quantity": 1,
+        "unit": "банка",
+        "text_quantity": "- Горошек зелёный консервированный 1 банка",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт — мелкий",
+        "notes": "мелкий"
+      },
+      {
+        "name": "Майонез",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Майонез 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Картофель и морковь отварить в мундире до готовности, остудить, очистить."
+      },
+      {
+        "step": 2,
+        "description": "Яйца сварить вкрутую (10 мин), остудить, очистить."
+      },
+      {
+        "step": 3,
+        "description": "Все ингредиенты, кроме горошка, нарезать одинаковыми кубиками 0.5-1 см."
+      },
+      {
+        "step": 4,
+        "description": "Соединить нарезку в большой миске, добавить горошек без жидкости."
+      },
+      {
+        "step": 5,
+        "description": "Заправить майонезом, посолить, поперчить, аккуратно перемешать."
+      },
+      {
+        "step": 6,
+        "description": "Дать настояться в холодильнике 30 минут перед подачей."
+      }
+    ],
+    "prep_time_minutes": 40,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 70,
+    "additional_notes": [
+      "В классическом варианте колбасу можно заменить отварной курицей или языком."
+    ]
+  },
+  {
+    "id": "salat-vinegret",
+    "name": "Винегрет",
+    "description": "Постный овощной салат на основе варёной свёклы, картофеля и моркови с солёными огурцами и квашеной капустой, заправленный растительным маслом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 1,
+    "tags": [
+      "салат",
+      "постное",
+      "овощное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Свёкла",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Свёкла 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Картофель 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Огурцы солёные",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Огурцы солёные 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Капуста квашеная",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Капуста квашеная 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 4,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 4 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Свёклу, картофель и морковь отварить в мундире до мягкости, остудить, очистить."
+      },
+      {
+        "step": 2,
+        "description": "Нарезать овощи кубиками 0.5 см, лук и огурцы — мельче."
+      },
+      {
+        "step": 3,
+        "description": "Квашеную капусту отжать от рассола."
+      },
+      {
+        "step": 4,
+        "description": "Свёклу заправить ложкой масла отдельно, чтобы не окрасила остальное."
+      },
+      {
+        "step": 5,
+        "description": "Смешать все ингредиенты, заправить маслом, посолить."
+      }
+    ],
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 70,
+    "additional_notes": []
+  },
+  {
+    "id": "salat-seld-pod-shuboy",
+    "name": "Сельдь под шубой",
+    "description": "Слоёный салат с филе сельди, варёными овощами (картофель, морковь, свёкла) и майонезом — обязательное блюдо новогоднего стола.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 2,
+    "tags": [
+      "салат",
+      "праздничное",
+      "рыбное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Сельдь солёная (филе)",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Сельдь солёная (филе) 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Картофель 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Свёкла",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Свёкла 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт — мелкий",
+        "notes": "мелкий"
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Майонез",
+        "quantity": 250,
+        "unit": "г",
+        "text_quantity": "- Майонез 250 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Овощи и яйца отварить, остудить, очистить и натереть на крупной тёрке (по отдельности)."
+      },
+      {
+        "step": 2,
+        "description": "Филе сельди и лук нарезать мелким кубиком."
+      },
+      {
+        "step": 3,
+        "description": "Выложить слои в форму: сельдь+лук → картофель+майонез → морковь+майонез → яйца+майонез → свёкла+майонез."
+      },
+      {
+        "step": 4,
+        "description": "Поставить в холодильник минимум на 2 часа для пропитки."
+      }
+    ],
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 60,
+    "additional_notes": []
+  },
+  {
+    "id": "salat-salat-mimoza",
+    "name": "Салат Мимоза",
+    "description": "Слоёный салат с консервированной рыбой, варёными яйцами и сыром, украшенный измельчённым яичным желтком — отсюда название.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 2,
+    "tags": [
+      "салат",
+      "рыбное",
+      "праздничное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Рыба консервированная (сайра/горбуша)",
+        "quantity": 1,
+        "unit": "банка",
+        "text_quantity": "- Рыба консервированная (сайра/горбуша) 1 банка",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сыр твёрдый",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Сыр твёрдый 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт — мелкий",
+        "notes": "мелкий"
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 100 г — замороженное",
+        "notes": "замороженное"
+      },
+      {
+        "name": "Майонез",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Майонез 200 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Рыбу размять вилкой, удалив крупные кости."
+      },
+      {
+        "step": 2,
+        "description": "Яйца отварить, разделить на белки и желтки, натереть отдельно."
+      },
+      {
+        "step": 3,
+        "description": "Сыр и замороженное масло натереть на крупной тёрке, лук мелко нарезать."
+      },
+      {
+        "step": 4,
+        "description": "Выложить слои: рыба → лук → белки+майонез → масло → сыр+майонез → желтки сверху."
+      },
+      {
+        "step": 5,
+        "description": "Охладить 1 час перед подачей."
+      }
+    ],
+    "prep_time_minutes": 25,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 45,
+    "additional_notes": []
+  },
+  {
+    "id": "salat-krabovyy-salat",
+    "name": "Крабовый салат",
+    "description": "Лёгкий салат из крабовых палочек, кукурузы, варёных яиц, риса и огурца, заправленный майонезом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 1,
+    "tags": [
+      "салат",
+      "лёгкое"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Палочки крабовые",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Палочки крабовые 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Кукуруза консервированная",
+        "quantity": 1,
+        "unit": "банка",
+        "text_quantity": "- Кукуруза консервированная 1 банка",
+        "notes": ""
+      },
+      {
+        "name": "Рис отварной",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Рис отварной 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Огурец свежий",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Огурец свежий 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Майонез",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Майонез 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Рис отварить до готовности, остудить."
+      },
+      {
+        "step": 2,
+        "description": "Яйца сварить вкрутую, остудить, нарезать кубиком."
+      },
+      {
+        "step": 3,
+        "description": "Крабовые палочки и огурец нарезать кубиком."
+      },
+      {
+        "step": 4,
+        "description": "Смешать с кукурузой без жидкости, заправить майонезом, посолить."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 35,
+    "additional_notes": []
+  },
+  {
+    "id": "salat-grecheskiy-salat",
+    "name": "Греческий салат",
+    "description": "Простой летний салат из свежих овощей с сыром фета и оливками, заправленный оливковым маслом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 1,
+    "tags": [
+      "салат",
+      "лёгкое",
+      "летнее"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Помидор",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Помидор 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Огурец свежий",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Огурец свежий 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Перец болгарский",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Перец болгарский 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук красный",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук красный 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сыр фета",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Сыр фета 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Маслины без косточек",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Маслины без косточек 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло оливковое",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Масло оливковое 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Уксус винный",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Уксус винный 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Орегано сушёный",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Орегано сушёный (щепотка)",
+        "notes": "щепотка"
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Овощи нарезать крупными кубиками, лук — кольцами."
+      },
+      {
+        "step": 2,
+        "description": "Фету нарезать кубиками, добавить к овощам с маслинами."
+      },
+      {
+        "step": 3,
+        "description": "Заправить смесью масла, уксуса, орегано и соли, аккуратно перемешать."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 15,
+    "additional_notes": []
+  },
+  {
+    "id": "salat-salat-s-kuritsey-i-gribami",
+    "name": "Салат с курицей и грибами",
+    "description": "Сытный салат с обжаренной куриной грудкой, шампиньонами, сыром и яйцом под майонезом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "салат",
+    "difficulty": 2,
+    "tags": [
+      "салат",
+      "сытное",
+      "куриное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Куриная грудка",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Куриная грудка 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Шампиньоны",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Шампиньоны 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Сыр твёрдый",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Сыр твёрдый 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Майонез",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Майонез 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 2 ст.л — для жарки",
+        "notes": "для жарки"
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Куриную грудку отварить (20 мин), остудить, разобрать на волокна."
+      },
+      {
+        "step": 2,
+        "description": "Грибы и лук обжарить до золотистого цвета, остудить."
+      },
+      {
+        "step": 3,
+        "description": "Яйца сварить, нарезать кубиком, сыр натереть."
+      },
+      {
+        "step": 4,
+        "description": "Смешать все ингредиенты, заправить майонезом, посолить."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 50,
+    "additional_notes": []
+  },
+  {
+    "id": "zakuska-holodets",
+    "name": "Холодец",
+    "description": "Традиционная мясная закуска: насыщенный бульон с кусочками мяса застывает в форме за счёт желатина из костей.",
+    "source_path": "",
+    "image_path": null,
+    "category": "закуска",
+    "difficulty": 4,
+    "tags": [
+      "закуска",
+      "праздничное",
+      "мясное"
+    ],
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "Свиная рулька",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Свиная рулька 1 шт — около 1.5 кг",
+        "notes": "около 1.5 кг"
+      },
+      {
+        "name": "Говядина на кости",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Говядина на кости 800 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 1,
+        "unit": "головка",
+        "text_quantity": "- Чеснок 1 головка",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный горошком",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный горошком (10 шт)",
+        "notes": "10 шт"
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Мясо залить холодной водой, довести до кипения, слить и промыть."
+      },
+      {
+        "step": 2,
+        "description": "Залить чистой водой, варить на минимальном огне 6-8 часов без бурного кипения."
+      },
+      {
+        "step": 3,
+        "description": "За час до конца добавить лук, морковь, специи и соль."
+      },
+      {
+        "step": 4,
+        "description": "Готовое мясо разобрать на волокна, разложить по формам."
+      },
+      {
+        "step": 5,
+        "description": "Бульон процедить, добавить измельчённый чеснок, залить мясо."
+      },
+      {
+        "step": 6,
+        "description": "Охладить до комнатной температуры, убрать в холодильник на 6-8 часов."
+      }
+    ],
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 480,
+    "total_time_minutes": 510,
+    "additional_notes": [
+      "Подавать с горчицей или хреном."
+    ]
+  },
+  {
+    "id": "zakuska-ikra-kabachkovaya",
+    "name": "Икра кабачковая",
+    "description": "Овощная икра из тушёных кабачков с морковью, луком и томатной пастой — отлично идёт с чёрным хлебом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "закуска",
+    "difficulty": 2,
+    "tags": [
+      "закуска",
+      "овощное",
+      "постное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Кабачки",
+        "quantity": 1500,
+        "unit": "г",
+        "text_quantity": "- Кабачки 1500 г",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 50,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 50 мл",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Сахар",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Сахар 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Уксус 9%",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Уксус 9% 1 ч.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Кабачки очистить от семян и кожуры, нарезать кубиком."
+      },
+      {
+        "step": 2,
+        "description": "Лук и морковь измельчить, обжарить на масле до мягкости."
+      },
+      {
+        "step": 3,
+        "description": "Добавить кабачки, тушить под крышкой 30 минут."
+      },
+      {
+        "step": 4,
+        "description": "Ввести томатную пасту, соль, сахар, тушить ещё 15 минут."
+      },
+      {
+        "step": 5,
+        "description": "Пробить погружным блендером до однородности, влить уксус."
+      },
+      {
+        "step": 6,
+        "description": "Прогреть 5 минут, разложить по банкам или подать остывшей."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 50,
+    "total_time_minutes": 70,
+    "additional_notes": []
+  },
+  {
+    "id": "zakuska-griby-marinovannye",
+    "name": "Грибы маринованные",
+    "description": "Маринованные шампиньоны или опята с уксусом, специями и чесноком — пикантная холодная закуска.",
+    "source_path": "",
+    "image_path": null,
+    "category": "закуска",
+    "difficulty": 2,
+    "tags": [
+      "закуска",
+      "грибное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Шампиньоны",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Шампиньоны 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 500,
+        "unit": "мл",
+        "text_quantity": "- Вода 500 мл",
+        "notes": ""
+      },
+      {
+        "name": "Уксус 9%",
+        "quantity": 100,
+        "unit": "мл",
+        "text_quantity": "- Уксус 9% 100 мл",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Соль 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный горошком",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный горошком (10 шт)",
+        "notes": "10 шт"
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 4,
+        "unit": "зубчика",
+        "text_quantity": "- Чеснок 4 зубчика",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 50,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 50 мл",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Грибы промыть, крупные разрезать пополам."
+      },
+      {
+        "step": 2,
+        "description": "Закипятить воду со специями, сахаром и солью."
+      },
+      {
+        "step": 3,
+        "description": "Опустить грибы, варить 15 минут на среднем огне."
+      },
+      {
+        "step": 4,
+        "description": "Добавить уксус и чеснок, проварить 2 минуты."
+      },
+      {
+        "step": 5,
+        "description": "Разложить по банкам, залить маринадом и маслом, охладить."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 40,
+    "additional_notes": []
+  },
+  {
+    "id": "zakuska-salo-solenoe",
+    "name": "Сало солёное",
+    "description": "Свиное сало с прослойкой мяса, засоленное сухим способом с чесноком и специями — традиционная закуска под чёрный хлеб.",
+    "source_path": "",
+    "image_path": null,
+    "category": "закуска",
+    "difficulty": 2,
+    "tags": [
+      "закуска",
+      "мясное"
+    ],
+    "servings": 10,
+    "ingredients": [
+      {
+        "name": "Сало свиное",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Сало свиное 1000 г — с прослойкой",
+        "notes": "с прослойкой"
+      },
+      {
+        "name": "Соль крупная",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Соль крупная 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 1,
+        "unit": "головка",
+        "text_quantity": "- Чеснок 1 головка",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Перец чёрный молотый 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист молотый",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Лавровый лист молотый 1 ч.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сало нарезать кусками толщиной 4-5 см."
+      },
+      {
+        "step": 2,
+        "description": "Чеснок измельчить, смешать со специями."
+      },
+      {
+        "step": 3,
+        "description": "Куски натереть смесью со всех сторон."
+      },
+      {
+        "step": 4,
+        "description": "Уложить в эмалированную посуду, пересыпать солью."
+      },
+      {
+        "step": 5,
+        "description": "Накрыть и оставить при комнатной температуре на сутки, затем в холодильник на 3-5 дней."
+      },
+      {
+        "step": 6,
+        "description": "Перед подачей счистить лишнюю соль, нарезать тонкими ломтиками."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 15,
+    "additional_notes": [
+      "Хранится в морозилке до 6 месяцев."
+    ]
+  },
+  {
+    "id": "zakuska-seledka-s-lukom",
+    "name": "Селёдка с луком",
+    "description": "Тонко нарезанное филе солёной сельди с маринованным луком и растительным маслом, классическая русская закуска под отварной картофель.",
+    "source_path": "",
+    "image_path": null,
+    "category": "закуска",
+    "difficulty": 1,
+    "tags": [
+      "закуска",
+      "рыбное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Сельдь солёная (филе)",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Сельдь солёная (филе) 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Уксус 9%",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Уксус 9% 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Сахар 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 3 ст.л — нерафинированное",
+        "notes": "нерафинированное"
+      },
+      {
+        "name": "Зелень укропа",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень укропа (для подачи)",
+        "notes": "для подачи"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Лук нарезать тонкими полукольцами, залить водой с уксусом и сахаром на 10 минут."
+      },
+      {
+        "step": 2,
+        "description": "Сельдь нарезать кусочками 1.5 см."
+      },
+      {
+        "step": 3,
+        "description": "Лук отжать, смешать с сельдью, заправить маслом."
+      },
+      {
+        "step": 4,
+        "description": "Украсить укропом, подать с картофелем."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 15,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-borsch",
+    "name": "Борщ",
+    "description": "Классический украинско-русский суп на говяжьем бульоне с капустой, свёклой, картофелем и томатной заправкой. Подаётся со сметаной и чёрным хлебом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 3,
+    "tags": [
+      "суп",
+      "горячее",
+      "первое"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Говядина на кости",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Говядина на кости 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Свёкла",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Свёкла 2 шт — средние",
+        "notes": "средние"
+      },
+      {
+        "name": "Капуста белокочанная",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Капуста белокочанная 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Картофель 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 3,
+        "unit": "зубчика",
+        "text_quantity": "- Чеснок 3 зубчика",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Уксус 9%",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Уксус 9% 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Сметана",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Сметана (для подачи)",
+        "notes": "для подачи"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сварить мясной бульон (2 часа), мясо вынуть, бульон процедить."
+      },
+      {
+        "step": 2,
+        "description": "Свёклу натереть, тушить с уксусом и томатной пастой 20 минут."
+      },
+      {
+        "step": 3,
+        "description": "Лук и морковь обжарить до золотистого цвета."
+      },
+      {
+        "step": 4,
+        "description": "В бульон опустить нарезанный картофель и шинкованную капусту, варить 15 минут."
+      },
+      {
+        "step": 5,
+        "description": "Добавить свекольную заправку и зажарку, варить ещё 10 минут."
+      },
+      {
+        "step": 6,
+        "description": "Ввести чеснок, лавровый лист, посолить, дать настояться 30 минут."
+      },
+      {
+        "step": 7,
+        "description": "Подавать со сметаной и зеленью."
+      }
+    ],
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 150,
+    "total_time_minutes": 180,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-schi-iz-kvashenoy-kapusty",
+    "name": "Щи из квашеной капусты",
+    "description": "Кислые щи на говяжьем бульоне с квашеной капустой и картофелем — главный русский суп.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 2,
+    "tags": [
+      "суп",
+      "первое",
+      "русская кухня"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Говядина на кости",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Говядина на кости 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Капуста квашеная",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Капуста квашеная 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Картофель 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Сметана",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Сметана (для подачи)",
+        "notes": "для подачи"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сварить мясной бульон, мясо разобрать."
+      },
+      {
+        "step": 2,
+        "description": "Квашеную капусту слегка отжать, потушить с томатной пастой 30 минут."
+      },
+      {
+        "step": 3,
+        "description": "В бульон опустить картофель кубиком, варить 10 минут."
+      },
+      {
+        "step": 4,
+        "description": "Добавить капусту и обжаренные лук с морковью, варить ещё 15 минут."
+      },
+      {
+        "step": 5,
+        "description": "Заправить лавровым листом, посолить, настоять 20 минут."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 120,
+    "total_time_minutes": 140,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-solyanka-myasnaya",
+    "name": "Солянка мясная",
+    "description": "Сборная мясная солянка с копчёностями, солёными огурцами, маслинами и лимоном на остром бульоне.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 3,
+    "tags": [
+      "суп",
+      "первое",
+      "сытное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Говядина",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Говядина 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Колбаса варёная",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Колбаса варёная 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Ветчина копчёная",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Ветчина копчёная 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Сосиски",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сосиски 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Огурцы солёные",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Огурцы солёные 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Маслины",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Маслины 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Каперсы",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Каперсы 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Лимон",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лимон 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Зелень петрушки",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень петрушки (пучок)",
+        "notes": "пучок"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сварить говяжий бульон (1.5 часа), мясо нарезать соломкой."
+      },
+      {
+        "step": 2,
+        "description": "Лук нарезать, спассеровать с томатной пастой."
+      },
+      {
+        "step": 3,
+        "description": "Колбасные изделия и огурцы нарезать соломкой."
+      },
+      {
+        "step": 4,
+        "description": "В бульон ввести зажарку, мясо, колбасы, огурцы, варить 15 минут."
+      },
+      {
+        "step": 5,
+        "description": "Добавить маслины и каперсы, прогреть 5 минут."
+      },
+      {
+        "step": 6,
+        "description": "Подавать с долькой лимона и сметаной."
+      }
+    ],
+    "prep_time_minutes": 25,
+    "cook_time_minutes": 100,
+    "total_time_minutes": 125,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-uha",
+    "name": "Уха",
+    "description": "Прозрачный рыбный суп из речной или морской рыбы с картофелем и луком, традиционно с водкой и дымком.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 2,
+    "tags": [
+      "суп",
+      "рыбное",
+      "первое"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Рыба свежая (судак/окунь/сёмга)",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Рыба свежая (судак/окунь/сёмга) 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Картофель 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный горошком",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный горошком (5 шт)",
+        "notes": "5 шт"
+      },
+      {
+        "name": "Зелень укропа",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень укропа (пучок)",
+        "notes": "пучок"
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Рыбу выпотрошить, нарезать крупными кусками."
+      },
+      {
+        "step": 2,
+        "description": "В кастрюлю положить картофель, морковь, лук, залить водой, варить 15 минут."
+      },
+      {
+        "step": 3,
+        "description": "Добавить рыбу, специи, варить ещё 15-20 минут на минимальном огне."
+      },
+      {
+        "step": 4,
+        "description": "Снять с огня, посыпать укропом, дать настояться 10 минут."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 35,
+    "total_time_minutes": 50,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-okroshka",
+    "name": "Окрошка",
+    "description": "Холодный летний суп на квасе или кефире с варёными овощами, мясом или колбасой и свежей зеленью.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 1,
+    "tags": [
+      "суп",
+      "холодное",
+      "летнее"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Квас",
+        "quantity": 1500,
+        "unit": "мл",
+        "text_quantity": "- Квас 1500 мл",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Картофель 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Огурец свежий",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Огурец свежий 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Колбаса варёная",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Колбаса варёная 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Редис",
+        "quantity": 5,
+        "unit": "шт",
+        "text_quantity": "- Редис 5 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук зелёный",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Лук зелёный (пучок)",
+        "notes": "пучок"
+      },
+      {
+        "name": "Укроп",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Укроп (пучок)",
+        "notes": "пучок"
+      },
+      {
+        "name": "Сметана",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сметана 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Горчица",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Горчица 1 ч.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Картофель и яйца отварить, остудить."
+      },
+      {
+        "step": 2,
+        "description": "Все ингредиенты, кроме зелени, нарезать мелким кубиком."
+      },
+      {
+        "step": 3,
+        "description": "Зелень измельчить, растереть со щепоткой соли и горчицей."
+      },
+      {
+        "step": 4,
+        "description": "Соединить нарезку с зеленью, разложить по тарелкам."
+      },
+      {
+        "step": 5,
+        "description": "Залить холодным квасом, подать со сметаной."
+      }
+    ],
+    "prep_time_minutes": 25,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 45,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-gribnoy-sup",
+    "name": "Грибной суп",
+    "description": "Лёгкий суп из лесных или шампиньонов с картофелем, морковью и сливками.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 1,
+    "tags": [
+      "суп",
+      "грибное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Шампиньоны",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Шампиньоны 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Картофель 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сливки 20%",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Сливки 20% 200 мл",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 30,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 30 г",
+        "notes": ""
+      },
+      {
+        "name": "Зелень укропа",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень укропа (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Грибы нарезать пластинками, обжарить с луком на сливочном масле."
+      },
+      {
+        "step": 2,
+        "description": "Картофель и морковь нарезать кубиком, залить водой (1.5 л), варить 15 минут."
+      },
+      {
+        "step": 3,
+        "description": "Добавить грибную поджарку, варить 10 минут."
+      },
+      {
+        "step": 4,
+        "description": "Влить сливки, прогреть 3 минуты, посолить, посыпать укропом."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 35,
+    "total_time_minutes": 50,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-rassolnik",
+    "name": "Рассольник",
+    "description": "Суп на мясном бульоне с перловой крупой, солёными огурцами и огуречным рассолом — характерная кислинка.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 2,
+    "tags": [
+      "суп",
+      "первое"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Говядина",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Говядина 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Крупа перловая",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Крупа перловая 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Картофель 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Огурцы солёные",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Огурцы солёные 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Рассол огуречный",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Рассол огуречный 200 мл",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Перловку замочить на 2 часа, отварить отдельно до полуготовности."
+      },
+      {
+        "step": 2,
+        "description": "Сварить мясной бульон, мясо нарезать."
+      },
+      {
+        "step": 3,
+        "description": "В бульон опустить картофель и перловку, варить 15 минут."
+      },
+      {
+        "step": 4,
+        "description": "Добавить обжаренные лук с морковью и тёртые солёные огурцы."
+      },
+      {
+        "step": 5,
+        "description": "Влить рассол, варить 10 минут, посолить по вкусу."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 130,
+    "total_time_minutes": 150,
+    "additional_notes": []
+  },
+  {
+    "id": "sup-kurinyy-bulon-s-lapshoy",
+    "name": "Куриный бульон с лапшой",
+    "description": "Простой и нежный куриный суп с домашней лапшой, морковью и зеленью.",
+    "source_path": "",
+    "image_path": null,
+    "category": "суп",
+    "difficulty": 1,
+    "tags": [
+      "суп",
+      "куриное",
+      "лёгкое"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Курица (бёдра/спинка)",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Курица (бёдра/спинка) 800 г",
+        "notes": ""
+      },
+      {
+        "name": "Лапша домашняя",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Лапша домашняя 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Зелень петрушки",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень петрушки (пучок)",
+        "notes": "пучок"
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сварить куриный бульон с целым луком и морковью (1 час)."
+      },
+      {
+        "step": 2,
+        "description": "Мясо вынуть, разобрать на волокна, овощи извлечь."
+      },
+      {
+        "step": 3,
+        "description": "В бульон добавить морковь кубиком, варить 5 минут."
+      },
+      {
+        "step": 4,
+        "description": "Опустить лапшу, варить 5 минут до готовности."
+      },
+      {
+        "step": 5,
+        "description": "Вернуть мясо, посыпать зеленью."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 70,
+    "total_time_minutes": 80,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-befstroganov",
+    "name": "Бефстроганов",
+    "description": "Тонко нарезанная говядина, тушённая в сметанно-томатном соусе. Подаётся с картофельным пюре или гречкой.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 2,
+    "tags": [
+      "горячее",
+      "мясное",
+      "говядина"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Говядина (вырезка)",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Говядина (вырезка) 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сметана",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Сметана 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Мука пшеничная",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Мука пшеничная 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 50 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Говядину нарезать тонкой соломкой поперёк волокон."
+      },
+      {
+        "step": 2,
+        "description": "Обвалять в муке с солью и перцем, обжарить на сливочном масле 5 минут."
+      },
+      {
+        "step": 3,
+        "description": "Отдельно обжарить лук полукольцами до золотистого цвета."
+      },
+      {
+        "step": 4,
+        "description": "Смешать мясо с луком, добавить сметану и томатную пасту."
+      },
+      {
+        "step": 5,
+        "description": "Тушить под крышкой 15 минут на слабом огне."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 40,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-pelmeni-domashnie",
+    "name": "Пельмени домашние",
+    "description": "Маленькие отварные изделия из тонкого теста с мясной начинкой (говядина + свинина). Подаются со сметаной, маслом или уксусом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 3,
+    "tags": [
+      "горячее",
+      "мясное",
+      "русская кухня"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Вода 200 мл",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Говядина",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Говядина 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Свинина",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Свинина 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Замесить тесто из муки, воды, яйца и соли, оставить под плёнкой на 30 минут."
+      },
+      {
+        "step": 2,
+        "description": "Мясо с луком пропустить через мясорубку, посолить, поперчить."
+      },
+      {
+        "step": 3,
+        "description": "Раскатать тесто тонким пластом, вырезать кружки 5 см."
+      },
+      {
+        "step": 4,
+        "description": "На каждый кружок положить 1 ч.л фарша, слепить пельмени."
+      },
+      {
+        "step": 5,
+        "description": "Отварить в подсоленной воде 5-7 минут после всплытия."
+      },
+      {
+        "step": 6,
+        "description": "Подавать со сметаной или сливочным маслом."
+      }
+    ],
+    "prep_time_minutes": 60,
+    "cook_time_minutes": 15,
+    "total_time_minutes": 75,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-golubtsy",
+    "name": "Голубцы",
+    "description": "Капустные листья с рисово-мясной начинкой, тушёные в томатно-сметанном соусе.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 3,
+    "tags": [
+      "горячее",
+      "мясное",
+      "овощное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Капуста белокочанная",
+        "quantity": 1,
+        "unit": "кочан",
+        "text_quantity": "- Капуста белокочанная 1 кочан — крупный",
+        "notes": "крупный"
+      },
+      {
+        "name": "Фарш мясной",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Фарш мясной 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Рис круглый",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Рис круглый 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Сметана",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сметана 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Кочан опустить в кипящую воду на 5 минут, снять листья, срезать утолщения."
+      },
+      {
+        "step": 2,
+        "description": "Рис отварить до полуготовности, смешать с фаршем, луком и солью."
+      },
+      {
+        "step": 3,
+        "description": "На каждый лист положить начинку, свернуть конвертом."
+      },
+      {
+        "step": 4,
+        "description": "Уложить в кастрюлю, залить соусом из сметаны, томатной пасты и моркови."
+      },
+      {
+        "step": 5,
+        "description": "Тушить под крышкой 50 минут на слабом огне."
+      }
+    ],
+    "prep_time_minutes": 40,
+    "cook_time_minutes": 60,
+    "total_time_minutes": 100,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-kotlety-domashnie",
+    "name": "Котлеты домашние",
+    "description": "Жареные мясные котлеты из смешанного фарша с луком, чесноком и хлебным мякишем.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 2,
+    "tags": [
+      "горячее",
+      "мясное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Фарш мясной (свинина+говядина)",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Фарш мясной (свинина+говядина) 800 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 2,
+        "unit": "зубчика",
+        "text_quantity": "- Чеснок 2 зубчика",
+        "notes": ""
+      },
+      {
+        "name": "Хлеб белый",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Хлеб белый 100 г — размоченный в молоке",
+        "notes": "размоченный в молоке"
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сухари панировочные",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Сухари панировочные 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 50,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 50 мл",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Лук и чеснок мелко порубить или измельчить блендером."
+      },
+      {
+        "step": 2,
+        "description": "Смешать фарш с луком, чесноком, отжатым хлебом и яйцом, отбить."
+      },
+      {
+        "step": 3,
+        "description": "Сформировать котлеты, обвалять в сухарях."
+      },
+      {
+        "step": 4,
+        "description": "Обжарить на разогретом масле по 4 минуты с каждой стороны."
+      },
+      {
+        "step": 5,
+        "description": "Довести до готовности под крышкой 10 минут на слабом огне."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 45,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-zharkoe-v-gorshochkah",
+    "name": "Жаркое в горшочках",
+    "description": "Мясо с картофелем, морковью и луком, томлённые в керамических горшочках в духовке. Подача прямо в горшочке.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 2,
+    "tags": [
+      "горячее",
+      "мясное",
+      "духовка"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Свинина",
+        "quantity": 700,
+        "unit": "г",
+        "text_quantity": "- Свинина 700 г",
+        "notes": ""
+      },
+      {
+        "name": "Картофель",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Картофель 800 г",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 4,
+        "unit": "зубчика",
+        "text_quantity": "- Чеснок 4 зубчика",
+        "notes": ""
+      },
+      {
+        "name": "Сметана",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сметана 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Бульон мясной",
+        "quantity": 400,
+        "unit": "мл",
+        "text_quantity": "- Бульон мясной 400 мл",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Мясо нарезать кубиком 3 см, обжарить до корочки."
+      },
+      {
+        "step": 2,
+        "description": "Овощи нарезать крупным кубиком."
+      },
+      {
+        "step": 3,
+        "description": "В горшочки слоями выложить мясо, лук, морковь, картофель, чеснок, лавровый лист."
+      },
+      {
+        "step": 4,
+        "description": "Залить сметаной, разведённой бульоном, посолить."
+      },
+      {
+        "step": 5,
+        "description": "Закрыть крышкой, томить в духовке при 180°C 60 минут."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 70,
+    "total_time_minutes": 90,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-kuritsa-v-smetane",
+    "name": "Курица в сметане",
+    "description": "Куриные кусочки, тушёные в сметанном соусе с луком и специями.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 1,
+    "tags": [
+      "горячее",
+      "куриное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Куриные бёдра",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Куриные бёдра 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Сметана",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Сметана 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 3,
+        "unit": "зубчика",
+        "text_quantity": "- Чеснок 3 зубчика",
+        "notes": ""
+      },
+      {
+        "name": "Мука пшеничная",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Мука пшеничная 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Курицу нарезать порционно, посолить, поперчить, обжарить до корочки."
+      },
+      {
+        "step": 2,
+        "description": "Добавить нарезанный лук, обжарить 5 минут."
+      },
+      {
+        "step": 3,
+        "description": "Смешать сметану с мукой и чесноком, залить курицу."
+      },
+      {
+        "step": 4,
+        "description": "Тушить под крышкой 25 минут на слабом огне."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 35,
+    "total_time_minutes": 50,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-ryba-zapechennaya-po-russki",
+    "name": "Рыба запечённая по-русски",
+    "description": "Филе белой рыбы (судак, треска), запечённое в духовке с луком, морковью и томатно-сметанным соусом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 2,
+    "tags": [
+      "горячее",
+      "рыбное",
+      "духовка"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Филе рыбы (судак/треска)",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Филе рыбы (судак/треска) 800 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Морковь 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сметана",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сметана 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Паста томатная",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Паста томатная 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Сыр твёрдый",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Сыр твёрдый 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Зелень укропа",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Зелень укропа (для подачи)",
+        "notes": "для подачи"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Лук и морковь обжарить до мягкости."
+      },
+      {
+        "step": 2,
+        "description": "Филе посолить, выложить в форму, сверху овощи."
+      },
+      {
+        "step": 3,
+        "description": "Залить соусом из сметаны и томатной пасты, посыпать тёртым сыром."
+      },
+      {
+        "step": 4,
+        "description": "Запекать при 200°C 25 минут."
+      },
+      {
+        "step": 5,
+        "description": "Посыпать укропом перед подачей."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 45,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-tsyplenok-tabaka",
+    "name": "Цыплёнок табака",
+    "description": "Распластованный цыплёнок, обжаренный под прессом до золотистой корочки. Подаётся с чесночным соусом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 3,
+    "tags": [
+      "горячее",
+      "куриное"
+    ],
+    "servings": 3,
+    "ingredients": [
+      {
+        "name": "Цыплёнок",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Цыплёнок 1 шт — около 1.2 кг",
+        "notes": "около 1.2 кг"
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 6,
+        "unit": "зубчиков",
+        "text_quantity": "- Чеснок 6 зубчиков",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 80,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 80 г",
+        "notes": ""
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Перец чёрный молотый 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Паприка",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Паприка 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Соль 1 ст.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Цыплёнка разрезать вдоль грудки, распластать, отбить."
+      },
+      {
+        "step": 2,
+        "description": "Натереть смесью соли, перца и паприки."
+      },
+      {
+        "step": 3,
+        "description": "На разогретую сковороду положить тушку кожей вниз, прижать прессом."
+      },
+      {
+        "step": 4,
+        "description": "Жарить под прессом 20 минут, перевернуть, ещё 15 минут."
+      },
+      {
+        "step": 5,
+        "description": "Подавать с чесночным соусом из тёртого чеснока и сливочного масла."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 55,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-grechka-s-tushenkoy",
+    "name": "Гречка с тушёнкой",
+    "description": "Простое походно-домашнее блюдо: рассыпчатая гречневая каша с обжаренным луком и тушёнкой.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 1,
+    "tags": [
+      "горячее",
+      "мясное",
+      "крупа"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Крупа гречневая",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Крупа гречневая 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Тушёнка говяжья",
+        "quantity": 1,
+        "unit": "банка",
+        "text_quantity": "- Тушёнка говяжья 1 банка — 525 г",
+        "notes": "525 г"
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Морковь 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      },
+      {
+        "name": "Перец чёрный молотый",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Перец чёрный молотый (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Гречку промыть, отварить в подсоленной воде (1:2) до готовности (20 мин)."
+      },
+      {
+        "step": 2,
+        "description": "Лук и морковь обжарить на масле до золотистого цвета."
+      },
+      {
+        "step": 3,
+        "description": "Добавить тушёнку, прогреть 5 минут, разминая куски."
+      },
+      {
+        "step": 4,
+        "description": "Соединить с готовой гречкой, поперчить."
+      }
+    ],
+    "prep_time_minutes": 5,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 30,
+    "additional_notes": []
+  },
+  {
+    "id": "goryachee-plov-uzbekskiy",
+    "name": "Плов узбекский",
+    "description": "Рис с бараниной (или говядиной), морковью, луком и специями, томлёный в казане.",
+    "source_path": "",
+    "image_path": null,
+    "category": "горячее",
+    "difficulty": 4,
+    "tags": [
+      "горячее",
+      "мясное",
+      "крупа"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Баранина",
+        "quantity": 700,
+        "unit": "г",
+        "text_quantity": "- Баранина 700 г",
+        "notes": ""
+      },
+      {
+        "name": "Рис басмати",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Рис басмати 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Морковь",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Морковь 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Чеснок",
+        "quantity": 2,
+        "unit": "головки",
+        "text_quantity": "- Чеснок 2 головки",
+        "notes": ""
+      },
+      {
+        "name": "Зира",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Зира 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Барбарис",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Барбарис 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 150,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 150 мл",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "В казане раскалить масло, обжарить мясо кусочками до корочки."
+      },
+      {
+        "step": 2,
+        "description": "Добавить лук полукольцами, жарить до золотистого цвета."
+      },
+      {
+        "step": 3,
+        "description": "Ввести морковь соломкой, тушить 10 минут со специями."
+      },
+      {
+        "step": 4,
+        "description": "Залить водой на 2 см выше уровня (зирвак), варить 30 минут."
+      },
+      {
+        "step": 5,
+        "description": "Засыпать промытый рис, разровнять, долить воды на 2 см."
+      },
+      {
+        "step": 6,
+        "description": "Воткнуть головки чеснока, варить без крышки до впитывания воды."
+      },
+      {
+        "step": 7,
+        "description": "Сделать проколы до дна, накрыть крышкой, томить 25 минут на минимуме."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 80,
+    "total_time_minutes": 100,
+    "additional_notes": []
+  },
+  {
+    "id": "garnir-kartofelnoe-pyure",
+    "name": "Картофельное пюре",
+    "description": "Воздушное пюре из отварного картофеля с молоком и сливочным маслом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "гарнир",
+    "difficulty": 1,
+    "tags": [
+      "гарнир",
+      "овощное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Картофель",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Картофель 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Молоко 200 мл — горячее",
+        "notes": "горячее"
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 80,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 80 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Картофель очистить, нарезать на 4 части, залить водой, посолить."
+      },
+      {
+        "step": 2,
+        "description": "Варить до мягкости 20-25 минут, слить воду."
+      },
+      {
+        "step": 3,
+        "description": "Размять толкушкой, добавить масло и горячее молоко."
+      },
+      {
+        "step": 4,
+        "description": "Взбить до однородности, посолить по вкусу."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 35,
+    "additional_notes": []
+  },
+  {
+    "id": "garnir-grechnevaya-kasha",
+    "name": "Гречневая каша",
+    "description": "Рассыпчатая гречка на воде или бульоне со сливочным маслом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "гарнир",
+    "difficulty": 1,
+    "tags": [
+      "гарнир",
+      "крупа"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Крупа гречневая",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Крупа гречневая 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 600,
+        "unit": "мл",
+        "text_quantity": "- Вода 600 мл",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 50 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Гречку промыть, обжарить на сухой сковороде 2 минуты."
+      },
+      {
+        "step": 2,
+        "description": "Залить кипящей подсоленной водой (1:2)."
+      },
+      {
+        "step": 3,
+        "description": "Варить под крышкой 15-20 минут до впитывания воды."
+      },
+      {
+        "step": 4,
+        "description": "Снять с огня, добавить масло, дать настояться 10 минут."
+      }
+    ],
+    "prep_time_minutes": 5,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 25,
+    "additional_notes": []
+  },
+  {
+    "id": "garnir-perlovaya-kasha",
+    "name": "Перловая каша",
+    "description": "Каша из ячменной крупы с луком и сливочным маслом — старинный русский гарнир.",
+    "source_path": "",
+    "image_path": null,
+    "category": "гарнир",
+    "difficulty": 1,
+    "tags": [
+      "гарнир",
+      "крупа"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Крупа перловая",
+        "quantity": 250,
+        "unit": "г",
+        "text_quantity": "- Крупа перловая 250 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 750,
+        "unit": "мл",
+        "text_quantity": "- Вода 750 мл",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 50 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Перловку замочить на 6-8 часов, слить воду."
+      },
+      {
+        "step": 2,
+        "description": "Залить свежей водой, довести до кипения, посолить."
+      },
+      {
+        "step": 3,
+        "description": "Варить на медленном огне 50-60 минут до мягкости."
+      },
+      {
+        "step": 4,
+        "description": "Лук обжарить на масле, добавить к готовой каше, перемешать."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 70,
+    "total_time_minutes": 80,
+    "additional_notes": []
+  },
+  {
+    "id": "garnir-kartofel-otvarnoy-s-ukropom",
+    "name": "Картофель отварной с укропом",
+    "description": "Молодой или обычный картофель, отваренный с лавровым листом, политый сливочным маслом и посыпанный укропом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "гарнир",
+    "difficulty": 1,
+    "tags": [
+      "гарнир",
+      "овощное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Картофель",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Картофель 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 60,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 60 г",
+        "notes": ""
+      },
+      {
+        "name": "Укроп свежий",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Укроп свежий (пучок)",
+        "notes": "пучок"
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": null,
+        "unit": null,
+        "text_quantity": "- Соль (по вкусу)",
+        "notes": "по вкусу"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Картофель очистить, нарезать на 2-4 части."
+      },
+      {
+        "step": 2,
+        "description": "Опустить в кипящую подсоленную воду с лавровым листом."
+      },
+      {
+        "step": 3,
+        "description": "Варить 20 минут до готовности, воду слить."
+      },
+      {
+        "step": 4,
+        "description": "Сложить в миску, добавить масло и измельчённый укроп, встряхнуть."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 30,
+    "additional_notes": []
+  },
+  {
+    "id": "garnir-ris-otvarnoy",
+    "name": "Рис отварной",
+    "description": "Рассыпчатый рис на воде со сливочным маслом — универсальный гарнир.",
+    "source_path": "",
+    "image_path": null,
+    "category": "гарнир",
+    "difficulty": 1,
+    "tags": [
+      "гарнир",
+      "крупа"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Рис длиннозёрный",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Рис длиннозёрный 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 600,
+        "unit": "мл",
+        "text_quantity": "- Вода 600 мл",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 30,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 30 г",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Рис промыть до прозрачной воды."
+      },
+      {
+        "step": 2,
+        "description": "Залить кипятком (1:2), посолить, довести до кипения."
+      },
+      {
+        "step": 3,
+        "description": "Накрыть крышкой, варить 15 минут на минимуме без перемешивания."
+      },
+      {
+        "step": 4,
+        "description": "Снять с огня, дать настояться 10 минут, заправить маслом."
+      }
+    ],
+    "prep_time_minutes": 5,
+    "cook_time_minutes": 15,
+    "total_time_minutes": 20,
+    "additional_notes": []
+  },
+  {
+    "id": "vypechka-pirozhki-s-kapustoy-zharenye",
+    "name": "Пирожки с капустой жареные",
+    "description": "Дрожжевые пирожки с тушёной капустой, обжаренные на сковороде до золотистой корочки.",
+    "source_path": "",
+    "image_path": null,
+    "category": "выпечка",
+    "difficulty": 3,
+    "tags": [
+      "выпечка",
+      "тесто"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 250,
+        "unit": "мл",
+        "text_quantity": "- Молоко 250 мл",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 7,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 7 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 50,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 50 мл — в тесто + для жарки",
+        "notes": "в тесто + для жарки"
+      },
+      {
+        "name": "Капуста белокочанная",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Капуста белокочанная 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Молоко подогреть, развести дрожжи с сахаром, оставить на 10 минут."
+      },
+      {
+        "step": 2,
+        "description": "Замесить тесто с мукой, яйцом, солью и маслом, дать подняться 1 час."
+      },
+      {
+        "step": 3,
+        "description": "Капусту нашинковать, тушить с луком и солью 20 минут."
+      },
+      {
+        "step": 4,
+        "description": "Из теста сформировать лепёшки, положить начинку, защипнуть."
+      },
+      {
+        "step": 5,
+        "description": "Жарить на масле по 3 минуты с каждой стороны."
+      }
+    ],
+    "prep_time_minutes": 90,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 120,
+    "additional_notes": []
+  },
+  {
+    "id": "vypechka-pirozhki-s-myasom-pechenye",
+    "name": "Пирожки с мясом печёные",
+    "description": "Дрожжевые пирожки с фаршем, запечённые в духовке.",
+    "source_path": "",
+    "image_path": null,
+    "category": "выпечка",
+    "difficulty": 3,
+    "tags": [
+      "выпечка",
+      "мясное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 250,
+        "unit": "мл",
+        "text_quantity": "- Молоко 250 мл",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 7,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 7 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт — 1 в тесто, 1 для смазки",
+        "notes": "1 в тесто, 1 для смазки"
+      },
+      {
+        "name": "Фарш мясной",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Фарш мясной 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 50 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Подготовить дрожжевое тесто, дать подняться 1 час."
+      },
+      {
+        "step": 2,
+        "description": "Фарш обжарить с луком, посолить, поперчить, остудить."
+      },
+      {
+        "step": 3,
+        "description": "Из теста сформировать лепёшки, наполнить фаршем, защипнуть."
+      },
+      {
+        "step": 4,
+        "description": "Выложить швом вниз на противень, смазать яйцом."
+      },
+      {
+        "step": 5,
+        "description": "Выпекать при 200°C 20 минут до золотистой корочки."
+      }
+    ],
+    "prep_time_minutes": 90,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 115,
+    "additional_notes": []
+  },
+  {
+    "id": "vypechka-bliny-tonkie",
+    "name": "Блины тонкие",
+    "description": "Классические русские блины на молоке — основа для широкой Масленицы. Подаются с маслом, сметаной, икрой или вареньем.",
+    "source_path": "",
+    "image_path": null,
+    "category": "выпечка",
+    "difficulty": 2,
+    "tags": [
+      "выпечка",
+      "праздничное",
+      "масленица"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 250,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 250 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 500,
+        "unit": "мл",
+        "text_quantity": "- Молоко 500 мл",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 0.5,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 0.5 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Масло растительное 3 ст.л — в тесто",
+        "notes": "в тесто"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Яйца взбить с сахаром и солью."
+      },
+      {
+        "step": 2,
+        "description": "Постепенно добавлять муку и молоко, замешивая жидкое тесто."
+      },
+      {
+        "step": 3,
+        "description": "Влить масло, дать настояться 15 минут."
+      },
+      {
+        "step": 4,
+        "description": "Выпекать на разогретой сковороде с двух сторон по 30-40 секунд."
+      },
+      {
+        "step": 5,
+        "description": "Складывать стопкой, при подаче смазывать сливочным маслом."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 30,
+    "total_time_minutes": 45,
+    "additional_notes": []
+  },
+  {
+    "id": "vypechka-kulebyaka-s-kapustoy-i-yaytsom",
+    "name": "Кулебяка с капустой и яйцом",
+    "description": "Большой закрытый пирог из дрожжевого теста с многослойной начинкой из капусты и яиц.",
+    "source_path": "",
+    "image_path": null,
+    "category": "выпечка",
+    "difficulty": 4,
+    "tags": [
+      "выпечка",
+      "праздничное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 300,
+        "unit": "мл",
+        "text_quantity": "- Молоко 300 мл",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 10,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 10 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 2,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 2 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 5,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 5 шт — 1 в тесто, 3 в начинку, 1 для смазки",
+        "notes": "1 в тесто, 3 в начинку, 1 для смазки"
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Капуста белокочанная",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Капуста белокочанная 800 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Замесить дрожжевое тесто, дать подняться 1.5 часа."
+      },
+      {
+        "step": 2,
+        "description": "Капусту нашинковать, тушить с маслом 30 минут, остудить."
+      },
+      {
+        "step": 3,
+        "description": "Яйца сварить, порубить, смешать с капустой."
+      },
+      {
+        "step": 4,
+        "description": "Тесто раскатать прямоугольником, выложить начинку полосой."
+      },
+      {
+        "step": 5,
+        "description": "Защипнуть края, переложить швом вниз на противень, смазать яйцом."
+      },
+      {
+        "step": 6,
+        "description": "Выпекать при 200°C 35-40 минут до румяной корочки."
+      }
+    ],
+    "prep_time_minutes": 120,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 160,
+    "additional_notes": []
+  },
+  {
+    "id": "vypechka-rasstegai-s-ryboy",
+    "name": "Расстегаи с рыбой",
+    "description": "Маленькие открытые пирожки с рыбной начинкой — традиционная подача к ухе.",
+    "source_path": "",
+    "image_path": null,
+    "category": "выпечка",
+    "difficulty": 3,
+    "tags": [
+      "выпечка",
+      "рыбное"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Молоко 200 мл",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 7,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 7 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Соль",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт — 1 в тесто, 1 для смазки",
+        "notes": "1 в тесто, 1 для смазки"
+      },
+      {
+        "name": "Филе рыбы (судак/треска)",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Филе рыбы (судак/треска) 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Лук репчатый",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лук репчатый 1 шт",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 50 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Замесить дрожжевое тесто, дать подняться 1 час."
+      },
+      {
+        "step": 2,
+        "description": "Филе рыбы припустить с луком и маслом, остудить, нарезать."
+      },
+      {
+        "step": 3,
+        "description": "Раскатать лепёшки, на каждую положить начинку, защипнуть края, оставив отверстие сверху."
+      },
+      {
+        "step": 4,
+        "description": "Выложить на противень, смазать яйцом."
+      },
+      {
+        "step": 5,
+        "description": "Выпекать при 200°C 20 минут."
+      }
+    ],
+    "prep_time_minutes": 80,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 105,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-medovik",
+    "name": "Медовик",
+    "description": "Многослойный медовый торт со сметанным или сливочным кремом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 3,
+    "tags": [
+      "десерт",
+      "торт",
+      "праздничное"
+    ],
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "Мёд",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Мёд 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахар 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сода",
+        "quantity": 1,
+        "unit": "ч.л",
+        "text_quantity": "- Сода 1 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Мука пшеничная",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Сметана 25%",
+        "quantity": 800,
+        "unit": "г",
+        "text_quantity": "- Сметана 25% 800 г — для крема",
+        "notes": "для крема"
+      },
+      {
+        "name": "Сахарная пудра",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахарная пудра 200 г — для крема",
+        "notes": "для крема"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "На водяной бане растопить мёд, сахар и масло, добавить соду."
+      },
+      {
+        "step": 2,
+        "description": "Снять с огня, ввести яйца, всыпать муку, замесить мягкое тесто."
+      },
+      {
+        "step": 3,
+        "description": "Разделить тесто на 8 частей, раскатать тонкие коржи."
+      },
+      {
+        "step": 4,
+        "description": "Выпекать каждый при 180°C по 4-5 минут до золотистого цвета."
+      },
+      {
+        "step": 5,
+        "description": "Сметану взбить с пудрой, промазать каждый корж."
+      },
+      {
+        "step": 6,
+        "description": "Обсыпать измельчёнными обрезками, выдержать 6-8 часов в холоде."
+      }
+    ],
+    "prep_time_minutes": 60,
+    "cook_time_minutes": 40,
+    "total_time_minutes": 100,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-napoleon",
+    "name": "Наполеон",
+    "description": "Слоёный торт из тонких хрустящих коржей с заварным кремом.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 4,
+    "tags": [
+      "десерт",
+      "торт",
+      "праздничное"
+    ],
+    "servings": 10,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 600,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 600 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 400 г — холодное",
+        "notes": "холодное"
+      },
+      {
+        "name": "Вода",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Вода 200 мл — ледяная",
+        "notes": "ледяная"
+      },
+      {
+        "name": "Соль",
+        "quantity": 0.5,
+        "unit": "ч.л",
+        "text_quantity": "- Соль 0.5 ч.л",
+        "notes": ""
+      },
+      {
+        "name": "Уксус 9%",
+        "quantity": 1,
+        "unit": "ст.л",
+        "text_quantity": "- Уксус 9% 1 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 1000,
+        "unit": "мл",
+        "text_quantity": "- Молоко 1000 мл — для крема",
+        "notes": "для крема"
+      },
+      {
+        "name": "Сахар",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Сахар 300 г — для крема",
+        "notes": "для крема"
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 4 шт — для крема",
+        "notes": "для крема"
+      },
+      {
+        "name": "Мука пшеничная",
+        "quantity": 80,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 80 г — для крема",
+        "notes": "для крема"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Муку порубить с холодным маслом в крошку, влить воду с уксусом и солью."
+      },
+      {
+        "step": 2,
+        "description": "Замесить тесто, разделить на 10 частей, охладить 1 час."
+      },
+      {
+        "step": 3,
+        "description": "Каждую часть тонко раскатать, выпечь при 200°C 7-8 минут."
+      },
+      {
+        "step": 4,
+        "description": "Для крема: яйца взбить с сахаром и мукой, влить горячее молоко тонкой струйкой."
+      },
+      {
+        "step": 5,
+        "description": "Уварить на медленном огне до загустения, остудить."
+      },
+      {
+        "step": 6,
+        "description": "Промазать коржи кремом, верх обсыпать крошкой из обрезков."
+      },
+      {
+        "step": 7,
+        "description": "Выдержать в холодильнике 8 часов."
+      }
+    ],
+    "prep_time_minutes": 90,
+    "cook_time_minutes": 60,
+    "total_time_minutes": 150,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-syrniki",
+    "name": "Сырники",
+    "description": "Жареные творожные оладьи с изюмом, подаются со сметаной, мёдом или вареньем.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 1,
+    "tags": [
+      "десерт",
+      "творожное",
+      "завтрак"
+    ],
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Творог 9%",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Творог 9% 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Мука пшеничная",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Изюм",
+        "quantity": 50,
+        "unit": "г",
+        "text_quantity": "- Изюм 50 г",
+        "notes": ""
+      },
+      {
+        "name": "Ванильный сахар",
+        "quantity": 1,
+        "unit": "пакетик",
+        "text_quantity": "- Ванильный сахар 1 пакетик",
+        "notes": ""
+      },
+      {
+        "name": "Масло растительное",
+        "quantity": 50,
+        "unit": "мл",
+        "text_quantity": "- Масло растительное 50 мл — для жарки",
+        "notes": "для жарки"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Творог протереть через сито, смешать с яйцами, сахаром и ванилью."
+      },
+      {
+        "step": 2,
+        "description": "Добавить муку и изюм, замесить мягкое тесто."
+      },
+      {
+        "step": 3,
+        "description": "Сформировать круглые лепёшки, обвалять в муке."
+      },
+      {
+        "step": 4,
+        "description": "Жарить на разогретом масле по 3 минуты с каждой стороны до золотистой корочки."
+      }
+    ],
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 15,
+    "total_time_minutes": 30,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-pasha-tvorozhnaya",
+    "name": "Пасха творожная",
+    "description": "Пасхальный десерт из протёртого творога со сливочным маслом, сметаной, сахаром и цукатами в форме усечённой пирамиды.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 3,
+    "tags": [
+      "десерт",
+      "праздничное",
+      "пасха"
+    ],
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "Творог 9%",
+        "quantity": 1000,
+        "unit": "г",
+        "text_quantity": "- Творог 9% 1000 г",
+        "notes": ""
+      },
+      {
+        "name": "Сметана 30%",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сметана 30% 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 200 г — размягчённое",
+        "notes": "размягчённое"
+      },
+      {
+        "name": "Сахарная пудра",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахарная пудра 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Желток куриный",
+        "quantity": 4,
+        "unit": "шт",
+        "text_quantity": "- Желток куриный 4 шт",
+        "notes": ""
+      },
+      {
+        "name": "Цукаты",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Цукаты 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Изюм",
+        "quantity": 100,
+        "unit": "г",
+        "text_quantity": "- Изюм 100 г",
+        "notes": ""
+      },
+      {
+        "name": "Ванильный сахар",
+        "quantity": 1,
+        "unit": "пакетик",
+        "text_quantity": "- Ванильный сахар 1 пакетик",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Творог дважды протереть через сито."
+      },
+      {
+        "step": 2,
+        "description": "Взбить масло с сахарной пудрой и желтками до пышности."
+      },
+      {
+        "step": 3,
+        "description": "Соединить с творогом и сметаной, добавить цукаты, изюм и ваниль."
+      },
+      {
+        "step": 4,
+        "description": "Выложить в пасочницу (или дуршлаг, выстеленный марлей), поставить под пресс."
+      },
+      {
+        "step": 5,
+        "description": "Выдержать в холодильнике 12 часов для отделения сыворотки."
+      }
+    ],
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 30,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-vatrushki-s-tvorogom",
+    "name": "Ватрушки с творогом",
+    "description": "Открытые круглые булочки из дрожжевого теста с творожной начинкой.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 2,
+    "tags": [
+      "десерт",
+      "выпечка",
+      "творожное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука пшеничная",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Мука пшеничная 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Молоко",
+        "quantity": 200,
+        "unit": "мл",
+        "text_quantity": "- Молоко 200 мл",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 7,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 7 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 3,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 3 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Масло сливочное",
+        "quantity": 80,
+        "unit": "г",
+        "text_quantity": "- Масло сливочное 80 г",
+        "notes": ""
+      },
+      {
+        "name": "Яйцо куриное",
+        "quantity": 2,
+        "unit": "шт",
+        "text_quantity": "- Яйцо куриное 2 шт — 1 в тесто, 1 для смазки",
+        "notes": "1 в тесто, 1 для смазки"
+      },
+      {
+        "name": "Творог 9%",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Творог 9% 400 г — начинка",
+        "notes": "начинка"
+      },
+      {
+        "name": "Сахар",
+        "quantity": 4,
+        "unit": "ст.л",
+        "text_quantity": "- Сахар 4 ст.л — в начинку",
+        "notes": "в начинку"
+      },
+      {
+        "name": "Желток куриный",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Желток куриный 1 шт — в начинку",
+        "notes": "в начинку"
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Замесить дрожжевое тесто, дать подняться 1 час."
+      },
+      {
+        "step": 2,
+        "description": "Творог смешать с сахаром и желтком для начинки."
+      },
+      {
+        "step": 3,
+        "description": "Из теста скатать шарики, расплющить, сделать углубление в центре."
+      },
+      {
+        "step": 4,
+        "description": "В углубление выложить творожную начинку."
+      },
+      {
+        "step": 5,
+        "description": "Смазать края яйцом, выпекать при 190°C 20 минут."
+      }
+    ],
+    "prep_time_minutes": 80,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 100,
+    "additional_notes": []
+  },
+  {
+    "id": "desert-kisel-yagodnyy",
+    "name": "Кисель ягодный",
+    "description": "Густой напиток-десерт из ягод (клюква, малина, смородина) с крахмалом, подаётся в стакане или как соус.",
+    "source_path": "",
+    "image_path": null,
+    "category": "десерт",
+    "difficulty": 1,
+    "tags": [
+      "десерт",
+      "напиток",
+      "ягодное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Ягоды свежие или мороженые",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Ягоды свежие или мороженые 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахар 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Крахмал картофельный",
+        "quantity": 4,
+        "unit": "ст.л",
+        "text_quantity": "- Крахмал картофельный 4 ст.л",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 1500,
+        "unit": "мл",
+        "text_quantity": "- Вода 1500 мл",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Ягоды размять, отжать сок, отложить."
+      },
+      {
+        "step": 2,
+        "description": "Жмых залить водой, проварить 10 минут, процедить."
+      },
+      {
+        "step": 3,
+        "description": "В отвар добавить сахар, довести до кипения."
+      },
+      {
+        "step": 4,
+        "description": "Крахмал развести в холодной воде, влить тонкой струйкой при помешивании."
+      },
+      {
+        "step": 5,
+        "description": "Прогреть до загустения (не кипятить), снять с огня, влить отжатый сок."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 20,
+    "total_time_minutes": 30,
+    "additional_notes": []
+  },
+  {
+    "id": "napitok-mors-klyukvennyy",
+    "name": "Морс клюквенный",
+    "description": "Освежающий ягодный морс из протёртой клюквы с сахаром, подаётся холодным.",
+    "source_path": "",
+    "image_path": null,
+    "category": "напиток",
+    "difficulty": 1,
+    "tags": [
+      "напиток",
+      "ягодное",
+      "холодное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Клюква",
+        "quantity": 500,
+        "unit": "г",
+        "text_quantity": "- Клюква 500 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахар 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 2000,
+        "unit": "мл",
+        "text_quantity": "- Вода 2000 мл",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Клюкву размять, отжать сок через марлю, отложить."
+      },
+      {
+        "step": 2,
+        "description": "Жмых залить водой с сахаром, довести до кипения и проварить 10 минут."
+      },
+      {
+        "step": 3,
+        "description": "Процедить, остудить, влить отжатый сок."
+      },
+      {
+        "step": 4,
+        "description": "Перед подачей охладить."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 15,
+    "total_time_minutes": 25,
+    "additional_notes": []
+  },
+  {
+    "id": "napitok-kompot-iz-suhofruktov",
+    "name": "Компот из сухофруктов",
+    "description": "Тёплый или холодный напиток из сухих яблок, груш, чернослива и изюма с сахаром.",
+    "source_path": "",
+    "image_path": null,
+    "category": "напиток",
+    "difficulty": 1,
+    "tags": [
+      "напиток",
+      "горячее",
+      "холодное"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Сухофрукты (микс)",
+        "quantity": 300,
+        "unit": "г",
+        "text_quantity": "- Сухофрукты (микс) 300 г",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 150,
+        "unit": "г",
+        "text_quantity": "- Сахар 150 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 2500,
+        "unit": "мл",
+        "text_quantity": "- Вода 2500 мл",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Сухофрукты промыть, замочить в тёплой воде на 10 минут."
+      },
+      {
+        "step": 2,
+        "description": "Залить кипящей водой с сахаром, варить 25 минут на слабом огне."
+      },
+      {
+        "step": 3,
+        "description": "Снять с огня, настаивать 1 час."
+      },
+      {
+        "step": 4,
+        "description": "Подавать тёплым или охлаждённым."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 25,
+    "total_time_minutes": 35,
+    "additional_notes": []
+  },
+  {
+    "id": "napitok-sbiten",
+    "name": "Сбитень",
+    "description": "Старинный русский горячий напиток на мёде с пряностями: имбирь, корица, гвоздика, кардамон.",
+    "source_path": "",
+    "image_path": null,
+    "category": "напиток",
+    "difficulty": 1,
+    "tags": [
+      "напиток",
+      "горячее",
+      "русская кухня"
+    ],
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мёд",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Мёд 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 2000,
+        "unit": "мл",
+        "text_quantity": "- Вода 2000 мл",
+        "notes": ""
+      },
+      {
+        "name": "Гвоздика",
+        "quantity": 5,
+        "unit": "шт",
+        "text_quantity": "- Гвоздика 5 шт",
+        "notes": ""
+      },
+      {
+        "name": "Корица",
+        "quantity": 1,
+        "unit": "палочка",
+        "text_quantity": "- Корица 1 палочка",
+        "notes": ""
+      },
+      {
+        "name": "Имбирь свежий",
+        "quantity": 30,
+        "unit": "г",
+        "text_quantity": "- Имбирь свежий 30 г",
+        "notes": ""
+      },
+      {
+        "name": "Кардамон",
+        "quantity": 3,
+        "unit": "шт",
+        "text_quantity": "- Кардамон 3 шт",
+        "notes": ""
+      },
+      {
+        "name": "Лавровый лист",
+        "quantity": 1,
+        "unit": "шт",
+        "text_quantity": "- Лавровый лист 1 шт",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Воду закипятить со специями и нарезанным имбирём, варить 10 минут."
+      },
+      {
+        "step": 2,
+        "description": "Снять с огня, дать настояться 5 минут, процедить."
+      },
+      {
+        "step": 3,
+        "description": "Растворить мёд (температура не выше 60°C, иначе теряет пользу)."
+      },
+      {
+        "step": 4,
+        "description": "Подавать горячим в кружках."
+      }
+    ],
+    "prep_time_minutes": 10,
+    "cook_time_minutes": 15,
+    "total_time_minutes": 25,
+    "additional_notes": []
+  },
+  {
+    "id": "napitok-kvas-domashniy",
+    "name": "Квас домашний",
+    "description": "Хлебный квас на ржаном хлебе и дрожжах — традиционный летний напиток.",
+    "source_path": "",
+    "image_path": null,
+    "category": "напиток",
+    "difficulty": 2,
+    "tags": [
+      "напиток",
+      "холодное",
+      "русская кухня"
+    ],
+    "servings": 10,
+    "ingredients": [
+      {
+        "name": "Хлеб ржаной",
+        "quantity": 400,
+        "unit": "г",
+        "text_quantity": "- Хлеб ржаной 400 г",
+        "notes": ""
+      },
+      {
+        "name": "Вода",
+        "quantity": 3000,
+        "unit": "мл",
+        "text_quantity": "- Вода 3000 мл",
+        "notes": ""
+      },
+      {
+        "name": "Сахар",
+        "quantity": 200,
+        "unit": "г",
+        "text_quantity": "- Сахар 200 г",
+        "notes": ""
+      },
+      {
+        "name": "Дрожжи сухие",
+        "quantity": 5,
+        "unit": "г",
+        "text_quantity": "- Дрожжи сухие 5 г",
+        "notes": ""
+      },
+      {
+        "name": "Изюм",
+        "quantity": 30,
+        "unit": "г",
+        "text_quantity": "- Изюм 30 г",
+        "notes": ""
+      }
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "description": "Хлеб нарезать кубиками, подсушить в духовке до сухарей."
+      },
+      {
+        "step": 2,
+        "description": "Залить кипятком, остудить до 30°C."
+      },
+      {
+        "step": 3,
+        "description": "Добавить сахар, дрожжи, изюм, накрыть тканью."
+      },
+      {
+        "step": 4,
+        "description": "Оставить при комнатной температуре на 2 суток для брожения."
+      },
+      {
+        "step": 5,
+        "description": "Процедить, разлить по бутылкам, охладить."
+      }
+    ],
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 0,
+    "total_time_minutes": 20,
+    "additional_notes": [
+      "Брожение 2 суток без учёта времени приготовления."
+    ]
+  }
+]

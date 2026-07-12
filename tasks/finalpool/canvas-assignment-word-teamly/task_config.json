@@ -1,0 +1,15 @@
+{
+  "needed_mcp_servers": [
+    "canvas",
+    "word",
+    "teamly",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

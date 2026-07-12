@@ -1,0 +1,25 @@
+{
+  "minimum_margin_pct": 15,
+  "target_margin_pct": 25,
+  "category_targets": {
+    "Электроника": {
+      "min_margin": 20
+    },
+    "Наушники": {
+      "min_margin": 15
+    },
+    "Колонки": {
+      "min_margin": 18
+    },
+    "Аудио": {
+      "min_margin": 20
+    },
+    "Камеры": {
+      "min_margin": 15
+    }
+  },
+  "pricing_rules": {
+    "max_above_competitor_pct": 10,
+    "action_threshold_pct": 10
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портал оценки здоровья клиентов</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); padding: 40px; }
+        h1 { color: #1a3a5c; border-bottom: 3px solid #e67e22; padding-bottom: 15px; }
+        h2 { color: #e67e22; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background: #fdf2e9; font-weight: 600; color: #1a3a5c; }
+        .healthy { color: #27ae60; font-weight: bold; }
+        .at-risk { color: #f39c12; font-weight: bold; }
+        .critical { color: #e74c3c; font-weight: bold; }
+        .nav { margin-bottom: 20px; }
+        .nav a { color: #e67e22; text-decoration: none; margin-right: 20px; font-weight: 600; }
+        .formula { background: #f8f9fa; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Пороги здоровья</a>
+            <a href="scoring.html">Формула оценки</a>
+        </div>
+
+        <h1>Портал оценки здоровья клиентов</h1>
+        <p>Этот портал описывает методологию оценки здоровья, используемую для классификации клиентских аккаунтов и приоритизации взаимодействия.</p>
+
+        <h2>Пороги статусов здоровья</h2>
+        <table>
+            <tr><th>Статус</th><th>Диапазон оценки</th><th>Требуемое действие</th></tr>
+            <tr>
+                <td><span class="healthy">Healthy</span></td>
+                <td>Оценка &gt;= 80</td>
+                <td>Регулярные созвоны, возможности допродаж</td>
+            </tr>
+            <tr>
+                <td><span class="at-risk">At Risk</span></td>
+                <td>Оценка от 50 до 79</td>
+                <td>Проактивный контакт, опрос удовлетворённости</td>
+            </tr>
+            <tr>
+                <td><span class="critical">Critical</span></td>
+                <td>Оценка &lt; 50</td>
+                <td>Немедленный повторный звонок, эскалация руководству</td>
+            </tr>
+        </table>
+
+        <h2>Политика повторных звонков</h2>
+        <p>Для аккаунтов, классифицированных как <span class="critical">Critical</span>, команда customer success обязана запланировать повторный звонок в течение 5 рабочих дней. Критичные аккаунты с оценкой здоровья ниже 15 требуют вмешательства на уровне руководства и должны планироваться как 30-минутные звонки начиная с понедельника после даты анализа, по одному звонку в день в 10:00 утра.</p>
+
+        <div class="formula">
+            <strong>Краткая справка:</strong><br>
+            Healthy: оценка &gt;= 80 | At Risk: 50-79 | Critical: &lt; 50
+        </div>
+    </div>
+</body>
+</html>

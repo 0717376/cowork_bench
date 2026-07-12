@@ -1,0 +1,5 @@
+{
+  "needed_mcp_servers": ["clickhouse", "word", "google_sheet", "emails", "filesystem"],
+  "needed_local_tools": ["python_execute", "handle_overlong_tool_outputs", "manage_context", "history"],
+  "meta": {}
+}

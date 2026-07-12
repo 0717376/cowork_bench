@@ -1,0 +1,16 @@
+{
+  "event_name": "Годовой корпоративный ужин",
+  "organization": "ООО «Невские Технологии»",
+  "city": "Санкт-Петербург",
+  "currency": "RUB",
+  "date": "2026-04-15",
+  "guest_count": 50,
+  "budget_per_person": 30,
+  "coordinator": "Анна Соколова",
+  "dietary_restrictions": {
+    "vegetarian": 10,
+    "gluten_free": 5,
+    "nut_allergy": 3
+  },
+  "courses_required": ["appetizer", "main", "dessert"]
+}

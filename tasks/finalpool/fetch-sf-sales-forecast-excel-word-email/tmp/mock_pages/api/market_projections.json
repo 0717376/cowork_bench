@@ -1,0 +1,31 @@
+{
+  "market_projections": [
+    {
+      "region": "Азиатско-Тихоокеанский регион",
+      "growth_rate": 8.5,
+      "market_size_m": 450
+    },
+    {
+      "region": "Европа",
+      "growth_rate": 3.2,
+      "market_size_m": 380
+    },
+    {
+      "region": "Латинская Америка",
+      "growth_rate": 6.8,
+      "market_size_m": 210
+    },
+    {
+      "region": "Ближний Восток",
+      "growth_rate": 5.4,
+      "market_size_m": 180
+    },
+    {
+      "region": "Северная Америка",
+      "growth_rate": 4.1,
+      "market_size_m": 520
+    }
+  ],
+  "forecast_period": "Q2 2026",
+  "source": "Global Market Intelligence"
+}

@@ -1,0 +1,16 @@
+{
+  "needed_mcp_servers": [
+    "clickhouse",
+    "teamly",
+    "emails",
+    "excel",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "python_execute",
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history"
+  ],
+  "meta": {}
+}

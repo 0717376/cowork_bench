@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "terminal",
+    "filesystem",
+    "insales",
+    "pdf-tools",
+    "excel",
+    "word",
+    "forms"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

@@ -1,0 +1,11 @@
+{
+  "training_date": "2026-03-17",
+  "training_location": "Казань",
+  "eligible_departments": [
+    "Продажи",
+    "Маркетинг"
+  ],
+  "min_experience_years": 3,
+  "max_employees": 5,
+  "seat_class": "Эконом"
+}

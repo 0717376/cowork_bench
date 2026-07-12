@@ -1,0 +1,17 @@
+{
+  "needed_mcp_servers": [
+    "terminal",
+    "insales",
+    "playwright_with_chunk",
+    "excel",
+    "google_calendar",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

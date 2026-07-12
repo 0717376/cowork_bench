@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "event": "Импульс-2026",
+  "city": "Москва",
+  "attendees": 500,
+  "budget_per_person_rub": 1500,
+  "currency": "RUB",
+  "stakeholders_email": "events@company.ru"
+}

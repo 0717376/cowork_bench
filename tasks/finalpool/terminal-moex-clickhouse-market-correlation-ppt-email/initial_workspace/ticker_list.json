@@ -1,0 +1,15 @@
+{
+  "stocks": [
+    "SBER.ME",
+    "GAZP.ME",
+    "LKOH.ME",
+    "TCSG.ME",
+    "MGNT.ME"
+  ],
+  "benchmarks": [
+    "MTSS.ME"
+  ],
+  "analysis_period": "YTD",
+  "presentation_slides_min": 6,
+  "email_recipient": "cfo@company.com"
+}

@@ -1,0 +1,27 @@
+{
+  "survey_title": "Training Feedback Survey",
+  "questions": {
+    "q1": "Overall Training Satisfaction",
+    "q2": "Which module was most useful?",
+    "q3": "What improvements would you suggest?",
+    "q4": "Would you recommend this training to colleagues?",
+    "q5": "Preferred training format"
+  },
+  "responses": [
+    {"respondent": "employee1@company.com", "satisfaction": 4, "most_useful_module": "Методы визуализации данных", "improvement": "Больше практических упражнений", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee2@company.com", "satisfaction": 5, "most_useful_module": "Модуль статистического анализа", "improvement": "Добавить реальные кейсы", "recommend": "Yes", "preferred_format": "Online"},
+    {"respondent": "employee3@company.com", "satisfaction": 3, "most_useful_module": "Проектирование дашбордов", "improvement": "Короче занятия с перерывами", "recommend": "No", "preferred_format": "Hybrid"},
+    {"respondent": "employee4@company.com", "satisfaction": 4, "most_useful_module": "Методология A/B-тестирования", "improvement": "Больше интерактивного контента", "recommend": "Yes", "preferred_format": "In-Person"},
+    {"respondent": "employee5@company.com", "satisfaction": 3, "most_useful_module": "Очистка и подготовка данных", "improvement": "Улучшить материалы перед курсом", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee6@company.com", "satisfaction": 5, "most_useful_module": "Прогнозное моделирование", "improvement": "Добавить возможность сертификации", "recommend": "No", "preferred_format": "Online"},
+    {"respondent": "employee7@company.com", "satisfaction": 4, "most_useful_module": "Методы визуализации данных", "improvement": "Больше групповых проектов", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee8@company.com", "satisfaction": 2, "most_useful_module": "Проектирование опросов", "improvement": "Сократить время лекций", "recommend": "No", "preferred_format": "In-Person"},
+    {"respondent": "employee9@company.com", "satisfaction": 4, "most_useful_module": "Модуль статистического анализа", "improvement": "Добавить продвинутые темы", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee10@company.com", "satisfaction": 5, "most_useful_module": "Проектирование дашбордов", "improvement": "Лучше распределить темп подачи материала", "recommend": "Yes", "preferred_format": "Online"},
+    {"respondent": "employee11@company.com", "satisfaction": 3, "most_useful_module": "Основы машинного обучения", "improvement": "Больше учебных наборов данных", "recommend": "No", "preferred_format": "Hybrid"},
+    {"respondent": "employee12@company.com", "satisfaction": 4, "most_useful_module": "Очистка и подготовка данных", "improvement": "Добавить сессии взаимной проверки", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee13@company.com", "satisfaction": 3, "most_useful_module": "Методология A/B-тестирования", "improvement": "Добавить менторский компонент", "recommend": "Yes", "preferred_format": "Online"},
+    {"respondent": "employee14@company.com", "satisfaction": 5, "most_useful_module": "Прогнозное моделирование", "improvement": "Больше отраслевых примеров", "recommend": "Yes", "preferred_format": "Hybrid"},
+    {"respondent": "employee15@company.com", "satisfaction": 4, "most_useful_module": "Методы визуализации данных", "improvement": "Гибкий график занятий", "recommend": "Yes", "preferred_format": "In-Person"}
+  ]
+}

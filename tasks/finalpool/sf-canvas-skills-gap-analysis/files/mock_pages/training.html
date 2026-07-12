@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сопоставление курсов обучения — портал компетенций</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f4f8; }
+        h1 { color: #1a365d; }
+        h2 { color: #2d3748; margin-top: 30px; }
+        .nav { background: #2d3748; padding: 10px 20px; margin-bottom: 20px; }
+        .nav a { color: white; text-decoration: none; margin-right: 20px; }
+        .nav a:hover { text-decoration: underline; }
+        table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        th { background: #2b6cb0; color: white; padding: 12px 15px; text-align: left; }
+        td { padding: 10px 15px; border-bottom: 1px solid #e2e8f0; }
+        tr:hover { background: #ebf8ff; }
+        .info { background: #e6fffa; border: 1px solid #81e6d9; padding: 10px; margin: 15px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">Компетенции</a>
+        <a href="training.html">Сопоставление курсов обучения</a>
+    </div>
+
+    <h1>Сопоставление курсов обучения</h1>
+    <p>В таблице ниже требуемые навыки сопоставлены с доступными курсами в нашей системе управления обучением (LMS). Названия курсов соответствуют предложениям на платформе LMS.</p>
+
+    <div class="info">
+        <strong>Примечание по интеграции:</strong> Данные о зачислениях на курсы и доле завершивших следует получать напрямую из LMS. Это сопоставление поддерживается командой L&amp;D.
+    </div>
+
+    <h2>Сопоставление навыков и курсов</h2>
+
+    <table id="training-mapping">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Skill Area</th>
+                <th>Recommended LMS Course</th>
+                <th>Course Type</th>
+                <th>Estimated Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Инженерия</td><td>Python Programming</td><td>Applied Analytics &amp; Algorithms</td><td>Technical</td><td>16 weeks</td></tr>
+            <tr><td>Инженерия</td><td>SQL &amp; Databases</td><td>Data-Driven Design</td><td>Technical</td><td>14 weeks</td></tr>
+            <tr><td>Инженерия</td><td>Cloud Architecture</td><td>Creative Computing &amp; Culture</td><td>Technical</td><td>12 weeks</td></tr>
+            <tr><td>Продажи</td><td>CRM Systems</td><td>Data-Driven Design</td><td>Business</td><td>14 weeks</td></tr>
+            <tr><td>Продажи</td><td>Data Analytics</td><td>Applied Analytics &amp; Algorithms</td><td>Analytical</td><td>16 weeks</td></tr>
+            <tr><td>Продажи</td><td>Negotiation</td><td>Global Governance &amp; Geopolitics</td><td>Soft Skills</td><td>10 weeks</td></tr>
+            <tr><td>Финансы</td><td>Accounting Standards</td><td>Foundations of Finance</td><td>Professional</td><td>16 weeks</td></tr>
+            <tr><td>Финансы</td><td>Excel &amp; Financial Modeling</td><td>Foundations of Finance</td><td>Technical</td><td>16 weeks</td></tr>
+            <tr><td>Финансы</td><td>Regulatory Compliance</td><td>Environmental Economics &amp; Ethics</td><td>Compliance</td><td>10 weeks</td></tr>
+            <tr><td>Кадры</td><td>HRIS Management</td><td>Data-Driven Design</td><td>Technical</td><td>14 weeks</td></tr>
+            <tr><td>Кадры</td><td>Labor Law &amp; Compliance</td><td>Global Governance &amp; Geopolitics</td><td>Legal</td><td>10 weeks</td></tr>
+            <tr><td>НИОКР</td><td>Research Methods</td><td>Biochemistry &amp; Bioinformatics</td><td>Research</td><td>16 weeks</td></tr>
+            <tr><td>НИОКР</td><td>Statistical Analysis</td><td>Applied Analytics &amp; Algorithms</td><td>Analytical</td><td>16 weeks</td></tr>
+            <tr><td>НИОКР</td><td>Machine Learning</td><td>Applied Analytics &amp; Algorithms</td><td>Technical</td><td>16 weeks</td></tr>
+            <tr><td>Операции</td><td>Process Optimization</td><td>Environmental Economics &amp; Ethics</td><td>Business</td><td>10 weeks</td></tr>
+            <tr><td>Операции</td><td>Supply Chain Management</td><td>Global Governance &amp; Geopolitics</td><td>Business</td><td>10 weeks</td></tr>
+            <tr><td>Операции</td><td>Quality Assurance</td><td>Biochemistry &amp; Bioinformatics</td><td>Technical</td><td>16 weeks</td></tr>
+            <tr><td>Поддержка</td><td>Customer Communication</td><td>Creative Computing &amp; Culture</td><td>Soft Skills</td><td>12 weeks</td></tr>
+            <tr><td>Поддержка</td><td>Technical Troubleshooting</td><td>Data-Driven Design</td><td>Technical</td><td>14 weeks</td></tr>
+            <tr><td>Поддержка</td><td>Ticket Management</td><td>Foundations of Finance</td><td>Process</td><td>16 weeks</td></tr>
+        </tbody>
+    </table>
+
+    <div class="info">
+        <strong>Политика зачисления:</strong> Подразделения с выявленными пробелами в навыках должны зачислить не менее 20% сотрудников на рекомендованные курсы в течение следующего квартала. По вопросам массового зачисления обращайтесь в L&amp;D по адресу ld@company.com.
+    </div>
+</body>
+</html>

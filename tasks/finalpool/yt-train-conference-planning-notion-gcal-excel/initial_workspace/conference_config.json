@@ -1,0 +1,26 @@
+{
+  "name": "Technology Innovation Forum 2026",
+  "dates": ["2026-03-12", "2026-03-13", "2026-03-14"],
+  "venue": "Великий Новгород",
+  "speakers": [
+    {
+      "name": "Dr. Alex Kim",
+      "email": "alex.kim@tech.edu",
+      "from_city": "Москва"
+    },
+    {
+      "name": "Dr. Maria Chen",
+      "email": "maria.chen@research.org",
+      "from_city": "Москва"
+    },
+    {
+      "name": "Prof. James Wu",
+      "email": "james.wu@university.edu",
+      "from_city": "Санкт-Петербург"
+    }
+  ],
+  "travel": {
+    "outbound_date": "2026-03-12",
+    "preferred_class": "эконом"
+  }
+}

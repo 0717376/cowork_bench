@@ -1,0 +1,34 @@
+{
+  "stock_data": [
+    {
+      "symbol": "GAZP.ME",
+      "sector": "Energy",
+      "latest_close": 208.63,
+      "ytd_return": 9.25
+    },
+    {
+      "symbol": "SBER.ME",
+      "sector": "Financial Services",
+      "latest_close": 120.82,
+      "ytd_return": -5.12
+    },
+    {
+      "symbol": "MTSS.ME",
+      "sector": "Communication Services",
+      "latest_close": 255.06,
+      "ytd_return": -3.59
+    },
+    {
+      "symbol": "MGNT.ME",
+      "sector": "Consumer Defensive",
+      "latest_close": 4182.19,
+      "ytd_return": -1.78
+    }
+  ],
+  "sector_targets": {
+    "Energy": 5.0,
+    "Financial Services": 2.0,
+    "Communication Services": -2.0,
+    "Consumer Defensive": -3.0
+  }
+}

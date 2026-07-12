@@ -1,0 +1,17 @@
+{
+  "needed_mcp_servers": [
+    "fetch",
+    "terminal",
+    "kulinar",
+    "excel",
+    "word",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

@@ -1,0 +1,11 @@
+{
+  "company": "ЭлектроСнаб",
+  "low_stock_threshold": 10,
+  "visit_criteria": "топ-5 поставщиков по объёму продаж",
+  "supplier_cities": ["Санкт-Петербург", "Казань"],
+  "travel_dates": {"spb": "2026-03-10", "kzn": "2026-03-17"},
+  "preferred_class": "Бизнес",
+  "preferred_trains": {"moscow_to_spb": "752А", "moscow_to_kzn": "716Г"},
+  "buyer_email": "buyer@elektrosnab.ru",
+  "summary_recipient": "procurement@elektrosnab.ru"
+}

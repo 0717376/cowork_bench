@@ -1,0 +1,29 @@
+{
+  "form": {
+    "title_contains_any": ["готовим вместе", "кулинарн", "обед", "lunch", "cooking"],
+    "min_questions": 5,
+    "required_field_keywords_any": [
+      ["фио", "имя", "name"],
+      ["почт", "email"],
+      ["отдел", "department"],
+      ["пищев", "ограничен", "diet", "restrict"],
+      ["блюд", "интересн", "dish", "excited"]
+    ]
+  },
+  "calendar_event": {
+    "summary_contains_any": ["готовим", "обед", "кулинар", "lunch", "cooking"],
+    "date": "2026-03-20",
+    "start_hour": 12,
+    "end_hour": 13,
+    "end_minute": 30,
+    "location_contains_any": ["кухн", "kitchen"]
+  },
+  "teamly_page": {
+    "title_contains_any": ["планирован", "готов", "кулинар", "обед", "planning", "cooking", "event"]
+  },
+  "email": {
+    "from": "hr@company.com",
+    "to": "all-staff@company.com",
+    "subject_contains_any": ["обед", "готов", "кулинар", "lunch", "cooking"]
+  }
+}

@@ -1,0 +1,29 @@
+[project]
+name = "hr1c_mcp_server"
+version = "0.1.0"
+description = "1С:ЗУП-подобный HR MCP-сервер (российская HR-БД поверх PostgreSQL)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mcp>=1.0.0",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.0.1",
+    "sqlparse>=0.5.3",
+    "tomli>=2.0.1",
+    "setuptools>=82.0.0",
+    "psycopg2-binary>=2.9",
+    "pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389"]
+
+[project.scripts]
+hr1c_mcp_server = "hr1c_mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hr1c_mcp_server"]

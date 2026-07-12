@@ -1,0 +1,21 @@
+# InSales MCP Server (RU SaaS store-engine mock)
+# Forked identity of the WooCommerce bundle; same PG-backed mock (schema "wc").
+# Cowork_Bench: ../../local_servers/woocommerce-mcp
+type: stdio
+name: insales
+params:
+  command: node
+  args:
+    - "${local_servers_paths}/woocommerce-mcp/dist/index.js"
+  env:
+    # Cowork-Bench uses the postgres-backed mock (schema "wc") instead of a
+    # real store backend. PG_* vars are injected automatically by the
+    # PGHOST→PG_HOST bridge in strands_runner/mcp_clients.py.
+    # Env var names kept (WORDPRESS_USE_PG mechanism) — internal ids, not identity.
+    WORDPRESS_USE_PG: "1"
+    WORDPRESS_SITE_URL: ""
+    WOOCOMMERCE_CONSUMER_KEY: "placeholder"
+    WOOCOMMERCE_CONSUMER_SECRET: "placeholder"
+  cwd: "${agent_workspace}"
+client_session_timeout_seconds: 10
+cache_tools_list: true

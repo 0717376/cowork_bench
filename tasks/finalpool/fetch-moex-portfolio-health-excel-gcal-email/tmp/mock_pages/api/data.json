@@ -1,0 +1,35 @@
+{
+  "market_indicators": [
+    {
+      "symbol": "SBER.ME",
+      "target_price": 148.0,
+      "analyst_rating": "Buy"
+    },
+    {
+      "symbol": "GAZP.ME",
+      "target_price": 205.0,
+      "analyst_rating": "Hold"
+    },
+    {
+      "symbol": "LKOH.ME",
+      "target_price": 4350.0,
+      "analyst_rating": "Buy"
+    },
+    {
+      "symbol": "TCSG.ME",
+      "target_price": 2350.0,
+      "analyst_rating": "Buy"
+    },
+    {
+      "symbol": "MGNT.ME",
+      "target_price": 4600.0,
+      "analyst_rating": "Hold"
+    },
+    {
+      "symbol": "MTSS.ME",
+      "target_price": 290.0,
+      "analyst_rating": "Hold"
+    }
+  ],
+  "source": "Financial Research API"
+}

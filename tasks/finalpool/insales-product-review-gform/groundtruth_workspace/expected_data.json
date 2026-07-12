@@ -1,0 +1,113 @@
+{
+  "low_rated_products": [
+    {
+      "id": 61,
+      "name": "dlx hmt Women Watch Casual Dress Analog Luxury Quartz Wrist Watches Stainless Steel Watch (Silver, Set of 2)",
+      "rating": 3.5,
+      "sales": 76,
+      "category": "Часы"
+    },
+    {
+      "id": 21,
+      "name": "Robustrion Smart Trifold Hard Back Flip Stand Case Cover for Lenovo Tab M10 HD 2nd Gen TB-X306X / Smart Tab M10 HD 2nd Gen...",
+      "rating": 3.71,
+      "sales": 135,
+      "category": "Электроника"
+    },
+    {
+      "id": 25,
+      "name": "boAt Wave Call Smart Watch, Smart Talk with Advanced Dedicated Bluetooth Calling Chip, 1.69” HD Display with 550 NITS & 7...",
+      "rating": 4.0,
+      "sales": 170,
+      "category": "Электроника"
+    },
+    {
+      "id": 76,
+      "name": "DALI ALTECO C-1 100 Watt 2.0 Channel Speaker with Dolby Atmos (Black)",
+      "rating": 4.0,
+      "sales": 167,
+      "category": "Аудио"
+    },
+    {
+      "id": 13,
+      "name": "ZEBRONICS Zeb-100HB 4 Ports USB Hub for Laptop, PC Computers, Plug & Play, Backward Compatible - Black",
+      "rating": 4.0,
+      "sales": 166,
+      "category": "Электроника"
+    }
+  ],
+  "affected_customers": [
+    {
+      "id": 1,
+      "email": "emily.johnson@x.dummyjson.com",
+      "first_name": "Эмилия",
+      "last_name": "Иванов"
+    },
+    {
+      "id": 2,
+      "email": "michael.williams@x.dummyjson.com",
+      "first_name": "Михаил",
+      "last_name": "Васильев"
+    },
+    {
+      "id": 12,
+      "email": "mia.rodriguez@x.dummyjson.com",
+      "first_name": "Мия",
+      "last_name": "Рогов"
+    },
+    {
+      "id": 13,
+      "email": "noah.hernandez@x.dummyjson.com",
+      "first_name": "Ной",
+      "last_name": "Герасимов"
+    },
+    {
+      "id": 14,
+      "email": "charlotte.lopez@x.dummyjson.com",
+      "first_name": "Шарлотта",
+      "last_name": "Логинов"
+    },
+    {
+      "id": 21,
+      "email": "madison.collins@x.dummyjson.com",
+      "first_name": "Мадина",
+      "last_name": "Колосов"
+    },
+    {
+      "id": 25,
+      "email": "harper.kelly@x.dummyjson.com",
+      "first_name": "Дарья",
+      "last_name": "Ковалёв"
+    },
+    {
+      "id": 29,
+      "email": "henry.hill@x.dummyjson.com",
+      "first_name": "Генрих",
+      "last_name": "Холмов"
+    },
+    {
+      "id": 31,
+      "email": "gabriel.adams@x.dummyjson.com",
+      "first_name": "Гавриил",
+      "last_name": "Адамов"
+    },
+    {
+      "id": 35,
+      "email": "jack.ward@x.dummyjson.com",
+      "first_name": "Яков",
+      "last_name": "Воронов"
+    },
+    {
+      "id": 42,
+      "email": "avery.carter@x.dummyjson.com",
+      "first_name": "Авдотья",
+      "last_name": "Карташов"
+    },
+    {
+      "id": 44,
+      "email": "scarlett.wright@x.dummyjson.com",
+      "first_name": "Скарлетт",
+      "last_name": "Рыжов"
+    }
+  ]
+}

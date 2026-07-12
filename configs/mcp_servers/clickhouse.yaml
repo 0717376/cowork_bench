@@ -1,0 +1,38 @@
+# clickhouse — RU cloud DWH identity (fork of the snowflake MCP).
+# Postgres-backed adapter over schema sf_data; SAME tool surface as snowflake.
+# Bundle: ../../local_servers/mcp-clickhouse-server (server identity russified to ClickHouse).
+# Seed values russified by db/zzz_clickhouse_after_init.sql (deterministic relabel map).
+type: stdio
+name: clickhouse
+params:
+  command: uv
+  args:
+    - "--directory"
+    - "${local_servers_paths}/mcp-clickhouse-server"
+    - "run"
+    - "mcp_snowflake_server"
+    - "--account"
+    - "local_pg"
+    - "--warehouse"
+    - "local"
+    - "--user"
+    - "eigent"
+    - "--private_key_path"
+    - ""
+    - "--role"
+    - "PUBLIC"
+    - "--database"
+    - "cowork_gym"
+    - "--schema"
+    - "sf"
+    - "--allow_write"
+    - "--exclude-json-results"
+  env:
+    PG_USER: eigent
+    PG_PASSWORD: camel
+    PG_HOST: cowork_pg
+    PG_PORT: "5432"
+    PG_DATABASE: cowork_gym
+  cwd: "${agent_workspace}"
+client_session_timeout_seconds: 120
+cache_tools_list: true

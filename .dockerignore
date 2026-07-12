@@ -1,0 +1,29 @@
+# Secrets — never copy into the image
+.env
+.env.local
+.env.*.local
+
+# VCS history (may contain private infra in older commits)
+.git
+.gitignore
+
+# Python / build caches
+.venv
+__pycache__
+*.pyc
+*.pyo
+
+# Node
+node_modules
+
+# Runtime outputs / scratch
+dumps
+_test_workspace
+benchmark_logs
+
+# Private notes / archives
+STATUS.md
+docs/archive
+
+# OS cruft
+.DS_Store

@@ -1,0 +1,23 @@
+{
+  "event": "Импульс-2026",
+  "attendees": 500,
+  "budget_per_person_rub": 1500,
+  "total_budget_rub": 750000,
+  "dietary_counts": {
+    "Вегетарианец": 70,
+    "Веган": 40,
+    "Халяль": 55,
+    "Без глютена": 35,
+    "Обычное": 300
+  },
+  "deliverables": {
+    "excel": "Catering_Plan.xlsx (sheets: Menu, Dietary_Summary, Summary)",
+    "word": "Catering_Proposal.docx",
+    "forms": "опрос пищевых предпочтений >=3 вопросов",
+    "email": "events@company.ru",
+    "calendar": "событие(я) с дедлайнами для вендоров"
+  },
+  "menu_min_dishes": 6,
+  "menu_max_dishes": 8,
+  "menu_source": "kulinar"
+}

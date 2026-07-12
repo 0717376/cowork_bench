@@ -1,0 +1,22 @@
+{
+  "Financial Services": {
+    "primary": "SBER.ME",
+    "peers": ["VTBR.ME", "TCSG.ME", "MOEX.ME", "SPBE.ME"]
+  },
+  "Energy": {
+    "primary": "GAZP.ME",
+    "peers": ["LKOH.ME", "ROSN.ME", "NVTK.ME", "TATN.ME"]
+  },
+  "Oil & Gas": {
+    "primary": "LKOH.ME",
+    "peers": ["GAZP.ME", "ROSN.ME", "SNGS.ME", "TATN.ME"]
+  },
+  "Consumer Defensive": {
+    "primary": "MGNT.ME",
+    "peers": ["FIVE.ME", "FIXP.ME", "LENT.ME", "BELU.ME"]
+  },
+  "Communication Services": {
+    "primary": "MTSS.ME",
+    "peers": ["RTKM.ME", "VKCO.ME", "YNDX.ME", "OZON.ME"]
+  }
+}

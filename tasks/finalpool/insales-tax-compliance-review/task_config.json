@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "playwright_with_chunk",
+    "terminal",
+    "insales",
+    "excel",
+    "word",
+    "pdf-tools",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "python_execute",
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history"
+  ],
+  "meta": {}
+}

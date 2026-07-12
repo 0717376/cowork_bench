@@ -1,0 +1,34 @@
+{
+  "benchmarks": [
+    {
+      "department": "Инженерия",
+      "industry_avg": 66816
+    },
+    {
+      "department": "Финансы",
+      "industry_avg": 79324
+    },
+    {
+      "department": "Кадры",
+      "industry_avg": 67899
+    },
+    {
+      "department": "Операции",
+      "industry_avg": 72812
+    },
+    {
+      "department": "НИОКР",
+      "industry_avg": 74771
+    },
+    {
+      "department": "Продажи",
+      "industry_avg": 77904
+    },
+    {
+      "department": "Поддержка",
+      "industry_avg": 61709
+    }
+  ],
+  "source": "Сервис кадровой аналитики (HR Analytics API)",
+  "date": "2026-03-01"
+}

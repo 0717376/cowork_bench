@@ -1,0 +1,26 @@
+{
+  "review_topic": "Transformer Architectures in NLP",
+  "methodology_categories": {
+    "Architecture Design": {
+      "description": "Статьи, предлагающие новые архитектуры моделей или структурные нововведения",
+      "keywords": ["architecture", "model", "layer", "design", "structure", "mechanism"]
+    },
+    "Training Methods": {
+      "description": "Статьи о методах обучения, оптимизации или стратегиях обучения",
+      "keywords": ["training", "pre-training", "fine-tuning", "optimization", "learning", "scaling"]
+    },
+    "Applications": {
+      "description": "Статьи о применении трансформеров к конкретным задачам или областям NLP",
+      "keywords": ["translation", "summarization", "classification", "generation", "task", "benchmark"]
+    },
+    "Survey": {
+      "description": "Статьи, которые обозревают, систематизируют или комплексно анализируют область",
+      "keywords": ["survey", "review", "overview", "comprehensive", "challenges", "directions"]
+    }
+  },
+  "output_files": {
+    "word_document": "Transformer_Literature_Review.docx",
+    "excel_analysis": "Research_Paper_Analysis.xlsx"
+  },
+  "teamly_space": "Research Paper Tracker"
+}

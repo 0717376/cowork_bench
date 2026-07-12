@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "terminal",
+    "insales",
+    "moex-finance",
+    "pptx",
+    "teamly",
+    "emails",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

@@ -1,0 +1,21 @@
+# WooCommerce MCP Server
+# Source: https://github.com/lockon-n/woocommerce-mcp
+# Toolathlon Version: The same
+# Cowork_Bench: ../../local_servers/woocommerce-mcp
+type: stdio
+name: woocommerce
+params:
+  command: node
+  args:
+    - "${local_servers_paths}/woocommerce-mcp/dist/index.js"
+  env:
+    # Cowork-Bench uses the postgres-backed mock (schema "wc") instead of a
+    # real WordPress server. PG_* vars are injected automatically by the
+    # PGHOST→PG_HOST bridge in strands_runner/mcp_clients.py.
+    WORDPRESS_USE_PG: "1"
+    WORDPRESS_SITE_URL: ""
+    WOOCOMMERCE_CONSUMER_KEY: "placeholder"
+    WOOCOMMERCE_CONSUMER_SECRET: "placeholder"
+  cwd: "${agent_workspace}"
+client_session_timeout_seconds: 10
+cache_tools_list: true

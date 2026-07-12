@@ -1,0 +1,26 @@
+{
+  "date": "2026-05-26",
+  "source": "Управление инвестиционных исследований",
+  "sectors": {
+    "Технологии": {
+      "outlook": "Positive",
+      "growth_forecast": 12.5,
+      "risk_level": "Moderate"
+    },
+    "Потребительский сектор": {
+      "outlook": "Neutral",
+      "growth_forecast": 5.0,
+      "risk_level": "Low"
+    },
+    "Энергетика": {
+      "outlook": "Cautious",
+      "growth_forecast": 3.0,
+      "risk_level": "High"
+    },
+    "Финансы": {
+      "outlook": "Positive",
+      "growth_forecast": 8.0,
+      "risk_level": "Moderate"
+    }
+  }
+}

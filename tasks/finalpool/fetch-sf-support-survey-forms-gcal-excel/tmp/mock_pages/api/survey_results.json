@@ -1,0 +1,207 @@
+{
+  "survey_title": "Опрос удовлетворённости поддержкой клиентов, I квартал 2026",
+  "collection_period": "1 января - 28 февраля 2026",
+  "total_respondents": 20,
+  "responses": [
+    {
+      "respondent_id": "RESP-001",
+      "overall_satisfaction": 5,
+      "response_time_rating": 5,
+      "resolution_quality_rating": 5,
+      "agent_professionalism": 5,
+      "priority_experienced": "High",
+      "issue_type": "Bug",
+      "comment": "Быстрое устранение критической ошибки. Отличная команда поддержки."
+    },
+    {
+      "respondent_id": "RESP-002",
+      "overall_satisfaction": 2,
+      "response_time_rating": 1,
+      "resolution_quality_rating": 3,
+      "agent_professionalism": 4,
+      "priority_experienced": "Low",
+      "issue_type": "Feature Request",
+      "comment": "Слишком долго ждал ответа. Более 24 часов на простой запрос."
+    },
+    {
+      "respondent_id": "RESP-003",
+      "overall_satisfaction": 4,
+      "response_time_rating": 4,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 5,
+      "priority_experienced": "Medium",
+      "issue_type": "Performance Issue",
+      "comment": "В целом хороший опыт, решение было основательным."
+    },
+    {
+      "respondent_id": "RESP-004",
+      "overall_satisfaction": 1,
+      "response_time_rating": 1,
+      "resolution_quality_rating": 1,
+      "agent_professionalism": 2,
+      "priority_experienced": "High",
+      "issue_type": "Incident",
+      "comment": "Критический инцидент решали более 6 часов. Недопустимо для высокого приоритета."
+    },
+    {
+      "respondent_id": "RESP-005",
+      "overall_satisfaction": 3,
+      "response_time_rating": 3,
+      "resolution_quality_rating": 3,
+      "agent_professionalism": 4,
+      "priority_experienced": "Medium",
+      "issue_type": "Bug",
+      "comment": "Средний опыт. Ничего особенного, но проблему решили."
+    },
+    {
+      "respondent_id": "RESP-006",
+      "overall_satisfaction": 5,
+      "response_time_rating": 5,
+      "resolution_quality_rating": 5,
+      "agent_professionalism": 5,
+      "priority_experienced": "High",
+      "issue_type": "Performance Issue",
+      "comment": "Поразительно быстрый отклик на критическую проблему производительности."
+    },
+    {
+      "respondent_id": "RESP-007",
+      "overall_satisfaction": 2,
+      "response_time_rating": 2,
+      "resolution_quality_rating": 2,
+      "agent_professionalism": 3,
+      "priority_experienced": "Low",
+      "issue_type": "Service Request",
+      "comment": "Пришлось писать повторно несколько раз. Утомительный процесс."
+    },
+    {
+      "respondent_id": "RESP-008",
+      "overall_satisfaction": 4,
+      "response_time_rating": 4,
+      "resolution_quality_rating": 5,
+      "agent_professionalism": 5,
+      "priority_experienced": "Medium",
+      "issue_type": "Bug",
+      "comment": "Быстрое решение, и исправление было надёжным. Спасибо за обратную связь."
+    },
+    {
+      "respondent_id": "RESP-009",
+      "overall_satisfaction": 3,
+      "response_time_rating": 2,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 4,
+      "priority_experienced": "Low",
+      "issue_type": "Feature Request",
+      "comment": "Решение было хорошим, но первоначальный отклик был медленным."
+    },
+    {
+      "respondent_id": "RESP-010",
+      "overall_satisfaction": 4,
+      "response_time_rating": 4,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 4,
+      "priority_experienced": "High",
+      "issue_type": "Incident",
+      "comment": "Хорошая обработка инцидента. Хотелось бы более быстрой эскалации."
+    },
+    {
+      "respondent_id": "RESP-011",
+      "overall_satisfaction": 1,
+      "response_time_rating": 1,
+      "resolution_quality_rating": 2,
+      "agent_professionalism": 3,
+      "priority_experienced": "Medium",
+      "issue_type": "Performance Issue",
+      "comment": "Проблема не решена полностью спустя две недели. Очень разочарован."
+    },
+    {
+      "respondent_id": "RESP-012",
+      "overall_satisfaction": 5,
+      "response_time_rating": 5,
+      "resolution_quality_rating": 5,
+      "agent_professionalism": 5,
+      "priority_experienced": "High",
+      "issue_type": "Bug",
+      "comment": "Идеальный опыт поддержки. Проблему решили в течение часа."
+    },
+    {
+      "respondent_id": "RESP-013",
+      "overall_satisfaction": 3,
+      "response_time_rating": 3,
+      "resolution_quality_rating": 3,
+      "agent_professionalism": 3,
+      "priority_experienced": "Medium",
+      "issue_type": "Technical Issue",
+      "comment": "Поддержка приемлемая, но можно быть проактивнее."
+    },
+    {
+      "respondent_id": "RESP-014",
+      "overall_satisfaction": 2,
+      "response_time_rating": 2,
+      "resolution_quality_rating": 3,
+      "agent_professionalism": 4,
+      "priority_experienced": "Low",
+      "issue_type": "Maintenance",
+      "comment": "Ждал 3 дня простого запроса на обслуживание."
+    },
+    {
+      "respondent_id": "RESP-015",
+      "overall_satisfaction": 4,
+      "response_time_rating": 4,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 5,
+      "priority_experienced": "Medium",
+      "issue_type": "Bug",
+      "comment": "Эффективное решение. Агент очень компетентный."
+    },
+    {
+      "respondent_id": "RESP-016",
+      "overall_satisfaction": 3,
+      "response_time_rating": 3,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 4,
+      "priority_experienced": "High",
+      "issue_type": "Performance Issue",
+      "comment": "Опыт неплохой, но ожидал более быстрого отклика для высокого приоритета."
+    },
+    {
+      "respondent_id": "RESP-017",
+      "overall_satisfaction": 5,
+      "response_time_rating": 5,
+      "resolution_quality_rating": 5,
+      "agent_professionalism": 5,
+      "priority_experienced": "Medium",
+      "issue_type": "Service Request",
+      "comment": "Превосходный сервис. Запрос обработали в течение нескольких часов."
+    },
+    {
+      "respondent_id": "RESP-018",
+      "overall_satisfaction": 2,
+      "response_time_rating": 1,
+      "resolution_quality_rating": 2,
+      "agent_professionalism": 3,
+      "priority_experienced": "Low",
+      "issue_type": "Feature Request",
+      "comment": "Несколько дней без обновлений. Плохая коммуникация."
+    },
+    {
+      "respondent_id": "RESP-019",
+      "overall_satisfaction": 4,
+      "response_time_rating": 4,
+      "resolution_quality_rating": 4,
+      "agent_professionalism": 4,
+      "priority_experienced": "High",
+      "issue_type": "Incident",
+      "comment": "Инцидент обработан хорошо. Своевременные обновления на всём протяжении."
+    },
+    {
+      "respondent_id": "RESP-020",
+      "overall_satisfaction": 3,
+      "response_time_rating": 3,
+      "resolution_quality_rating": 3,
+      "agent_professionalism": 3,
+      "priority_experienced": "Medium",
+      "issue_type": "Bug",
+      "comment": "Обычный опыт. Жаловаться не на что."
+    }
+  ]
+}

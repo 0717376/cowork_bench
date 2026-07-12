@@ -1,0 +1,8 @@
+Metric,Description,Weight
+Revenue,Общая выручка категории,High
+Units_Sold,Общее количество проданных единиц в категории,Medium
+Avg_Price,Средняя цена продажи за единицу,Medium
+Avg_Rating,Средний пользовательский рейтинг отзывов,High
+Market_Growth,Темп роста рынка год к году,High
+Opportunity_Score,Темп роста умноженный на рейтинг,High
+Target_Achievement,Процент выручки относительно цели,Medium

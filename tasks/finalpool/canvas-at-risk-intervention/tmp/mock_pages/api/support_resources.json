@@ -1,0 +1,58 @@
+[
+  {
+    "type": "tutoring",
+    "subject": "Finance",
+    "availability": "Пн-Пт 9:00-17:00",
+    "contact": "tutoring-finance@university.edu",
+    "location": "Библиотека, ауд. 201"
+  },
+  {
+    "type": "tutoring",
+    "subject": "Biochemistry",
+    "availability": "Пн-Пт 10:00-16:00",
+    "contact": "tutoring-bio@university.edu",
+    "location": "Корпус естественных наук, ауд. 305"
+  },
+  {
+    "type": "tutoring",
+    "subject": "Analytics",
+    "availability": "Пн-Ср 9:00-17:00",
+    "contact": "tutoring-analytics@university.edu",
+    "location": "Вычислительный центр, ауд. 102"
+  },
+  {
+    "type": "tutoring",
+    "subject": "Economics",
+    "availability": "Вт-Чт 10:00-16:00",
+    "contact": "tutoring-econ@university.edu",
+    "location": "Корпус социальных наук, ауд. 410"
+  },
+  {
+    "type": "study_group",
+    "subject": "Computing",
+    "availability": "Пн-Пт 14:00-18:00",
+    "contact": "study-groups@university.edu",
+    "location": "Студенческий центр, ауд. 115"
+  },
+  {
+    "type": "study_group",
+    "subject": "Design",
+    "availability": "Ср-Пт 13:00-17:00",
+    "contact": "study-groups@university.edu",
+    "location": "Лаборатория дизайна, ауд. 220"
+  },
+  {
+    "type": "study_group",
+    "subject": "Governance",
+    "availability": "Вт-Чт 14:00-17:00",
+    "contact": "study-groups@university.edu",
+    "location": "Гуманитарный корпус, ауд. 330"
+  },
+  {
+    "type": "counseling",
+    "subject": "General",
+    "availability": "По предварительной записи, Пн-Пт",
+    "contact": "counseling@university.edu",
+    "location": "Корпус студенческих служб"
+  }
+]

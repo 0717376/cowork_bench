@@ -1,0 +1,9 @@
+{
+  "team_size": 15,
+  "travel_date": "2026-03-10",
+  "origin": "Москва",
+  "destination": "Санкт-Петербург",
+  "preferred_class": "Эконом",
+  "dinner_time": "18:00",
+  "budget_per_person_rub": 7000
+}

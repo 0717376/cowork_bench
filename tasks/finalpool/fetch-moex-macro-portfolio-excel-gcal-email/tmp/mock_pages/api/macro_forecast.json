@@ -1,0 +1,13 @@
+{
+  "source": "Аналитический центр «Российские инвестиционные исследования»",
+  "report_date": "2026-03-01",
+  "region": "Россия",
+  "currency": "RUB",
+  "forecasts": [
+    {"quarter": "Q1 2026", "gdp_growth_pct": 2.3, "inflation_rate_pct": 6.5, "interest_rate_pct": 21.0},
+    {"quarter": "Q2 2026", "gdp_growth_pct": 2.2, "inflation_rate_pct": 6.0, "interest_rate_pct": 20.0},
+    {"quarter": "Q3 2026", "gdp_growth_pct": 1.9, "inflation_rate_pct": 5.5, "interest_rate_pct": 19.0},
+    {"quarter": "Q4 2026", "gdp_growth_pct": 2.0, "inflation_rate_pct": 5.0, "interest_rate_pct": 18.0}
+  ],
+  "notes": "Рост ВВП в 2026 году ожидается умеренным. Инфляция постепенно снижается к целевому уровню. Банк России, как ожидается, будет плавно снижать ключевую ставку."
+}

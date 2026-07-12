@@ -1,0 +1,13 @@
+# MOEX Finance — RU локализация yahoo-finance MCP.
+# Те же tool-имена, но данные по эмитентам Московской биржи из схемы PG moex.*.
+# Сиды в db/zzz_moex_after_init.sql.
+# Cowork_Bench: ../../local_servers/moex-finance-mcp
+type: stdio
+name: moex-finance
+params:
+  command: uv
+  args:
+    - "run"
+    - "${local_servers_paths}/moex-finance-mcp/server.py"
+client_session_timeout_seconds: 60
+cache_tools_list: true

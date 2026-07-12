@@ -1,0 +1,46 @@
+{
+  "departments": [
+    {
+      "name": "Engineering",
+      "head": "Светлана Чернова",
+      "email": "s.chernova@company.ru",
+      "phone": "+7-495-000-0101"
+    },
+    {
+      "name": "Finance",
+      "head": "Михаил Тарасов",
+      "email": "m.tarasov@company.ru",
+      "phone": "+7-495-000-0102"
+    },
+    {
+      "name": "HR",
+      "head": "Евгения Панкова",
+      "email": "e.pankova@company.ru",
+      "phone": "+7-495-000-0103"
+    },
+    {
+      "name": "Operations",
+      "head": "Дмитрий Ким",
+      "email": "d.kim@company.ru",
+      "phone": "+7-495-000-0104"
+    },
+    {
+      "name": "R&D",
+      "head": "Анна Фомина",
+      "email": "a.fomina@company.ru",
+      "phone": "+7-495-000-0105"
+    },
+    {
+      "name": "Sales",
+      "head": "Роман Мартынов",
+      "email": "r.martynov@company.ru",
+      "phone": "+7-495-000-0106"
+    },
+    {
+      "name": "Support",
+      "head": "Лариса Ванина",
+      "email": "l.vanina@company.ru",
+      "phone": "+7-495-000-0107"
+    }
+  ]
+}

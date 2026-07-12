@@ -1,0 +1,45 @@
+{
+  "faculty": [
+    {
+      "name": "Др. Смирнов",
+      "department": "Кафедра информатики",
+      "available_days": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ],
+      "preferred_time": "10:00-12:00",
+      "notes": "Доступен для заседаний по пересмотру учебного плана"
+    },
+    {
+      "name": "Др. Иванов",
+      "department": "Кафедра анализа данных",
+      "available_days": [
+        "Tuesday",
+        "Thursday"
+      ],
+      "preferred_time": "13:00-16:00",
+      "notes": "Может провести семинар по новым методам аналитики"
+    },
+    {
+      "name": "Др. Петров",
+      "department": "Кафедра информатики",
+      "available_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "preferred_time": "09:00-11:00",
+      "notes": "Эксперт по проектированию алгоритмов, доступен для консультаций"
+    }
+  ],
+  "scheduling_constraints": {
+    "min_notice_days": 7,
+    "max_meeting_duration_hours": 3,
+    "preferred_room": "Конференц-зал А",
+    "avoid_dates": [
+      "2026-03-15",
+      "2026-03-22"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "conference": "Международная конференция по методам машинного обучения",
+  "location": "Санкт-Петербург, Россия",
+  "dates": "28-30 марта 2026",
+  "sessions": [
+    {
+      "session_id": "S1",
+      "title": "Масштабирование и эффективность больших языковых моделей",
+      "date": "2026-03-28",
+      "time": "09:00-12:00",
+      "room": "Большой зал A",
+      "chair": "др. Анна Петрова",
+      "topics": ["scaling laws", "compute efficiency", "model size optimization"]
+    },
+    {
+      "session_id": "S2",
+      "title": "Методы выравнивания и обучение с обратной связью от человека",
+      "date": "2026-03-28",
+      "time": "14:00-17:00",
+      "room": "Большой зал B",
+      "chair": "др. Михаил Соколов",
+      "topics": ["RLHF", "instruction tuning", "human alignment", "safety"]
+    },
+    {
+      "session_id": "S3",
+      "title": "Модели с открытым исходным кодом и воспроизводимость",
+      "date": "2026-03-29",
+      "time": "09:00-12:00",
+      "room": "Конференц-зал 1",
+      "chair": "др. Светлана Кузнецова",
+      "topics": ["open source", "reproducibility", "model release", "democratization"]
+    },
+    {
+      "session_id": "S4",
+      "title": "Инфраструктура обучения и лучшие практики",
+      "date": "2026-03-29",
+      "time": "14:00-17:00",
+      "room": "Конференц-зал 2",
+      "chair": "др. Дмитрий Волков",
+      "topics": ["distributed training", "hardware optimization", "training methodology"]
+    },
+    {
+      "session_id": "S5",
+      "title": "Перспективы развития и панельная дискуссия",
+      "date": "2026-03-30",
+      "time": "09:00-12:00",
+      "room": "Большой зал A",
+      "chair": "др. Ольга Морозова",
+      "topics": ["future research", "AGI", "multimodal", "applications"]
+    }
+  ]
+}

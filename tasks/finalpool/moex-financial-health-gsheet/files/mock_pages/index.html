@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портал кредитного анализа</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        h1 { color: #1a2530; border-bottom: 3px solid #2980b9; padding-bottom: 12px; }
+        h2 { color: #2c3e50; margin-top: 30px; }
+        table { border-collapse: collapse; width: 70%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px 15px; text-align: left; }
+        th { background-color: #2980b9; color: white; }
+        tr:nth-child(even) { background-color: #ecf0f1; }
+        .benchmark-box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; width: 65%; }
+        .benchmark-item { margin: 12px 0; font-size: 16px; }
+        .threshold { font-weight: bold; color: #c0392b; }
+        .info { color: #7f8c8d; font-size: 14px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Портал кредитного анализа</h1>
+    <p>Корпоративные кредитные рейтинги и бенчмарки финансового здоровья. Последнее обновление: 2026-03-05.</p>
+
+    <h2>Кредитные рейтинги</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Компания</th>
+                <th>Credit Rating</th>
+                <th>Rating Outlook</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SBER.ME</td>
+                <td>Сбербанк</td>
+                <td>AA</td>
+                <td>Stable</td>
+            </tr>
+            <tr>
+                <td>GAZP.ME</td>
+                <td>Газпром</td>
+                <td>AA+</td>
+                <td>Stable</td>
+            </tr>
+            <tr>
+                <td>LKOH.ME</td>
+                <td>ЛУКОЙЛ</td>
+                <td>AAA</td>
+                <td>Positive</td>
+            </tr>
+            <tr>
+                <td>MGNT.ME</td>
+                <td>Магнит</td>
+                <td>A+</td>
+                <td>Stable</td>
+            </tr>
+            <tr>
+                <td>MTSS.ME</td>
+                <td>МТС</td>
+                <td>AA-</td>
+                <td>Negative</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Бенчмарки финансового здоровья</h2>
+    <div class="benchmark-box">
+        <p class="info">Profit Margin (рентабельность по чистой прибыли) определяется как Net Income, делённый на Total Revenue, выраженный в процентах.</p>
+        <div class="benchmark-item">Profit Margin больше <span class="threshold">15%</span>: <strong>Strong</strong></div>
+        <div class="benchmark-item">Profit Margin от <span class="threshold">5%</span> до <span class="threshold">15%</span> (включая 5%): <strong>Adequate</strong></div>
+        <div class="benchmark-item">Profit Margin меньше <span class="threshold">5%</span>: <strong>Weak</strong></div>
+    </div>
+    <p class="info">Используйте эти бенчмарки для классификации финансового здоровья по марже каждой компании в вашей оценке.</p>
+</body>
+</html>

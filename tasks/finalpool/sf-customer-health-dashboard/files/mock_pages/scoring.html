@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формула оценки - Портал здоровья клиентов</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); padding: 40px; }
+        h1 { color: #1a3a5c; border-bottom: 3px solid #e67e22; padding-bottom: 15px; }
+        h2 { color: #e67e22; margin-top: 30px; }
+        .formula-box { background: #f8f9fa; padding: 20px; border-left: 4px solid #e67e22; margin: 15px 0; border-radius: 4px; }
+        .formula-main { font-family: monospace; font-size: 16px; margin: 10px 0; color: #1a3a5c; font-weight: bold; }
+        .component { margin: 15px 0; padding: 15px; background: #fdf2e9; border-radius: 6px; }
+        .component h3 { color: #e67e22; margin-top: 0; }
+        .nav { margin-bottom: 20px; }
+        .nav a { color: #e67e22; text-decoration: none; margin-right: 20px; font-weight: 600; }
+        code { background: #eee; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Пороги здоровья</a>
+            <a href="scoring.html">Формула оценки</a>
+        </div>
+
+        <h1>Расчёт оценки здоровья</h1>
+
+        <div class="formula-box">
+            <p class="formula-main">health_score = 0.4 * recency_score + 0.3 * frequency_score + 0.3 * monetary_score</p>
+        </div>
+
+        <h2>Компоненты оценки</h2>
+
+        <div class="component">
+            <h3>Recency Score (вес: 0.4)</h3>
+            <p><code>recency_score = max(0, 100 - days_since_last_order)</code></p>
+            <p>Измеряет, насколько недавно клиент разместил свой последний заказ. Клиент, заказавший сегодня, получает 100 баллов. Оценка уменьшается на 1 балл за каждый день с момента последнего заказа, минимум 0.</p>
+            <p><strong>Примечание:</strong> используйте текущую дату на момент анализа для вычисления количества дней с момента последнего заказа.</p>
+        </div>
+
+        <div class="component">
+            <h3>Frequency Score (вес: 0.3)</h3>
+            <p><code>frequency_score = min(100, order_count * 10)</code></p>
+            <p>Измеряет частоту заказов. Каждый заказ добавляет 10 баллов, с потолком 100 (10+ заказов).</p>
+        </div>
+
+        <div class="component">
+            <h3>Monetary Score (вес: 0.3)</h3>
+            <p><code>monetary_score = min(100, lifetime_value / 50)</code></p>
+            <p>Измеряет траты клиента. Пожизненная ценность из записи клиента, делённая на 50, с потолком 100 (пожизненная ценность $5,000+).</p>
+        </div>
+
+        <h2>Примечания по реализации</h2>
+        <p>Все три компонентные оценки находятся в диапазоне от 0 до 100. Взвешенная сумма даёт оценку здоровья также в диапазоне от 0 до 100. Округлите итоговую оценку здоровья до 2 знаков после запятой.</p>
+    </div>
+</body>
+</html>

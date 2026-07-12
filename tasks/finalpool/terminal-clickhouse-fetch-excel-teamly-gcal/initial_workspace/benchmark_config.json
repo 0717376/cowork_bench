@@ -1,0 +1,28 @@
+{
+  "_комментарий": "Конфигурация сравнения внутренних метрик поддержки с отраслевыми бенчмарками SLA. benchmark_url — адрес страницы-панели с отраслевыми бенчмарками; названия месяцев в monthly_review_schedule оставлены на английском для разбора (April/May/June 2026).",
+  "benchmark_url": "http://localhost:30185",
+  "comparison_parameters": {
+    "avg_response_time": {
+      "direction": "lower_is_better",
+      "unit": "hours"
+    },
+    "customer_satisfaction": {
+      "direction": "higher_is_better",
+      "unit": "score_out_of_5"
+    },
+    "sla_compliance_rate": {
+      "direction": "higher_is_better",
+      "unit": "percentage"
+    }
+  },
+  "monthly_review_schedule": {
+    "months": [
+      "April 2026",
+      "May 2026",
+      "June 2026"
+    ],
+    "day": "first Monday",
+    "time": "10:00 AM",
+    "duration_minutes": 90
+  }
+}

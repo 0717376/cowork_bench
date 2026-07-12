@@ -1,0 +1,33 @@
+"""Preprocess: clear writable schema data for clean state."""
+import os
+import argparse
+import psycopg2
+
+DB = {"host": os.environ.get("PGHOST", "localhost"), "port": 5432, "dbname": "cowork_gym", "user": "eigent", "password": "camel"}
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--agent_workspace", required=False)
+    parser.add_argument("--launch_time", required=False)
+    args = parser.parse_args()
+
+    conn = psycopg2.connect(**DB)
+    cur = conn.cursor()
+
+    # Clear email tables
+    for table in ["attachments", "sent_log", "drafts", "messages", "folders", "account_config"]:
+        cur.execute(f'DELETE FROM email."{table}"')
+
+    # Seed leak: quiz 78 'TypeScript Essentials Quiz' in course 1 skews Quiz_Count
+    # (groundtruth has AAA-2013J Quiz_Count=0); questions cascade.
+    cur.execute("DELETE FROM canvas.quizzes WHERE id = 78")
+
+    conn.commit()
+    cur.close()
+    conn.close()
+    print("Data cleared for schemas: email")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,9 @@
+{
+  "origin": "Москва",
+  "destination": "Санкт-Петербург",
+  "travel_date": "2026-03-10",
+  "return_same_day": true,
+  "team_size": 3,
+  "budget_total_rub": 40000,
+  "traveler_lead": "consultant@company.ru"
+}

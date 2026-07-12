@@ -1,0 +1,19 @@
+{
+  "needed_mcp_servers": [
+    "insales",
+    "clickhouse",
+    "excel",
+    "emails",
+    "google_sheet",
+    "word",
+    "terminal",
+    "google_calendar"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

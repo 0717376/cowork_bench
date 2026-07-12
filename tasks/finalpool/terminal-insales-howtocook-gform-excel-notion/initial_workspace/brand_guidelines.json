@@ -1,0 +1,18 @@
+{
+  "brand_name": "KitchenCraft Kits",
+  "tagline": "Готовь умнее, ешь лучше",
+  "color_palette": {
+    "primary": "#2E7D32",
+    "secondary": "#FF8F00",
+    "accent": "#1565C0"
+  },
+  "kit_naming_convention": "Используйте описательные названия по стилю готовки (например, 'Smoothie Starter Kit', 'Stir-Fry Master Kit')",
+  "packaging_requirements": {
+    "include_qr_code": true,
+    "recipe_card_size": "5x7 inches",
+    "max_recipes_per_kit": 10,
+    "min_recipes_per_kit": 3
+  },
+  "photography_style": "Вид сверху (flat-lay) при естественном освещении",
+  "launch_timeline": "II квартал 2026"
+}

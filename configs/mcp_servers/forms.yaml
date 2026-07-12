@@ -1,0 +1,17 @@
+# Forms (RU-локализация google-forms-mcp)
+# Cowork_Bench: ../../local_servers/forms-mcp
+# PG-backed mock; схема gform.* в Postgres
+type: stdio
+name: forms
+params:
+  command: node
+  args:
+    - "${local_servers_paths}/forms-mcp/build/index.js"
+  env:
+    PG_HOST: "cowork_pg"
+    PG_PORT: "5432"
+    PG_DATABASE: "cowork_gym"
+    PG_USER: "eigent"
+    PG_PASSWORD: "camel"
+client_session_timeout_seconds: 60
+cache_tools_list: true

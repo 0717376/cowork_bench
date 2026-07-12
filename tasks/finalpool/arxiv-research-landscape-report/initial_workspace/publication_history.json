@@ -1,0 +1,53 @@
+{
+  "group_name": "Лаборатория ML-исследований",
+  "period": "2024-2025",
+  "publications": [
+    {
+      "year": 2024,
+      "topic": "NLP",
+      "venue": "ACL",
+      "title": "Контекстные эмбеддинги для малоресурсных языков",
+      "citations": 45
+    },
+    {
+      "year": 2024,
+      "topic": "deep learning",
+      "venue": "NeurIPS",
+      "title": "Адаптивные расписания скорости обучения для тренировки трансформеров",
+      "citations": 82
+    },
+    {
+      "year": 2024,
+      "topic": "reinforcement learning",
+      "venue": "ICML",
+      "title": "Формирование вознаграждения для многоагентной кооперации",
+      "citations": 61
+    },
+    {
+      "year": 2025,
+      "topic": "knowledge graphs",
+      "venue": "AAAI",
+      "title": "Нейро-символьная интеграция для пополнения базы знаний",
+      "citations": 33
+    },
+    {
+      "year": 2025,
+      "topic": "optimization",
+      "venue": "ICLR",
+      "title": "Методы второго порядка для крупномасштабного обучения нейросетей",
+      "citations": 27
+    },
+    {
+      "year": 2025,
+      "topic": "generative models",
+      "venue": "CVPR",
+      "title": "Диффузионные модели для управляемой генерации изображений",
+      "citations": 19
+    }
+  ],
+  "summary": {
+    "total_papers": 6,
+    "primary_topics": ["NLP", "deep learning", "reinforcement learning", "knowledge graphs", "optimization", "generative models"],
+    "top_venues": ["NeurIPS", "ICML", "AAAI", "ACL", "ICLR", "CVPR"]
+  }
+}

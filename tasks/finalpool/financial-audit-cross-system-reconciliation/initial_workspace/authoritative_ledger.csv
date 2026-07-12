@@ -1,0 +1,15 @@
+Order ID,Date,Amount,Status
+WC-001,2024-01-05,125.50,completed
+WC-002,2024-01-06,89.99,completed
+WC-003,2024-01-08,245.00,completed
+WC-004,2024-01-10,156.75,completed
+WC-005,2024-01-15,310.00,completed
+WC-006,2024-01-18,78.50,pending
+WC-007,2024-01-20,201.00,completed
+WC-009,2024-02-05,92.25,completed
+WC-010,2024-02-10,167.50,completed
+WC-011,2024-02-20,234.00,completed
+WC-012,2024-02-18,501.25,completed
+WC-013,2024-03-02,154.75,completed
+WC-014,2024-03-08,278.50,completed
+WC-015,2024-03-12,189.99,completed

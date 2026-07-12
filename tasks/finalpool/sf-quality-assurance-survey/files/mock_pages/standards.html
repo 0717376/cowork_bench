@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чек-лист лучших практик — Портал стандартов качества</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); padding: 40px; }
+        h1 { color: #1a3a5c; border-bottom: 3px solid #2980b9; padding-bottom: 15px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { padding: 10px 15px; margin: 5px 0; background: #f8f9fa; border-left: 4px solid #27ae60; border-radius: 4px; }
+        .nav { margin-bottom: 20px; }
+        .nav a { color: #2980b9; text-decoration: none; margin-right: 20px; font-weight: 600; }
+        .nav a:hover { text-decoration: underline; }
+        .scoring { background: #fff3cd; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Целевые метрики</a>
+            <a href="standards.html">Лучшие практики</a>
+        </div>
+
+        <h1>Чек-лист лучших практик</h1>
+
+        <h2>Стандарты обработки тикетов</h2>
+        <ul class="checklist">
+            <li>Подтверждать получение всех тикетов с высоким приоритетом в течение 30 минут с момента создания</li>
+            <li>Предоставлять обновления статуса каждые 2 часа для тикетов с высоким приоритетом</li>
+            <li>Документировать анализ первопричин для всех тикетов типа «Ошибка» и «Инцидент»</li>
+            <li>Связываться с клиентом в течение 24 часов после решения обращения</li>
+            <li>Немедленно эскалировать тикеты, превышающие пороги SLA, руководителю команды</li>
+        </ul>
+
+        <h2>Стандарты коммуникации</h2>
+        <ul class="checklist">
+            <li>Использовать профессиональный и эмпатичный язык во всех взаимодействиях с клиентами</li>
+            <li>Указывать шаги для воспроизведения технических проблем</li>
+            <li>Указывать ориентировочные сроки решения в первом ответе</li>
+            <li>Предлагать альтернативные решения, когда основное исправление задерживается</li>
+        </ul>
+
+        <h2>Методология оценки качества</h2>
+        <div class="scoring">
+            <p>Каждый агент оценивается по трём измерениям:</p>
+            <p><strong>Оценка времени отклика:</strong> Доля тикетов, по которым первый отклик был в пределах целевого времени для соответствующего приоритета.</p>
+            <p><strong>Оценка удовлетворённости:</strong> Средняя оценка удовлетворённости клиентов по всем решённым тикетам.</p>
+            <p><strong>Оценка решения:</strong> Доля назначенных тикетов, успешно решённых.</p>
+            <p>Агент помечается на улучшение, если хотя бы одно измерение опускается ниже своего целевого порога.</p>
+        </div>
+    </div>
+</body>
+</html>

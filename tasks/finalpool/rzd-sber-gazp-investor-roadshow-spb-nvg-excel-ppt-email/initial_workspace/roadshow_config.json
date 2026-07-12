@@ -1,0 +1,14 @@
+{
+  "company_ticker": "SBER.ME",
+  "comparison_ticker": "GAZP.ME",
+  "roadshow_dates": ["2026-03-10", "2026-03-12"],
+  "cities": ["Санкт-Петербург", "Великий Новгород"],
+  "departure_city": "Москва",
+  "preferred_class": "Бизнес",
+  "preferred_trains": {
+    "moscow_to_spb": "752А",
+    "moscow_to_nvg": "818А"
+  },
+  "investor_email": "investors@fundmanager.ru",
+  "spb_partner_email": "spb_partners@finance.ru"
+}

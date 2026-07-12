@@ -1,0 +1,30 @@
+{
+  "name": "rzd-mcp",
+  "version": "0.1.0",
+  "main": "build/index.js",
+  "scripts": {
+    "prebuild": "rm -rf build/*",
+    "build": "tsc",
+    "postbuild": "chmod +x build/index.js",
+    "prepare": "npm run build",
+    "test": "tsc && node ./build/index.js"
+  },
+  "keywords": ["mcp", "rzd", "sapsan", "trains"],
+  "author": "cowork-bench",
+  "license": "MIT",
+  "description": "RZD (Russian Railways) MCP server backed by PostgreSQL — search Sapsan trains between Moscow and St. Petersburg.",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@types/pg": "^8.18.0",
+    "commander": "^14.0.0",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "pg": "^8.20.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.5.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,5 @@
+{
+  "note": "Эталоны не захардкожены. Оценка пересчитывает метрики набора и успеваемости вживую из canvas.* и проверяет лист Department_Metrics (Google Sheet), страницу 'At-Risk Intervention Plan' в Teamly, письмо на academic-advisors@university.edu и событие 'Advising Follow-up Meeting' (2026-06-12 14:00-15:00 UTC).",
+  "risk_thresholds": {"Critical": "avg_score < 60", "At Risk": "60 <= avg_score < 75", "On Track": "avg_score >= 75"},
+  "deliverables": ["enrollment.json", "performance.json", "at_risk.json", "risk_identifier.py", "Course Enrollment Analytics (Google Sheet)", "At-Risk Intervention Plan (Teamly)", "email", "Advising Follow-up Meeting (calendar)"]
+}

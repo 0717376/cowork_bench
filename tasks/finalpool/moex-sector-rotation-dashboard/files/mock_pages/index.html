@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследовательский портал по секторам МосБиржи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        h1 {
+            color: #1a3a5c;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c5f8a;
+            margin-top: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 15px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #1a3a5c;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .updated {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Исследовательский портал по секторам МосБиржи</h1>
+    <p>Внутренний аналитический дашборд для анализа секторальной ротации на Московской бирже. Данные отражают консенсус аналитиков по состоянию на май 2026 года.</p>
+
+    <h2>Целевые эталонные доходности по секторам (за период)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Сектор</th>
+                <th>Целевая эталонная доходность (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Financial Services</td><td>-3.0</td></tr>
+            <tr><td>Energy</td><td>5.0</td></tr>
+            <tr><td>Consumer Defensive</td><td>-2.0</td></tr>
+            <tr><td>Communication Services</td><td>-4.0</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Консенсус-рейтинги аналитиков</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Тикер</th>
+                <th>Сектор</th>
+                <th>Рейтинг аналитиков</th>
+                <th>Целевая цена (RUB)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>SBER.ME</td><td>Financial Services</td><td>Buy</td><td>140</td></tr>
+            <tr><td>GAZP.ME</td><td>Energy</td><td>Overweight</td><td>220</td></tr>
+            <tr><td>LKOH.ME</td><td>Energy</td><td>Hold</td><td>4000</td></tr>
+            <tr><td>MGNT.ME</td><td>Consumer Defensive</td><td>Neutral</td><td>4500</td></tr>
+            <tr><td>MTSS.ME</td><td>Communication Services</td><td>Outperform</td><td>280</td></tr>
+        </tbody>
+    </table>
+
+    <p class="updated">Последнее обновление: 2026-05-26 19:00 MSK</p>
+</body>
+</html>

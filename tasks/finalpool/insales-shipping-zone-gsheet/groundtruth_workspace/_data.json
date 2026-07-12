@@ -1,0 +1,51 @@
+{
+  "zone_stats": {
+    "Domestic US": {
+      "order_count": 100,
+      "total_revenue": 39418.17,
+      "avg_order_value": 394.18
+    },
+    "California": {
+      "order_count": 0,
+      "total_revenue": 0.0,
+      "avg_order_value": 0
+    },
+    "International": {
+      "order_count": 0,
+      "total_revenue": 0.0,
+      "avg_order_value": 0
+    }
+  },
+  "methods": [
+    {
+      "zone": "Доставка по РФ",
+      "method": "flat_rate",
+      "title": "Стандартная доставка"
+    },
+    {
+      "zone": "Доставка по РФ",
+      "method": "flat_rate",
+      "title": "Экспресс-доставка"
+    },
+    {
+      "zone": "Доставка по РФ",
+      "method": "free_shipping",
+      "title": "Бесплатная доставка (заказы > 100 ₽)"
+    },
+    {
+      "zone": "Москва",
+      "method": "flat_rate",
+      "title": "Стандартная (Москва)"
+    },
+    {
+      "zone": "Москва",
+      "method": "local_pickup",
+      "title": "Самовывоз из магазина"
+    },
+    {
+      "zone": "Международная",
+      "method": "flat_rate",
+      "title": "Международная доставка"
+    }
+  ]
+}

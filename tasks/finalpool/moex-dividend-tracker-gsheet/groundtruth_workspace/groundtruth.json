@@ -1,0 +1,49 @@
+{
+  "_note": "Эталон строится из схемы moex.* (тикеры .ME). Value для дивидендов = lastDividendValue (RUB); Dividend_Yield = trailingAnnualDividendYield (в %); Trailing_Annual_Rate = trailingAnnualDividendRate; Date(Dividend)=exDividendDate(YYYY-MM-DD); Stock Split => lastSplitFactor / lastSplitDate. Эти значения eval перечитывает из БД динамически, файл — только справочный снимок.",
+  "tickers": ["SBER.ME", "GAZP.ME", "LKOH.ME", "MGNT.ME", "TCSG.ME"],
+  "stock_actions": [
+    {
+      "Symbol": "GAZP.ME",
+      "Action_Type": "Dividend",
+      "Value": 51.03,
+      "Date": "2022-10-10",
+      "Dividend_Yield": 0.0,
+      "Trailing_Annual_Rate": 0.0
+    },
+    {
+      "Symbol": "LKOH.ME",
+      "Action_Type": "Dividend",
+      "Value": 278.0,
+      "Date": "2026-05-04",
+      "Dividend_Yield": 13.67543,
+      "Trailing_Annual_Rate": 541.0
+    },
+    {
+      "Symbol": "MGNT.ME",
+      "Action_Type": "Dividend",
+      "Value": 82.32,
+      "Date": "2026-06-24",
+      "Dividend_Yield": 0.0,
+      "Trailing_Annual_Rate": 0.0
+    },
+    {
+      "Symbol": "SBER.ME",
+      "Action_Type": "Dividend",
+      "Value": 37.64,
+      "Date": "2026-07-20",
+      "Dividend_Yield": 0.0,
+      "Trailing_Annual_Rate": 0.0
+    },
+    {
+      "Symbol": "SBER.ME",
+      "Action_Type": "Stock Split",
+      "Value": "1000:1",
+      "Date": "2007-07-18",
+      "Dividend_Yield": 0,
+      "Trailing_Annual_Rate": 0
+    }
+  ],
+  "dividend_stocks": ["GAZP.ME", "LKOH.ME", "MGNT.ME", "SBER.ME"],
+  "non_dividend_stocks": ["TCSG.ME"],
+  "total_actions": 5
+}

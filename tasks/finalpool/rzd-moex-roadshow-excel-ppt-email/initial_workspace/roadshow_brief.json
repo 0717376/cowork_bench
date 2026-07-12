@@ -1,0 +1,19 @@
+{
+  "task": "Подготовка инвестиционного роадшоу",
+  "travel_date": "2026-03-10",
+  "route": "Москва — Санкт-Петербург",
+  "recommended_train": "752А",
+  "seat_class": "Бизнес (Business Class)",
+  "stock_ticker": "MGNT.ME",
+  "price_history_days": 5,
+  "output_files": ["Roadshow_Prep.xlsx", "Roadshow_Agenda.pptx"],
+  "email_recipient": "roadshow@bank.com",
+  "email_subject": "Roadshow Travel and Prep Confirmed",
+  "ppt_slides": [
+    "Investor Roadshow - March 2026",
+    "Journey Details",
+    "Portfolio Overview",
+    "Meeting Schedule"
+  ],
+  "instructions": "Запроси детали бизнес-класса поезда 752А (утренний «Сапсан» Москва — Санкт-Петербург). Получи данные по акции MGNT, включая цены закрытия за последние 5 дней. Сведи всё в Excel, PowerPoint и письмо. Точные имена файлов, листов, колонок, заголовков слайдов и тему письма см. в задании (task.md)."
+}

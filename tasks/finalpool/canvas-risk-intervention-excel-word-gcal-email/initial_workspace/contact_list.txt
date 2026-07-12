@@ -1,0 +1,5 @@
+Контакты служб академической поддержки:
+- Учебная часть: academic-affairs@university.edu
+- Студенческий сервис: student-services@university.edu
+- Центр репетиторства: tutoring@university.edu
+- Техническая поддержка: it-help@university.edu

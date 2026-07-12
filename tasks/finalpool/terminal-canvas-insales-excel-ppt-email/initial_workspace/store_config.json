@@ -1,0 +1,19 @@
+{
+  "bookstore_name": "Университетский магазин «Техника и книги»",
+  "electronics_category_ids": [
+    1,
+    2
+  ],
+  "electronics_category_names": [
+    "Электроника",
+    "Камеры"
+  ],
+  "contacts": {
+    "bookstore_manager": "bookstore_manager@university.edu",
+    "academic_affairs": "academic_affairs@university.edu"
+  },
+  "loyalty_program": {
+    "registry_file": "student_bookstore_registry.csv",
+    "matching_field": "student_id to bookstore_customer_id"
+  }
+}

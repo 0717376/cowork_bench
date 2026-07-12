@@ -1,0 +1,28 @@
+{
+  "name": "teamly-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "teamly-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "description": "MCP-сервер Teamly — российский аналог Confluence: пространства и страницы поверх Postgres.",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "pg": "^8.13.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,18 @@
+# RZD (Russian Railways) ticket query — PostgreSQL-backed mock.
+# Mirrors the 12306-mcp pattern but uses the `rzd.*` schema and exposes
+# Russian-language tool descriptions for Sapsan/etc. between Moscow and SPB.
+# Cowork_Bench: ../../local_servers/rzd-mcp
+type: stdio
+name: rzd
+params:
+  command: node
+  args:
+    - "${local_servers_paths}/rzd-mcp/build/index.js"
+  env:
+    PG_HOST: "cowork_pg"
+    PG_PORT: "5432"
+    PG_DATABASE: "cowork_gym"
+    PG_USER: "eigent"
+    PG_PASSWORD: "camel"
+cache_tools_list: true
+client_session_timeout_seconds: 20

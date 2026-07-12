@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель эффективности секторов рынка</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #1a1a2e; color: #eee; }
+        h1 { color: #00d4ff; text-align: center; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .dashboard { max-width: 1000px; margin: 0 auto; }
+        .sector-card { background: #16213e; border-radius: 8px; padding: 20px; margin: 15px 0; border-left: 4px solid #00d4ff; }
+        .sector-name { font-size: 18px; font-weight: bold; color: #00d4ff; }
+        .metrics { display: flex; justify-content: space-between; margin-top: 10px; }
+        .metric { text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; }
+        .metric-label { font-size: 12px; color: #888; }
+        .positive { color: #00ff88; }
+        .negative { color: #ff4444; }
+        .neutral { color: #ffaa00; }
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        th { background: #0f3460; color: #eee; padding: 12px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #333; }
+        .consensus { padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+        .buy { background: #004d00; color: #00ff88; }
+        .hold { background: #4d4d00; color: #ffaa00; }
+        .sell { background: #4d0000; color: #ff4444; }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Еженедельная панель эффективности секторов рынка MOEX</h1>
+        <p class="subtitle">Период отчёта: 1-7 марта 2026 | Источник данных: Market Analytics Pro | Валюта: RUB</p>
+
+        <div class="sector-card">
+            <div class="sector-name">Энергетика</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value positive">+3.4%</div>
+                    <div class="metric-label">Недельная доходность</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">142.6</div>
+                    <div class="metric-label">Индекс сектора</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value positive">+18.7%</div>
+                    <div class="metric-label">Доходность с начала года</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Высокая</div>
+                    <div class="metric-label">Волатильность</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sector-card">
+            <div class="sector-name">Финансы</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value positive">+1.8%</div>
+                    <div class="metric-label">Недельная доходность</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">124.2</div>
+                    <div class="metric-label">Индекс сектора</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value positive">+9.6%</div>
+                    <div class="metric-label">Доходность с начала года</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Средняя</div>
+                    <div class="metric-label">Волатильность</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sector-card">
+            <div class="sector-name">Телекоммуникации</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value neutral">+0.4%</div>
+                    <div class="metric-label">Недельная доходность</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">96.3</div>
+                    <div class="metric-label">Индекс сектора</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value negative">-1.8%</div>
+                    <div class="metric-label">Доходность с начала года</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Низкая</div>
+                    <div class="metric-label">Волатильность</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sector-card">
+            <div class="sector-name">Потребительский сектор</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value negative">-1.5%</div>
+                    <div class="metric-label">Недельная доходность</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">101.7</div>
+                    <div class="metric-label">Индекс сектора</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value positive">+4.2%</div>
+                    <div class="metric-label">Доходность с начала года</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Средняя</div>
+                    <div class="metric-label">Волатильность</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sector-card">
+            <div class="sector-name">Технологии</div>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value positive">+2.6%</div>
+                    <div class="metric-label">Недельная доходность</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">133.8</div>
+                    <div class="metric-label">Индекс сектора</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value positive">+14.1%</div>
+                    <div class="metric-label">Доходность с начала года</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Высокая</div>
+                    <div class="metric-label">Волатильность</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="color: #00d4ff; margin-top: 40px;">Консенсус-рейтинги аналитиков</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Сектор</th>
+                    <th>Консенсус</th>
+                    <th>Средний потенциал роста к таргету</th>
+                    <th>Число аналитиков</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Энергетика</td>
+                    <td><span class="consensus buy">Активно покупать</span></td>
+                    <td>+21.5%</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Финансы</td>
+                    <td><span class="consensus buy">Покупать</span></td>
+                    <td>+12.4%</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>Телекоммуникации</td>
+                    <td><span class="consensus hold">Держать</span></td>
+                    <td>+5.7%</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Потребительский сектор</td>
+                    <td><span class="consensus buy">Покупать</span></td>
+                    <td>+8.9%</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Технологии</td>
+                    <td><span class="consensus buy">Активно покупать</span></td>
+                    <td>+19.3%</td>
+                    <td>31</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="subtitle" style="margin-top: 30px;">
+            Панель сформирована Market Analytics Pro v3.2 | Дисклеймер: только для информационных целей.
+        </p>
+    </div>
+</body>
+</html>

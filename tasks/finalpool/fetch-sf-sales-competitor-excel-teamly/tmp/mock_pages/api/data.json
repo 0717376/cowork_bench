@@ -1,0 +1,27 @@
+{
+  "benchmarks": [
+    {
+      "region": "Азиатско-Тихоокеанский регион",
+      "market_size_m": 439
+    },
+    {
+      "region": "Европа",
+      "market_size_m": 339
+    },
+    {
+      "region": "Латинская Америка",
+      "market_size_m": 453
+    },
+    {
+      "region": "Ближний Восток",
+      "market_size_m": 421
+    },
+    {
+      "region": "Северная Америка",
+      "market_size_m": 463
+    }
+  ],
+  "source": "Sales Market Benchmark API",
+  "metric": "market_size_m",
+  "date": "2026-03-01"
+}

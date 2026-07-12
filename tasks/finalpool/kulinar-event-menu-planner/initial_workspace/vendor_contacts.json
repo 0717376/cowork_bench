@@ -1,0 +1,14 @@
+{
+  "catering": {
+    "company": "Кейтеринг «Золотая Кухня»",
+    "contact": "Мария Соколова",
+    "email": "catering@vendor.com",
+    "phone": "+7 (812) 555-0123"
+  },
+  "supplies": {
+    "company": "Поставки для мероприятий «Ивент-Снаб»",
+    "contact": "Тимофей Рыков",
+    "email": "supplies@vendor.com",
+    "phone": "+7 (812) 555-0456"
+  }
+}

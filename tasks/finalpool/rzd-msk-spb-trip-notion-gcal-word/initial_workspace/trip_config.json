@@ -1,0 +1,9 @@
+{
+  "origin": "Москва",
+  "destination": "Санкт-Петербург",
+  "travel_date": "2026-03-10",
+  "return_same_day": true,
+  "preferred_class": "Эконом",
+  "budget_per_person": 20000,
+  "traveler": "consultant@company.ru"
+}

@@ -1,0 +1,56 @@
+{
+  "report_title": "Q4 2025 Investment Committee Briefing",
+  "sections": [
+    {
+      "name": "Revenue Overview",
+      "description": "Квартальная выручка по брендам продуктов с приростом QoQ"
+    },
+    {
+      "name": "Customer Analysis",
+      "description": "Топ-10 клиентов по сумме расходов с разбивкой по сегментам"
+    },
+    {
+      "name": "Market Context",
+      "description": "Динамика акций по ключевым рыночным индикаторам"
+    },
+    {
+      "name": "Combined Outlook",
+      "description": "Сравнение внутреннего роста с динамикой рынка"
+    },
+    {
+      "name": "Next Steps",
+      "description": "Пункты плана действий и запланированное продолжение"
+    }
+  ],
+  "kpis": [
+    "Total Q4 Revenue",
+    "Overall QoQ Growth Rate",
+    "Top Brand by Revenue",
+    "Number of Growing Brands",
+    "Market Benchmark Comparison"
+  ],
+  "output_files": {
+    "excel": "Investment_Committee_Briefing.xlsx",
+    "pptx": "Committee_Briefing.pptx",
+    "notes": "briefing_notes.txt"
+  },
+  "market_symbols": [
+    "SBER.ME",
+    "GAZP.ME",
+    "LKOH.ME",
+    "TCSG.ME",
+    "MGNT.ME"
+  ],
+  "quarters": {
+    "current": {
+      "label": "Q4 2025",
+      "start": "2025-10-01",
+      "end": "2025-12-31"
+    },
+    "previous": {
+      "label": "Q3 2025",
+      "start": "2025-07-01",
+      "end": "2025-09-30"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "terminal",
+    "moex-finance",
+    "google_sheet",
+    "pdf-tools",
+    "google_calendar",
+    "emails",
+    "filesystem"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

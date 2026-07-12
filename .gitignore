@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# Runtime outputs
+dumps/
+_test_workspace/
+tasks/finalpool/*/tmp/
+
+# OS
+.DS_Store
+
+# Local env (secrets — never commit)
+.env
+.env.local
+.env.*.local
+# Per-model profiles (contain API keys / internal endpoints)
+env/
+
+# Internal ops scripts / vendor-specific proxies — not part of the public benchmark
+scripts/gigachat_proxy.py
+scripts/nonstream_proxy.py
+scripts/use_model.sh
+scripts/scan_degeneration.py
+
+# Private project notes / personal run artifacts — contain internal model
+# endpoints, infra, and run logs; not part of the public benchmark.
+STATUS.md
+next_steps.md
+docs/archive/
+docs/RUN_PLAN.md
+docs/PRESENTATION.md
+docs/presentation.html
+docs/presentation.pdf
+benchmark_logs/
+EXPERIMENTS.local.md

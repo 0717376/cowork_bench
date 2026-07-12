@@ -1,0 +1,18 @@
+{
+  "needed_mcp_servers": [
+    "fetch",
+    "terminal",
+    "insales",
+    "moex-finance",
+    "excel",
+    "word",
+    "emails"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ],
+  "meta": {}
+}

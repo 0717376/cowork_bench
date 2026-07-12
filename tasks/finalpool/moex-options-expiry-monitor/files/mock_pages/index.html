@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портал мониторинга опционов</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        h1 { color: #1a2530; border-bottom: 3px solid #27ae60; padding-bottom: 12px; }
+        h2 { color: #2c3e50; margin-top: 30px; }
+        .param-box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; width: 65%; }
+        .param-item { margin: 12px 0; font-size: 16px; }
+        .threshold { font-weight: bold; color: #c0392b; }
+        .info { color: #7f8c8d; font-size: 14px; margin-top: 5px; }
+        table { border-collapse: collapse; width: 70%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px 15px; text-align: left; }
+        th { background-color: #27ae60; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Портал мониторинга опционных позиций</h1>
+    <p>Параметры риск-менеджмента для мониторинга опционных позиций. Последнее обновление: 2026-03-05.</p>
+
+    <h2>Пороги классификации риска</h2>
+    <div class="param-box">
+        <div class="param-item">Порог высокой подразумеваемой волатильности: <span class="threshold">40%</span></div>
+        <p class="info">Позиции со средней подразумеваемой волатильностью выше 40% классифицируются как "High IV" и требуют проверки.</p>
+
+        <div class="param-item">Окно алертов по близкой экспирации: <span class="threshold">7 дней</span></div>
+        <p class="info">Позиции, истекающие в течение 7 дней от текущей даты (на 2026-03-14 или ранее), требуют немедленного внимания.</p>
+
+        <div class="param-item">Порог Deep ITM: <span class="threshold">0.80</span> (страйк / текущая цена)</div>
+        <p class="info">Колл-опцион со страйком ниже 80% текущей цены акции считается "Deep In-The-Money".</p>
+
+        <div class="param-item">Порог Deep OTM: <span class="threshold">1.20</span> (страйк / текущая цена)</div>
+        <p class="info">Колл-опцион со страйком выше 120% текущей цены акции считается "Deep Out-of-The-Money".</p>
+    </div>
+
+    <h2>Правила классификации уровня риска</h2>
+    <table>
+        <thead>
+            <tr><th>Условие</th><th>Уровень риска (Risk Level)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Средняя IV выше 40% И экспирация в пределах 7 дней</td><td>High IV + Near Expiry</td></tr>
+            <tr><td>Только средняя IV выше 40%</td><td>High IV</td></tr>
+            <tr><td>Только экспирация в пределах 7 дней</td><td>Near Expiry</td></tr>
+            <tr><td>Ни одно из условий</td><td>Normal</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Рекомендации по позициям</h2>
+    <div class="param-box">
+        <div class="param-item">Для позиций "High IV + Near Expiry": рассмотрите немедленное закрытие или ролл.</div>
+        <div class="param-item">Для позиций "Near Expiry": запланируйте проверку до экспирации.</div>
+        <div class="param-item">Для позиций "High IV": отслеживайте изменения подразумеваемой волатильности ежедневно.</div>
+        <div class="param-item">Создайте события в календаре для всех near-expiry позиций с заголовком "Options Expiry Alert: [SYMBOL]" на дату экспирации с 09:00 до 09:30.</div>
+    </div>
+</body>
+</html>

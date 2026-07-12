@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель комплаенс-контроля портфеля</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        table { border-collapse: collapse; width: 60%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px 15px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #ecf0f1; }
+        .limit-box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; width: 55%; }
+        .limit-item { margin: 10px 0; font-size: 16px; }
+        .limit-value { font-weight: bold; color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <h1>Панель комплаенс-контроля портфеля</h1>
+    <p>Внутренний портал комплаенс-контроля для мониторинга аллокации портфеля. Последнее обновление: 2026-05-26.</p>
+
+    <h2>Лимиты аллокации</h2>
+    <div class="limit-box">
+        <div class="limit-item">Максимальная доля одной бумаги: <span class="limit-value">30%</span></div>
+        <div class="limit-item">Максимальная доля сектора: <span class="limit-value">40%</span></div>
+    </div>
+
+    <h2>Рейтинги риска по тикерам</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Тикер</th>
+                <th>Компания</th>
+                <th>Сектор</th>
+                <th>Рейтинг риска</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SBER.ME</td>
+                <td>ПАО Сбербанк</td>
+                <td>Финансы</td>
+                <td>Средний</td>
+            </tr>
+            <tr>
+                <td>GAZP.ME</td>
+                <td>ПАО Газпром</td>
+                <td>Энергетика</td>
+                <td>Средне-высокий</td>
+            </tr>
+            <tr>
+                <td>LKOH.ME</td>
+                <td>ПАО ЛУКОЙЛ</td>
+                <td>Энергетика</td>
+                <td>Средне-высокий</td>
+            </tr>
+            <tr>
+                <td>MGNT.ME</td>
+                <td>ПАО Магнит</td>
+                <td>Потребительский сектор</td>
+                <td>Средний</td>
+            </tr>
+            <tr>
+                <td>MTSS.ME</td>
+                <td>ПАО МТС</td>
+                <td>Телекоммуникации</td>
+                <td>Низкий</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "needed_mcp_servers": [
+    "playwright_with_chunk",
+    "terminal",
+    "kulinar",
+    "excel",
+    "teamly",
+    "word"
+  ],
+  "needed_local_tools": [
+    "handle_overlong_tool_outputs",
+    "manage_context",
+    "history",
+    "python_execute"
+  ]
+}
