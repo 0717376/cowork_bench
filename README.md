@@ -162,6 +162,7 @@ AGENT_ENTRY=my_runner.py AGENT_PHASE_AWARE=1 \
 | **Qwen 3.6 27B** (Dense, FP8) | 262k | 309 / 496 — **62.3%** | solo |
 | **Qwen 3.6 35B-A3B** (FP8, MoE) | 262k | 300 / 496 — **60.5%** | solo |
 | **Qwen 3.5 122B-A10B** (MoE) | 262k | 265 / 496 — **53.4%** | parallel |
+| **Gemma 4 31B** (Dense, BF16) | 262k | 257 / 496 — **51.8%** | parallel + solo |
 | **GigaCode Agentic v1.6** \* (80B-A3B, FP8) | 262k | 120 / 421 — **28.5%** | parallel, ex-stall |
 | **GigaChat-3.5** (432B-A28B) \*\*\* | 130k | 119 / 496 — **24.0%** | solo |
 | **GigaChat-3-Max** \*\* (90B Dense, FP8) | 130k | 41 / 375 — **10.9%** | parallel, ex-stall |
