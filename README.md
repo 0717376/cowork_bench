@@ -162,7 +162,7 @@ AGENT_ENTRY=my_runner.py AGENT_PHASE_AWARE=1 \
 | **Qwen 3.6 27B** (Dense, FP8) | 262k | 309 / 496 — **62.3%** | solo |
 | **Qwen 3.6 35B-A3B** (FP8, MoE) | 262k | 300 / 496 — **60.5%** | solo |
 | **Qwen 3.5 122B-A10B** (MoE) | 262k | 265 / 496 — **53.4%** | parallel |
-| **Gemma 4 31B** (Dense, BF16) | 262k | 257 / 496 — **51.8%** | parallel + solo |
+| **Gemma 4 31B** (Dense, FP8) † | 262k | 243 / 496 — **49.0%** | solo |
 | **GigaCode Agentic v1.6** \* (80B-A3B, FP8) | 262k | 120 / 421 — **28.5%** | parallel, ex-stall |
 | **GigaChat-3.5** (432B-A28B) \*\*\* | 130k | 119 / 496 — **24.0%** | solo |
 | **GigaChat-3-Max** \*\* (90B Dense, FP8) | 130k | 41 / 375 — **10.9%** | parallel, ex-stall |
@@ -173,6 +173,8 @@ AGENT_ENTRY=my_runner.py AGENT_PHASE_AWARE=1 \
 > \*\* **GigaChat-3-Max** — исключены инфра-фейлы: 59 stream-stall + 22 × HTTP 500 + 32 task_timeout. Метрика **10.9%** = 41/375 дошедших до эвала (сырой pass@1 = 41/496 = 8.3%).
 >
 > \*\*\* **GigaChat-3.5 / 3-Pro** — прогнаны через legacy `functions`-API с транслирующим прокси (**1 инструмент за ход** — структурный гандикап); реальное окно ~130k. 3-Pro — без reasoning.
+>
+> † **Gemma 4 31B** — self-hosted FP8 (`RedHatAI/gemma-4-31B-it-FP8-dynamic`), vLLM 0.24, idle 600с. Чистый single-shot solo-прогон, **0 инфра-столлов**. Прежние 51.8% были best-of-many на BF16 (аккумуляция лучших раундов из-за столлов gemma4-парсера); заменены честным одиночным прогоном.
 
 Бенч даёт большой разброс по силе моделей (65% → 5%); внутри семейства Qwen влияют и размерность, и поколение: 3.6-модели 27B/35B держат уровень флагмана 3.5-397B (60–63%), тогда как 3.5-122B — 53.4%.
 
