@@ -21,6 +21,8 @@ from zoneinfo import ZoneInfo
 
 import psycopg2
 
+from utils.required_artifacts import require_readable_docx
+
 DB_CONFIG = {
     "host": os.environ.get("PGHOST", "localhost"),
     "port": 5432,
@@ -220,6 +222,9 @@ def main():
     parser.add_argument("--launch_time", required=False)
     parser.add_argument("--res_log_file", required=False)
     args = parser.parse_args()
+
+    # Fail-closed gate: the mandatory Word deliverable must be a readable DOCX.
+    require_readable_docx(os.path.join(args.agent_workspace, "Novgorod_Trip_Itinerary.docx"))
 
     check_word(args.agent_workspace)
     check_gcal()

@@ -38,6 +38,11 @@ EXPECTED_FL_PAPERS = {
 # Critical checks: any failure => overall FAIL regardless of accuracy.
 CRITICAL_CHECKS = {
     "Excel file exists",
+    "Excel readable",
+    "Sheet 'Paper Details' exists",
+    "Sheet 'Summary' exists",
+    "Paper Details required headers",
+    "Summary required headers",
     "Teamly hub page exists",
     "Teamly: >= 4 paper entries",
     "Summary: Total_Papers between 4-6",
@@ -172,6 +177,8 @@ def check_excel(agent_workspace):
 
     record("Sheet 'Paper Details' exists", True)
     header = details_rows[0] if details_rows else []
+    required = ['Paper_ID', 'Title', 'Authors', 'Year', 'Abstract_Length']
+    record("Paper Details required headers", all(find_col(header, [name]) is not None for name in required), f"Header: {header}")
     data_rows = details_rows[1:] if len(details_rows) > 1 else []
 
     record("Paper Details has >= 4 rows", len(data_rows) >= 4,
@@ -201,6 +208,8 @@ def check_excel(agent_workspace):
         return
 
     record("Sheet 'Summary' exists", True)
+    summary_header = summary_rows[0] if summary_rows else []
+    record("Summary required headers", all(find_col(summary_header, [name]) is not None for name in ['Metric', 'Value']), f"Header: {summary_header}")
 
     metrics = {}
     for row in summary_rows:

@@ -201,10 +201,16 @@ def record_critical(label, passed):
 def check_local_excel(workspace, expected_rows, expected_summary):
     path = os.path.join(workspace, "financial_health_report.xlsx")
     if not os.path.exists(path):
+        record_critical("Local Excel file exists", False)
         print(f"FAIL: financial_health_report.xlsx not found at {path}")
         return 0, 1
 
-    wb = openpyxl.load_workbook(path, data_only=True)
+    try:
+        wb = openpyxl.load_workbook(path, data_only=True)
+    except Exception as exc:
+        record_critical("Local Excel file readable", False)
+        print(f"FAIL: unreadable financial_health_report.xlsx: {exc}")
+        return 0, 1
     total_checks = 0
     passed_checks = 0
 
@@ -215,6 +221,8 @@ def check_local_excel(workspace, expected_rows, expected_summary):
             sheet_name = name
             break
     if not sheet_name:
+        record_critical("Income Analysis sheet exists", False)
+        wb.close()
         print("FAIL: 'Income Analysis' sheet not found")
         total_checks += 1
         return 0, total_checks
@@ -225,6 +233,8 @@ def check_local_excel(workspace, expected_rows, expected_summary):
     INCOME_COLS = ["Symbol", "Company_Name", "Total_Revenue", "Net_Income",
                    "Gross_Profit", "Operating_Income", "Profit_Margin_Pct", "Operating_Margin_Pct"]
 
+    record_critical("Income Analysis required headers", [str(v).strip().lower() for v in next(ws.iter_rows(values_only=True), ())][:len(INCOME_COLS)] == [v.lower() for v in INCOME_COLS])
+    record_critical("Income Analysis expected companies", sorted(str(r[0]) for r in rows_data if r and r[0] is not None) == sorted(r['Symbol'] for r in expected_rows))
     for i, exp_row in enumerate(expected_rows):
         if i >= len(rows_data):
             print(f"FAIL: Missing row {i+1} in Income Analysis")
@@ -264,6 +274,7 @@ def check_local_excel(workspace, expected_rows, expected_summary):
             sheet_name = name
             break
     if not sheet_name:
+        record_critical("Health Assessment sheet exists", False)
         print("FAIL: 'Health Assessment' sheet not found")
         total_checks += 1
     else:
@@ -271,6 +282,8 @@ def check_local_excel(workspace, expected_rows, expected_summary):
         rows_data = list(ws.iter_rows(min_row=2, values_only=True))
         HEALTH_COLS = ["Symbol", "Credit_Rating", "Rating_Outlook", "Profit_Margin_Pct", "Margin_Health"]
 
+        record_critical("Health Assessment required headers", [str(v).strip().lower() for v in next(ws.iter_rows(values_only=True), ())][:len(HEALTH_COLS)] == [v.lower() for v in HEALTH_COLS])
+        record_critical("Health Assessment expected companies", sorted(str(r[0]) for r in rows_data if r and r[0] is not None) == sorted(r['Symbol'] for r in expected_rows))
         for i, exp_row in enumerate(expected_rows):
             if i >= len(rows_data):
                 print(f"FAIL: Missing row {i+1} in Health Assessment")
@@ -307,6 +320,7 @@ def check_local_excel(workspace, expected_rows, expected_summary):
             sheet_name = name
             break
     if not sheet_name:
+        record_critical("Summary sheet exists", False)
         print("FAIL: 'Summary' sheet not found")
         total_checks += len(expected_summary)
     else:

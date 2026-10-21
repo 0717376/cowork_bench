@@ -113,7 +113,13 @@ def evaluate(agent_ws, gt_data, today):
         return
     record("Inventory_Forecast.xlsx exists", True)
 
-    wb = openpyxl.load_workbook(path, data_only=True)
+    try:
+        wb = openpyxl.load_workbook(path, data_only=True)
+    except Exception as exc:
+        record("Inventory_Forecast.xlsx readable", False, type(exc).__name__)
+        for check in CRITICAL_CHECKS:
+            record(check, False, "unreadable workbook")
+        return
 
     # ---- Stock Analysis sheet ----
     sa = load_sheet_rows(wb, "Stock Analysis")
@@ -128,6 +134,10 @@ def evaluate(agent_ws, gt_data, today):
         record("Stock Analysis has required columns",
                all(n in idx for n in needed),
                f"missing: {[n for n in needed if n not in idx]}")
+        # Dependent semantic checks must fail normally when headers are absent,
+        # rather than raising KeyError before the grader writes its result.
+        if not all(n in idx for n in needed):
+            idx = {}
         for r in sa[1:]:
             if not r or r[0] is None:
                 continue
@@ -141,7 +151,7 @@ def evaluate(agent_ws, gt_data, today):
 
         # (structural) reorder=Yes count tolerance
         yes_rows = [r for r in stock_rows
-                    if str(r[idx["Needs_Reorder"]]).strip().lower() == "yes"]
+                    if idx and str(r[idx["Needs_Reorder"]]).strip().lower() == "yes"]
         exp_re = gt_data["reorder_count"]
         record(f"Needs_Reorder=Yes count ~{exp_re} (+/-3)",
                abs(len(yes_rows) - exp_re) <= 3, f"got {len(yes_rows)}")
@@ -181,6 +191,8 @@ def evaluate(agent_ws, gt_data, today):
         record("Reorder Schedule has required columns",
                all(n in sidx for n in sneeded),
                f"missing: {[n for n in sneeded if n not in sidx]}")
+        if not all(n in sidx for n in sneeded):
+            sidx = {}
         for r in rs[1:]:
             if not r or r[0] is None:
                 continue

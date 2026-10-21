@@ -14,6 +14,8 @@ import os
 import sys
 import openpyxl
 
+from utils.required_artifacts import require_readable_docx
+
 
 # Содержательные (обязательные) проверки. Провал любой => итог FAIL.
 CRITICAL_CHECKS = {
@@ -105,6 +107,9 @@ def main():
     parser.add_argument("--launch_time", required=False)
     parser.add_argument("--res_log_file", required=False)
     args = parser.parse_args()
+
+    # Fail-closed gate: the mandatory Word deliverable must be a readable DOCX.
+    require_readable_docx(os.path.join(args.agent_workspace, "Coupon_Strategy.docx"))
 
     task_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     gt_dir = args.groundtruth_workspace or os.path.join(task_root, "groundtruth_workspace")

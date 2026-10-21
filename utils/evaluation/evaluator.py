@@ -70,7 +70,7 @@ class TaskEvaluator:
         # Finally, it's successful
         return {
             "pass": True,
-            "details": "All evaluation checks passed, and task status is success"
+            "details": "Task status is success; the configured evaluation policy accepted the result"
         }
     
     @staticmethod

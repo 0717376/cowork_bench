@@ -8,6 +8,7 @@ ISSUE_TYPE values are russified centrally by db/zzz_clickhouse_after_init.sql
 (Bug->Ошибка, ...). PRIORITY (High/Medium/Low) and STATUS (Closed) are NOT
 russified and stay English.
 """
+from utils.required_artifacts import require_readable_xlsx
 import argparse
 import os
 import sys
@@ -57,6 +58,8 @@ def main():
     parser.add_argument("--launch_time", required=False)
     parser.add_argument("--res_log_file", required=False)
     args = parser.parse_args()
+    required_ws = args.agent_workspace or os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    require_readable_xlsx(os.path.join(required_ws, "Support_Resolution_Analysis.xlsx"))
 
     # checks: list of (name, passed, is_critical)
     checks = []
@@ -205,7 +208,7 @@ def main():
     agent_ws = args.agent_workspace or os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     xlsx_path = os.path.join(agent_ws, "Support_Resolution_Analysis.xlsx")
     if not os.path.exists(xlsx_path):
-        add("Support_Resolution_Analysis.xlsx exists", False, critical=False)
+        add("Support_Resolution_Analysis.xlsx exists", False, critical=True)
     else:
         add("Support_Resolution_Analysis.xlsx exists", True, critical=False)
         try:
@@ -219,7 +222,7 @@ def main():
             wb.close()
             add("XLSX has >=2 rows per sheet", ok, critical=False)
         except Exception as e:
-            add(f"XLSX readable ({e})", False, critical=False)
+            add(f"XLSX readable ({e})", False, critical=True)
 
     # --- Scoring ---
     total = len(checks)

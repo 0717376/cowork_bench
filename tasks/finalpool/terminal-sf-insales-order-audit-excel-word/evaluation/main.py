@@ -19,6 +19,8 @@ import sys
 import openpyxl
 import psycopg2
 
+from utils.required_artifacts import require_readable_docx
+
 def num_close(a, b, rel_tol=0.15, abs_tol=0.5):
     return abs(float(a) - float(b)) <= max(abs_tol, abs(float(b)) * rel_tol)
 
@@ -365,6 +367,9 @@ def main():
     parser.add_argument("--launch_time", required=False)
     parser.add_argument("--res_log_file", required=False)
     args = parser.parse_args()
+
+    # Fail-closed gate: the mandatory Word deliverable must be a readable DOCX.
+    require_readable_docx(os.path.join(args.agent_workspace, "Audit_Findings.docx"))
 
     # Live DW aggregates (russified table); fall back to groundtruth snapshot.
     dw = fetch_dw_aggregates()
