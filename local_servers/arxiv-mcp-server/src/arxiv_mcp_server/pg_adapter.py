@@ -9,6 +9,7 @@ import psycopg2.extras
 from typing import Dict, Any, List
 import mcp.types as types
 from .config import Settings
+from .query_syntax import SearchQuery, compile_query
 from .tools import search_tool, download_tool, list_tool, read_tool  # noqa: F401
 
 logger = logging.getLogger("arxiv-mcp-server")
@@ -52,47 +53,30 @@ def _row_to_result(r: Dict[str, Any]) -> Dict[str, Any]:
 async def handle_search(arguments: Dict[str, Any]) -> List[types.TextContent]:
     """Handle paper search using PostgreSQL instead of arXiv API."""
     try:
-        max_results = min(int(arguments.get("max_results", 10)), settings.MAX_RESULTS)
+        max_results = max(1, min(int(arguments.get("max_results", 10)), settings.MAX_RESULTS))
         base_query = arguments["query"]
         date_from = arguments.get("date_from")
         date_to = arguments.get("date_to")
         categories = arguments.get("categories")
         sort_by = arguments.get("sort_by", "relevance")
 
-        # Exact arXiv-ID lookup
+        # Exact IDs use the same date/category filters as every other query.
         id_match = re.fullmatch(r"(?:arxiv:)?(\d{4}\.\d{4,5})(v\d+)?", base_query.strip(), re.IGNORECASE)
         if id_match:
-            conn = _get_conn()
-            try:
-                with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-                    cur.execute("""
-                        SELECT id, title, authors, summary, categories, primary_category,
-                               published, doi, journal_ref, comment, pdf_url, links
-                        FROM arxiv.papers
-                        WHERE id = %s OR id LIKE %s
-                    """, (id_match.group(1), id_match.group(1) + 'v%'))
-                    rows = cur.fetchall()
-            finally:
-                conn.close()
-            if rows:
-                results = [_row_to_result(r) for r in rows]
-                response_data = {"total_results": len(results), "papers": results}
-                return [types.TextContent(type="text", text=json.dumps(response_data, indent=2))]
-            # ID not found locally: fall through to full-text search
-
+            search = SearchQuery('(id = %s OR id LIKE %s)',
+                                 (id_match.group(1), id_match.group(1) + 'v%'),
+                                 '0.0::double precision', (), None)
+        else:
+            search = compile_query(base_query)
         conn = _get_conn()
         try:
             with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
                 conditions = []
                 params = []
 
-                # Full-text search
                 if base_query.strip():
-                    conditions.append(
-                        "to_tsvector('english', coalesce(title,'') || ' ' || coalesce(summary,'')) "
-                        "@@ plainto_tsquery('english', %s)"
-                    )
-                    params.append(base_query)
+                    conditions.append('(' + search.predicate + ')')
+                    params.extend(search.params)
 
                 # Date filtering
                 if date_from:
@@ -112,16 +96,15 @@ async def handle_search(arguments: Dict[str, Any]) -> List[types.TextContent]:
 
                 where_clause = " AND ".join(conditions) if conditions else "TRUE"
 
+                filter_values = list(params)
+
                 # Sort
                 if sort_by == "date":
                     order_clause = "published DESC NULLS LAST"
                 else:
                     if base_query.strip():
-                        order_clause = (
-                            "ts_rank(to_tsvector('english', coalesce(title,'') || ' ' || coalesce(summary,'')), "
-                            "plainto_tsquery('english', %s)) DESC"
-                        )
-                        params.append(base_query)
+                        order_clause = '(' + search.rank + ') DESC, published DESC NULLS LAST, id'
+                        params.extend(search.rank_params)
                     else:
                         order_clause = "published DESC NULLS LAST"
 
@@ -138,16 +121,22 @@ async def handle_search(arguments: Dict[str, Any]) -> List[types.TextContent]:
                 cur.execute(sql, params)
                 rows = cur.fetchall()
 
-            # Fallback to ILIKE if FTS returns nothing
-            if not rows and base_query.strip():
+            # Literal fallback is only for plain text, and must retain every
+            # date/category filter. It must never undo OR/field/NOT semantics.
+            if not rows and search.plain_text:
                 with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-                    cur.execute("""
+                    filters = conditions[1:]
+                    filter_params = filter_values[len(search.params):]
+                    fallback = "(title ILIKE %s OR summary ILIKE %s)"
+                    if filters:
+                        fallback += ' AND ' + ' AND '.join(filters)
+                    pattern = '%' + search.plain_text.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_') + '%'
+                    cur.execute(f"""
                         SELECT id, title, authors, summary, categories, primary_category,
                                published, doi, journal_ref, comment, pdf_url, links
-                        FROM arxiv.papers
-                        WHERE title ILIKE %s OR summary ILIKE %s
-                        LIMIT %s
-                    """, (f'%{base_query}%', f'%{base_query}%', max_results))
+                        FROM arxiv.papers WHERE {fallback}
+                        ORDER BY published DESC NULLS LAST, id LIMIT %s
+                    """, [pattern, pattern, *filter_params, max_results])
                     rows = cur.fetchall()
 
             results = [_row_to_result(r) for r in rows]

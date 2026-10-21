@@ -104,7 +104,7 @@ def prepare_workspace(agent_workspace):
     if not os.path.exists(mem_file):
         import json
         with open(mem_file, "w") as f:
-            json.dump({"notes": []}, f)
+            json.dump({"entities": [], "relations": []}, f)
     print(f"[preprocess] Memory directory ensured at {mem_dir}")
 
 

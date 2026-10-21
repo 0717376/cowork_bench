@@ -20,6 +20,7 @@ Semantic CRITICAL checks (any failure => overall FAIL, before accuracy gate):
 
 Pass: no critical failure AND accuracy >= 70%.
 """
+from utils.memory_graph import parse_memory_graph
 import json
 import os
 import re
@@ -292,21 +293,7 @@ def main():
         try:
             with open(memory_path, encoding="utf-8") as f:
                 raw = f.read()
-            try:
-                mem_data = json.loads(raw)
-                entities = mem_data.get("entities", [])
-            except json.JSONDecodeError:
-                # The issued memory MCP persists its graph as JSONL (one JSON
-                # object per line, type=="entity"/"relation"), not a single
-                # pretty-printed object. Reconstruct entities from those lines.
-                entities = []
-                for line in raw.splitlines():
-                    line = line.strip()
-                    if not line:
-                        continue
-                    obj = json.loads(line)
-                    if isinstance(obj, dict) and obj.get("type") == "entity":
-                        entities.append(obj)
+            entities = parse_memory_graph(raw).get('entities', [])
 
             def ent_text(e):
                 obs = e.get("observations", []) or []

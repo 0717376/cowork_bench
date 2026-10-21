@@ -14,6 +14,8 @@ import uuid
 from typing import Any
 
 import psycopg2
+import sqlparse
+from sqlparse import tokens as SQLTokens
 import psycopg2.extras
 
 logging.basicConfig(
@@ -41,6 +43,47 @@ def _get_pg_connection():
 _SUCCESS = [{"status": "success", "message": "Query executed successfully"}]
 
 
+def _quote_known_columns(query, column_names):
+    """Honor the mock's case-insensitive SQL contract on quoted PG columns.
+
+    Only catalog-confirmed column names are quoted. Literals/comments, quoted
+    identifiers, function names and unrelated SQL syntax are never rewritten.
+    """
+    names = {}
+    for name in column_names:
+        key = name.lower()
+        names[key] = name if key not in names or names[key] == name else None
+    statements = sqlparse.parse(query)
+    output = []
+    for statement in statements:
+        flat = list(statement.flatten())
+        for i, token in enumerate(flat):
+            identifier = token.ttype in SQLTokens.Name or (token.ttype in SQLTokens.Keyword and token.value.upper() in {'LOCATION', 'ROLE', 'SEGMENT'})
+            actual = names.get(token.value.lower()) if identifier else None
+            following = next((t for t in flat[i + 1:] if not t.is_whitespace and t.ttype not in SQLTokens.Comment), None)
+            if actual and not (following and following.value == '('):
+                output.append('"' + actual.replace('"', '""') + '"')
+            else:
+                output.append(token.value)
+    return ''.join(output)
+
+
+def _mask_literals(query):
+    prefix = '__cowork_literal_'
+    while prefix in query:
+        prefix += '_'
+    opaque, output = {}, []
+    for statement in sqlparse.parse(query):
+        for token in statement.flatten():
+            if token.ttype in SQLTokens.Literal.String.Single or token.ttype in SQLTokens.Comment:
+                marker = "'" + prefix + str(len(opaque)) + "'"
+                opaque[marker] = token.value
+                output.append(marker)
+            else:
+                output.append(token.value)
+    return ''.join(output), opaque
+
+
 def _translate_query(query: str):
     """Translate Snowflake SQL to PostgreSQL.
 
@@ -52,8 +95,14 @@ def _translate_query(query: str):
     # ── No-op commands ────────────────────────────────────────────────
     if q_upper.startswith("USE "):
         return None
+    show = re.fullmatch(r"SHOW\s+TABLES\s+(?:FROM|IN)\s+(\w+)(?:\.(\w+))?", q, re.IGNORECASE)
+    if show:
+        db, schema = show.group(1), show.group(2) or 'PUBLIC'
+        return _translate_query(f"SELECT TABLE_NAME FROM {db}.INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='{schema}'")
+    if q_upper == "SHOW DATABASES":
+        return _translate_query('SELECT DATABASE_NAME FROM INFORMATION_SCHEMA.DATABASES')
     if q_upper.startswith("SHOW "):
-        return None
+        raise ValueError('Unsupported SHOW query: use the database/schema/table discovery tools')
     for prefix in ("CREATE DATABASE", "DROP DATABASE",
                     "CREATE SCHEMA", "DROP SCHEMA"):
         if q_upper.startswith(prefix):
@@ -121,6 +170,8 @@ def _translate_query(query: str):
             "ORDER BY ordinal_position"
         )
 
+    q, opaque = _mask_literals(q)
+
     # ── ClickHouse aggregate functions → PostgreSQL ordered-set aggregates ─
     _arg = r'([^()]*(?:\([^()]*\)[^()]*)*)'
     q = re.sub(
@@ -135,6 +186,37 @@ def _translate_query(query: str):
         q,
         flags=re.IGNORECASE,
     )
+
+    # Common documented ClickHouse expressions in this PostgreSQL-backed mock.
+    # q has opaque literal/comment placeholders, so only SQL syntax is changed.
+    q = re.sub(r'\bcount\s*\(\s*\)', 'count(*)', q, flags=re.IGNORECASE)
+    q = re.sub(r'\btoYYYYMM\s*\(' + _arg + r'\)',
+               lambda m: "to_char(" + m.group(1) + ", 'YYYYMM')::integer", q, flags=re.IGNORECASE)
+    for function, template in {
+        'toString': lambda arg: f'CAST({arg} AS text)',
+        'toYear': lambda arg: f'EXTRACT(YEAR FROM {arg})::integer',
+        'toMonth': lambda arg: f'EXTRACT(MONTH FROM {arg})::integer',
+        'toDate': lambda arg: f'CAST({arg} AS date)',
+        'toDateTime': lambda arg: f'CAST({arg} AS timestamp)',
+        'toStartOfQuarter': lambda arg: f"date_trunc('quarter', {arg})::date",
+        'countIf': lambda arg: f'count(*) FILTER (WHERE {arg})',
+    }.items():
+        q = re.sub(r'\b' + function + r'\s*\(' + _arg + r'\)',
+                   lambda match: template(match.group(1)), q, flags=re.IGNORECASE)
+    conditional_arg = r'([^(),]*(?:\([^()]*\)[^(),]*)*)'
+    for conditional, aggregate in [('avgIf', 'avg'), ('sumIf', 'sum')]:
+        q = re.sub(r'\b' + conditional + r'\s*\(' + conditional_arg + r',' + _arg + r'\)',
+                   lambda m: f'{aggregate}({m.group(1)}) FILTER (WHERE {m.group(2)})', q, flags=re.IGNORECASE)
+    if q_upper.startswith('CREATE TABLE'):
+        type_map = {'string': 'text', 'float64': 'double precision', 'float32': 'real',
+                    'int64': 'bigint', 'int32': 'integer', 'uint64': 'numeric(20,0)',
+                    'uint32': 'bigint', 'uint16': 'integer', 'uint8': 'smallint',
+                    'datetime': 'timestamp', 'bool': 'boolean'}
+        q = re.sub(r'([,(]\s*"?[A-Za-z_]\w*"?\s+)(' + '|'.join(type_map) + r')\b',
+                   lambda m: m.group(1) + type_map[m.group(2).lower()], q, flags=re.IGNORECASE)
+        # MergeTree determines physical layout, which the mock does not expose.
+        q = re.sub(r'\)\s+ENGINE\s*=\s*MergeTree(?:\(\))?(?:\s+ORDER\s+BY\s+[^;]+)?$',
+                   ')', q, flags=re.IGNORECASE)
 
     # ── Regular queries: DB.SCHEMA.TABLE → <PG_SCHEMA>."DB__SCHEMA__TABLE" ─
     def _replace_ref(match):
@@ -162,6 +244,8 @@ def _translate_query(query: str):
         translated,
         flags=re.IGNORECASE,
     )
+    for marker, original in opaque.items():
+        translated = translated.replace(marker, original)
     return translated
 
 
@@ -232,6 +316,12 @@ class SnowflakeDB:
         try:
             conn = self._get_conn()
             cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+            # Physical table names are fixed by _translate_query. Fetch only
+            # their schema, never infer column casing from model-generated SQL.
+            tables = sorted(set(re.findall(r'\bsf_data\."([^";]+)"', translated, re.IGNORECASE)))
+            if tables:
+                cur.execute("SELECT column_name FROM information_schema.columns WHERE table_schema = 'sf_data' AND table_name = ANY(%s)", (tables,))
+                translated = _quote_known_columns(translated, [r['column_name'] for r in cur.fetchall()])
             cur.execute(translated)
 
             if cur.description:
@@ -244,9 +334,6 @@ class SnowflakeDB:
                 result_rows = list(_SUCCESS)
 
             cur.close()
-
-            if not result_rows:
-                result_rows = list(_SUCCESS)
 
             data_id = str(uuid.uuid4())
             return result_rows, data_id

@@ -58,6 +58,54 @@ class SecurityConfig:
     truncate_message: str = "...[output truncated]"
 
 
+def _shell_parts(command_string):
+    """Split only active operators; quoted/escaped punctuation is argument data.
+
+    This is a bounded shell subset, not a shell parser. Nested execution and
+    unquoted grouping/newlines/background jobs are rejected rather than passing
+    an unvalidated second command to shell=True.
+    """
+    operators = ("&&", "||", ">>", "<<", "|", ";", ">", "<")
+    parts, start, pos, quote = [], 0, 0, None
+    while pos < len(command_string):
+        char = command_string[pos]
+        if quote == "'":
+            if char == "'":
+                quote = None
+            pos += 1
+            continue
+        if char == "\\":
+            pos += 2
+            continue
+        if char == '`' or command_string.startswith('$(', pos):
+            raise CommandSecurityError('Command substitution is not supported')
+        if quote == '"':
+            if char == '"':
+                quote = None
+            pos += 1
+            continue
+        if char in ("'", '"'):
+            quote = char
+            pos += 1
+            continue
+        operator = next((op for op in operators if command_string.startswith(op, pos)), None)
+        if operator:
+            if command_string[start:pos].strip():
+                parts.append(command_string[start:pos].strip())
+            parts.append(operator)
+            pos += len(operator)
+            start = pos
+            continue
+        if char in '()&\n\r':
+            raise CommandSecurityError('Unsupported shell grouping, background job or newline')
+        pos += 1
+    if quote:
+        raise CommandSecurityError('No closing quotation')
+    if command_string[start:].strip():
+        parts.append(command_string[start:].strip())
+    return parts
+
+
 class CommandExecutor:
     def __init__(self, allowed_dir: str, security_config: SecurityConfig):
         if not allowed_dir or not os.path.exists(allowed_dir):
@@ -132,16 +180,14 @@ class CommandExecutor:
         shell_operators = ["&&", "||", "|", ">", ">>", "<", "<<", ";"]
 
         # Check if command contains shell operators
-        contains_shell_operator = any(
-            operator in command_string for operator in shell_operators
-        )
+        contains_shell_operator = any(part in shell_operators for part in _shell_parts(command_string))
 
         if contains_shell_operator:
             # Check if shell operators are allowed
             if not self.security_config.allow_shell_operators:
                 # If shell operators are not allowed, raise an error
                 for operator in shell_operators:
-                    if operator in command_string:
+                    if operator in _shell_parts(command_string):
                         raise CommandSecurityError(
                             f"Shell operator '{operator}' is not supported. Set ALLOW_SHELL_OPERATORS=true to enable."
                         )
@@ -189,7 +235,7 @@ class CommandExecutor:
             allowed_dir_real = os.path.abspath(os.path.realpath(self.allowed_dir))
 
             # Check if the path starts with allowed_dir
-            return real_path.startswith(allowed_dir_real)
+            return os.path.commonpath([real_path, allowed_dir_real]) == allowed_dir_real
         except Exception:
             return False
 
@@ -275,16 +321,7 @@ class CommandExecutor:
         redirection_operators = [">", ">>", "<", "<<"]
         command_separators = ["&&", "||", "|", ";"]
         
-        # Create a regex pattern to split by any of the shell operators
-        # We need to escape special regex characters in the operators
-        escaped_operators = [re.escape(op) for op in shell_operators]
-        pattern = "|".join(escaped_operators)
-
-        # Split the command string by shell operators, keeping the operators
-        parts = re.split(f"({pattern})", command_string)
-
-        # Filter out empty parts and whitespace-only parts
-        parts = [part.strip() for part in parts if part.strip()]
+        parts = _shell_parts(command_string)
 
         # Parse commands with context awareness
         i = 0
@@ -322,7 +359,10 @@ class CommandExecutor:
                 if not self._is_url_path(current_part):
                     try:
                         # Validate that the filename path is safe (within allowed directory)
-                        self._normalize_path(current_part)
+                        filenames = shlex.split(current_part)
+                        if len(filenames) != 1:
+                            raise CommandSecurityError("Redirection requires exactly one path")
+                        self._normalize_path(filenames[0])
                     except CommandSecurityError as e:
                         raise CommandSecurityError(f"Invalid file path '{current_part}': {str(e)}")
             
@@ -377,12 +417,12 @@ class CommandExecutor:
 
             # Check if this is a command with shell operators
             shell_operators = ["&&", "||", "|", ">", ">>", "<", "<<", ";"]
-            use_shell = any(operator in command_string for operator in shell_operators)
+            use_shell = any(part in shell_operators for part in _shell_parts(command_string))
 
             # Double-check that shell operators are allowed if they are present
             if use_shell and not self.security_config.allow_shell_operators:
                 for operator in shell_operators:
-                    if operator in command_string:
+                    if operator in _shell_parts(command_string):
                         raise CommandSecurityError(
                             f"Shell operator '{operator}' is not supported. Set ALLOW_SHELL_OPERATORS=true to enable."
                         )

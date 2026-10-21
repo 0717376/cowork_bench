@@ -12,6 +12,7 @@ regardless of accuracy. Pass threshold otherwise: accuracy >= 80%.
 Usage:
     python -m evaluation.main --agent_workspace <path> --groundtruth_workspace <path>
 """
+from utils.memory_graph import parse_memory_graph
 import argparse
 import json
 import os
@@ -84,27 +85,12 @@ def check_memory(agent_workspace):
 
     # Memory format from @modelcontextprotocol/server-memory is a knowledge graph.
     # The memory file may be JSONL (one object per line) or a single JSON object.
-    memory_data = None
     try:
-        memory_data = json.loads(content)
-    except json.JSONDecodeError:
-        # try JSONL
-        ents = []
-        for line in content.splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                obj = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if isinstance(obj, dict):
-                ents.append(obj)
-        memory_data = {"entities": [e for e in ents if e.get("type") != "relation"]}
-
-    check("Memory is valid JSON", memory_data is not None, "Cannot parse memory.json")
-    if memory_data is None:
+        memory_data = parse_memory_graph(content)
+    except ValueError as exc:
+        check("Memory is valid JSON", False, str(exc))
         return
+    check("Memory is valid JSON", True)
 
     # Collect entities (support several shapes).
     entities = []

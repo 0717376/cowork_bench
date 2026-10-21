@@ -5,6 +5,7 @@ Evaluation script for ecommerce-commodity-impact task.
 Queries PostgreSQL directly to compute expected values, then compares
 against the agent's Excel output and memory.json.
 """
+from utils.memory_graph import parse_memory_graph
 
 import os
 import sys
@@ -400,7 +401,7 @@ def check_memory(agent_workspace):
 
     try:
         with open(memory_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
+            data = parse_memory_graph(f.read())
     except (json.JSONDecodeError, Exception) as e:
         return False, f"memory/memory.json is not valid JSON: {e}"
 
@@ -427,7 +428,6 @@ def check_memory(agent_workspace):
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
-
 def run_evaluation(agent_workspace: str) -> tuple:
     """Run all evaluation checks and return (passed, message)."""
     print("=" * 80)

@@ -19,6 +19,7 @@ Usage:
         --agent_workspace /path/to/workspace \
         --groundtruth_workspace /path/to/groundtruth
 """
+from utils.memory_graph import parse_memory_graph
 
 import argparse
 import json
@@ -376,33 +377,11 @@ def check_memory(agent_workspace):
         record("memory.json readable", False, str(e))
         return False
 
-    # Memory MCP персистит NDJSON (по одной записи {"type":"entity",...} на
-    # строку); fallback — единый объект {"entities": [...]}.
-    entities = []
-    parsed_ok = False
     try:
-        memory_data = json.loads(raw)
-        parsed_ok = True
-        if isinstance(memory_data, dict):
-            entities = memory_data.get("entities", [])
-        elif isinstance(memory_data, list):
-            entities = [e for e in memory_data
-                        if isinstance(e, dict) and e.get("type", "entity") == "entity"]
-    except json.JSONDecodeError:
-        for line in raw.splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rec = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            parsed_ok = True
-            if isinstance(rec, dict) and rec.get("type", "entity") == "entity":
-                entities.append(rec)
-
-    if not parsed_ok:
-        record("memory.json readable", False, "neither JSON nor NDJSON")
+        memory_data = parse_memory_graph(raw)
+        entities = memory_data.get('entities', [])
+    except ValueError as exc:
+        record("memory.json readable", False, str(exc))
         return False
 
     record("memory.json readable", True)

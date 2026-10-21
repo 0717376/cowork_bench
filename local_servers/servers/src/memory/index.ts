@@ -6,6 +6,7 @@ import { z } from "zod";
 import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { parseGraphFileContent } from './graph-parser.js';
 
 // Define memory file path using environment variable with fallback
 export const defaultMemoryPath = path.join(path.dirname(fileURLToPath(import.meta.url)), 'memory.jsonl');
@@ -69,32 +70,25 @@ export class KnowledgeGraphManager {
   constructor(private memoryFilePath: string) {}
 
   private async loadGraph(): Promise<KnowledgeGraph> {
+    let data: string;
     try {
-      const data = await fs.readFile(this.memoryFilePath, "utf-8");
-      const lines = data.split("\n").filter(line => line.trim() !== "");
-      return lines.reduce((graph: KnowledgeGraph, line) => {
-        const item = JSON.parse(line);
-        if (item.type === "entity") {
-          graph.entities.push({
-            name: item.name,
-            entityType: item.entityType,
-            observations: item.observations
-          });
-        }
-        if (item.type === "relation") {
-          graph.relations.push({
-            from: item.from,
-            to: item.to,
-            relationType: item.relationType
-          });
-        }
-        return graph;
-      }, { entities: [], relations: [] });
+      data = await fs.readFile(this.memoryFilePath, "utf-8");
     } catch (error) {
       if (error instanceof Error && 'code' in error && (error as any).code === "ENOENT") {
         return { entities: [], relations: [] };
       }
       throw error;
+    }
+
+    try {
+      // Accepts the current JSONL format as well as the legacy whole-graph
+      // JSON object format ({"entities": [...], "relations": [...]}) without
+      // rewriting the file; invalid content throws instead of yielding an
+      // empty graph.
+      return parseGraphFileContent(data);
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      throw new Error(`Failed to parse memory file ${this.memoryFilePath}: ${reason}`);
     }
   }
 

@@ -16,6 +16,7 @@ CRITICAL_CHECKS — содержательные проверки. Провал 
 Usage:
     python -m evaluation.main --agent_workspace <path> --groundtruth_workspace <path>
 """
+from utils.memory_graph import parse_memory_graph
 import argparse
 import json
 import os
@@ -300,8 +301,8 @@ def check_memory(agent_workspace):
     check("Memory has content", True)
 
     try:
-        memory_data = json.loads(content)
-    except json.JSONDecodeError:
+        memory_data = parse_memory_graph(content)
+    except ValueError:
         check("Memory is valid JSON", False, "Cannot parse memory.json")
         return
 

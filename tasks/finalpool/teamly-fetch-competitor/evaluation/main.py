@@ -9,6 +9,7 @@ Checks:
 2. Teamly page exists with the competitor analysis summary.
 3. Memory file (memory/memory.json) has been updated with analysis notes.
 """
+from utils.memory_graph import parse_memory_graph
 
 import argparse
 import json
@@ -320,7 +321,7 @@ def check_memory(agent_workspace):
 
     try:
         with open(memory_path, "r") as f:
-            data = json.load(f)
+            data = parse_memory_graph(f.read())
     except Exception as e:
         record("Memory file is valid JSON", False, str(e))
         record("Memory file has been updated with notes", False, "invalid json")

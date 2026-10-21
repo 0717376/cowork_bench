@@ -21,6 +21,7 @@ CRITICAL checks (semantic substance, any failure => hard FAIL via sys.exit(1)):
 import argparse
 import json
 import os
+from utils.memory_graph import parse_memory_graph
 import re
 import sys
 
@@ -371,8 +372,8 @@ def check_memory(agent_workspace):
     if os.path.isfile(memory_path):
         with open(memory_path, "r") as f:
             try:
-                data = json.load(f)
-            except json.JSONDecodeError:
+                data = parse_memory_graph(f.read())
+            except (json.JSONDecodeError, ValueError):
                 check("memory.json is valid JSON", False, "JSON parse error")
                 return
 
