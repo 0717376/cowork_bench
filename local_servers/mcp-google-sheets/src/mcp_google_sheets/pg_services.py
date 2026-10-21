@@ -8,6 +8,7 @@ all data from a PostgreSQL database.
 """
 
 import os
+import math
 import re
 import uuid
 from datetime import datetime, timezone
@@ -40,57 +41,84 @@ def _col_index_to_letter(index: int) -> str:
 
 
 def _parse_a1_range(range_str: str):
-    """Parse A1 notation into components.
+    """Parse A1 without treating malformed coordinates as a whole-sheet write.
 
-    Supports:
-      "Sheet1!A1:C10"  -> (sheet_title, 0, 0, 9, 2)
-      "Sheet1!A1"      -> (sheet_title, 0, 0, None, None)  (single cell / open)
-      "A1:C10"         -> (None, 0, 0, 9, 2)
-      "Sheet1"         -> (sheet_title, None, None, None, None)  (whole sheet)
-      "Sheet1!A1:5"    -> (sheet_title, 0, 0, 4, None) - row-only end
-      "'Sheet Name'!A1:C10" -> handle quoted sheet names
-
-    Returns (sheet_title, start_row, start_col, end_row, end_col)
-    where row/col are 0-based integers or None.
+    Supports cells, bounded/open row/column ranges, and qualified ranges.
+    Quote a whole-sheet name (e.g. 'Sheet1') to disambiguate it from a cell.
+    Quoted titles escape apostrophes by doubling them.
     """
+    if not isinstance(range_str, str) or not range_str.strip():
+        raise ValueError("A1 range must be a non-empty string")
+    text = range_str.strip()
     sheet_title = None
-    cell_part = range_str
-
-    # Handle sheet name
-    if '!' in range_str:
-        sheet_title, cell_part = range_str.split('!', 1)
-        # Remove surrounding quotes from sheet name
-        sheet_title = sheet_title.strip("'").strip('"')
-
-    # If no cell reference at all (just sheet name)
-    if not cell_part or cell_part == sheet_title:
-        if '!' not in range_str:
-            # The whole string is a sheet name
-            return (range_str.strip("'").strip('"'), None, None, None, None)
-        return (sheet_title, None, None, None, None)
-
-    # Parse cell references
-    parts = cell_part.split(':')
-
-    def _parse_cell_ref(ref: str):
-        """Parse a single cell reference like 'A1' or 'C10' or just '5' (row only)."""
-        ref = ref.strip()
-        m = re.match(r'^([A-Za-z]*)(\d*)$', ref)
-        if not m:
-            return None, None
-        col_str, row_str = m.group(1), m.group(2)
-        col = _col_letter_to_index(col_str) if col_str else None
-        row = int(row_str) - 1 if row_str else None
-        return row, col
-
-    start_row, start_col = _parse_cell_ref(parts[0])
-
-    if len(parts) > 1:
-        end_row, end_col = _parse_cell_ref(parts[1])
+    if text.startswith("'"):
+        match = re.fullmatch(r"'((?:[^']|'')+)'(?:!(.*))?", text)
+        if not match:
+            raise ValueError("Invalid quoted sheet name or A1 range")
+        sheet_title = match.group(1).replace("''", "'")
+        cell_part = match.group(2)
+        if cell_part is None:
+            return sheet_title, None, None, None, None
+    elif "!" in text:
+        sheet_title, cell_part = text.split("!", 1)
+        if not sheet_title or any(c in sheet_title for c in "'\""):
+            raise ValueError("Invalid sheet name")
     else:
-        end_row, end_col = start_row, start_col
+        cell_part = text
 
-    return (sheet_title, start_row, start_col, end_row, end_col)
+    # Preserve the backend's explicit whole-sheet form, e.g. Sheet1!.
+    if sheet_title is not None and cell_part == "":
+        return sheet_title, None, None, None, None
+    if not cell_part or "!" in cell_part or cell_part.count(":") > 1:
+        raise ValueError("Invalid A1 range")
+    parts = cell_part.split(":")
+
+    def parse_ref(ref):
+        if not ref:
+            return None, None  # Explicit open endpoint, not a parse failure.
+        match = re.fullmatch(r"([A-Za-z]*)([0-9]*)", ref)
+        if not match or not any(match.groups()):
+            raise ValueError("Invalid A1 cell reference")
+        col_text, row_text = match.groups()
+        if row_text and int(row_text) < 1:
+            raise ValueError("A1 rows start at 1")
+        return (int(row_text) - 1 if row_text else None,
+                _col_letter_to_index(col_text) if col_text else None)
+
+    sr, sc = parse_ref(parts[0])
+    er, ec = parse_ref(parts[1]) if len(parts) == 2 else (sr, sc)
+    if all(value is None for value in (sr, sc, er, ec)):
+        raise ValueError("Empty A1 range")
+    if ((sr is not None and er is not None and sr > er)
+            or (sc is not None and ec is not None and sc > ec)):
+        raise ValueError("A1 range end precedes start")
+    return sheet_title, sr, sc, er, ec
+
+
+def _validate_values(values):
+    """Validate the entire matrix before any connection or write."""
+    if not isinstance(values, list):
+        raise ValueError("Values must be a 2D list of scalar cells")
+    for row in values:
+        if not isinstance(row, list):
+            raise ValueError("Each values row must be a list")
+        for cell in row:
+            if cell is not None and not isinstance(cell, (str, bool, int, float)):
+                raise ValueError("Cells must be JSON scalar values")
+            if isinstance(cell, float) and not math.isfinite(cell):
+                raise ValueError("Cells must be finite JSON values")
+    return values
+
+
+def _qualify_write_range(sheet, range_str):
+    """Tools take a separate sheet and an unqualified A1 range."""
+    if not isinstance(sheet, str) or not sheet:
+        raise ValueError("Sheet must be a non-empty name")
+    if not isinstance(range_str, str) or not range_str.strip() or "!" in range_str:
+        raise ValueError("Use an unqualified A1 range with the separate sheet argument")
+    full_range = "'" + sheet.replace("'", "''") + "'!" + range_str
+    _parse_a1_range(full_range)
+    return full_range
 
 
 def _get_conn(pool):
@@ -392,12 +420,15 @@ class ValuesUpdateRequest(_BaseRequest):
         self.spreadsheet_id = spreadsheet_id
         self.range_str = range_str
         self.value_input_option = value_input_option
-        self.body = body or {}
+        self.body = body if body is not None else {}
 
     def execute(self):
+        sheet_title, sr, sc, er, ec = _parse_a1_range(self.range_str)
+        if not isinstance(self.body, dict):
+            raise ValueError("Value range body must be an object")
+        values = _validate_values(self.body.get("values", []))
         conn = _get_conn(self.pool)
         try:
-            sheet_title, sr, sc, er, ec = _parse_a1_range(self.range_str)
             if sr is None:
                 sr = 0
             if sc is None:
@@ -411,7 +442,6 @@ class ValuesUpdateRequest(_BaseRequest):
             if sheet_id is None:
                 raise Exception(f"Sheet not found for range {self.range_str}")
 
-            values = self.body.get("values", [])
             updated = _write_cells(conn, self.spreadsheet_id, sheet_id, sr, sc, values)
 
             num_rows = len(values)
@@ -432,21 +462,28 @@ class ValuesBatchUpdateRequest(_BaseRequest):
     def __init__(self, pool, spreadsheet_id, body):
         self.pool = pool
         self.spreadsheet_id = spreadsheet_id
-        self.body = body or {}
+        self.body = body if body is not None else {}
 
     def execute(self):
+        if not isinstance(self.body, dict) or not isinstance(self.body.get("data", []), list):
+            raise ValueError("Batch data must be a list")
+        prepared = []
+        for entry in self.body.get("data", []):
+            if not isinstance(entry, dict):
+                raise ValueError("Each batch entry must be an object")
+            range_str = entry.get("range", "")
+            coords = _parse_a1_range(range_str)
+            values = _validate_values(entry.get("values", []))
+            prepared.append((range_str, values, coords))
         conn = _get_conn(self.pool)
         try:
-            data_list = self.body.get("data", [])
             total_updated_cells = 0
             total_updated_rows = 0
             total_updated_cols = 0
             responses = []
 
-            for entry in data_list:
-                range_str = entry.get("range", "")
-                values = entry.get("values", [])
-                sheet_title, sr, sc, er, ec = _parse_a1_range(range_str)
+            for range_str, values, coords in prepared:
+                sheet_title, sr, sc, er, ec = coords
                 if sr is None:
                     sr = 0
                 if sc is None:

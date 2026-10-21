@@ -19,7 +19,7 @@ from mcp.server.fastmcp import FastMCP, Context
 from mcp.types import ToolAnnotations
 
 # PostgreSQL-backed mock Google API services
-from .pg_services import PgSheetsService, PgDriveService
+from .pg_services import PgSheetsService, PgDriveService, _qualify_write_range, _validate_values
 
 # Constants
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
@@ -259,16 +259,15 @@ def update_cells(spreadsheet_id: str,
     Args:
         spreadsheet_id: The ID of the spreadsheet (found in the URL)
         sheet: The name of the sheet
-        range: Cell range in A1 notation (e.g., 'A1:C10')
+        range: Unqualified A1 range (e.g., 'A1:C10'); do not include sheet!
         data: 2D array of values to update
     
     Returns:
         Result of the update operation
     """
+    full_range = _qualify_write_range(sheet, range)
+    _validate_values(data)
     sheets_service = ctx.request_context.lifespan_context.sheets_service
-    
-    # Construct the range
-    full_range = f"{sheet}!{range}"
     
     # Prepare the value range object
     value_range_body = {
@@ -302,18 +301,17 @@ def batch_update_cells(spreadsheet_id: str,
     Args:
         spreadsheet_id: The ID of the spreadsheet (found in the URL)
         sheet: The name of the sheet
-        ranges: Dictionary mapping range strings to 2D arrays of values
+        ranges: Dictionary mapping unqualified A1 ranges (no sheet!) to 2D values
                e.g., {'A1:B2': [[1, 2], [3, 4]], 'D1:E2': [['a', 'b'], ['c', 'd']]}
     
     Returns:
         Result of the batch update operation
     """
-    sheets_service = ctx.request_context.lifespan_context.sheets_service
-    
     # Prepare the batch update request
     data = []
     for range_str, values in ranges.items():
-        full_range = f"{sheet}!{range_str}"
+        full_range = _qualify_write_range(sheet, range_str)
+        _validate_values(values)
         data.append({
             'range': full_range,
             'values': values
@@ -324,6 +322,7 @@ def batch_update_cells(spreadsheet_id: str,
         'data': data
     }
     
+    sheets_service = ctx.request_context.lifespan_context.sheets_service
     # Call the Sheets API to perform batch update
     result = sheets_service.spreadsheets().values().batchUpdate(
         spreadsheetId=spreadsheet_id,
