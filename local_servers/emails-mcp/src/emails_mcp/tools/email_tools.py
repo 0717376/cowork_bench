@@ -1,6 +1,7 @@
 import logging
 from typing import List, Optional
 from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp.exceptions import ToolError
 from ..services.email_service import EmailService
 from ..utils.email_parser import format_email_summary
 
@@ -143,15 +144,16 @@ def register_email_tools(mcp: FastMCP, email_service: EmailService):
                 from_addr=from_addr
             )
             
-            if success:
-                attachment_info = f" with {len(attachments)} attachments" if attachments else ""
-                return f"Email sent successfully to {to}{attachment_info}"
-            else:
-                return "Email sending failed"
-                
         except Exception as e:
-            return f"Error sending email: {str(e)}"
-    
+            # Raising a tool error lets FastMCP serialize CallToolResult.isError.
+            # A normal string is successful tool content, even if it says Error.
+            raise ToolError(f"Error sending email: {e}") from e
+
+        if not success:
+            raise ToolError("Email sending failed")
+        attachment_info = f" with {len(attachments)} attachments" if attachments else ""
+        return f"Email sent successfully to {to}{attachment_info}"
+
     @mcp.tool()
     async def reply_email(email_id: str, body: str, html_body: str = None,
                          cc: str = None, bcc: str = None, reply_all: bool = False) -> str:
