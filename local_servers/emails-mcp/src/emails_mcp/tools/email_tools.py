@@ -127,7 +127,10 @@ def register_email_tools(mcp: FastMCP, email_service: EmailService):
             html_body: HTML body content (optional)
             cc: CC recipients, comma-separated (optional)
             bcc: BCC recipients, comma-separated (optional)
-            attachments: List of file paths to attach (optional)
+            attachments: List of file paths to attach (optional). Relative paths
+                use the configured attachment upload directory, not the server cwd.
+                When an upload directory is configured, absolute paths must also
+                remain within it (including resolved symlink targets).
             from_addr: Sender address to put in the "From" header (optional).
                 Defaults to the configured account address when omitted.
         """

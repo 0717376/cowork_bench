@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import uuid
+from pathlib import Path
 from datetime import datetime
 from email import policy
 from email.mime.text import MIMEText
@@ -522,8 +523,9 @@ class PgSMTPBackend:
     and logs the send in ``email.sent_log``.
     """
 
-    def __init__(self, config: EmailConfig):
+    def __init__(self, config: EmailConfig, attachment_upload_path: Optional[str] = None):
         self.config = config
+        self.attachment_upload_path = attachment_upload_path
         self.connection = None  # psycopg2 connection
 
     # ------------------------------------------------------------------
@@ -568,6 +570,24 @@ class PgSMTPBackend:
     # Send (insert into DB)
     # ------------------------------------------------------------------
 
+    def _attachment_path(self, file_path: str) -> Path:
+        """Resolve uploads from the configured root, including symlink targets."""
+        candidate = Path(file_path)
+        if self.attachment_upload_path:
+            root = Path(self.attachment_upload_path).resolve(strict=True)
+            if not candidate.is_absolute():
+                candidate = root / candidate
+            candidate = candidate.resolve(strict=True)
+            if not candidate.is_relative_to(root):
+                raise ValueError("Attachment is outside the configured upload directory")
+        else:
+            # Standalone callers without a configured upload directory retain
+            # their existing path semantics; the benchmark always supplies one.
+            candidate = candidate.resolve(strict=True)
+        if not candidate.is_file():
+            raise ValueError("Attachment must be a regular file")
+        return candidate
+
     def send_email(
         self,
         to: str,
@@ -584,8 +604,6 @@ class PgSMTPBackend:
         Returns:
             tuple[bool, Optional[str]]: (success, RFC822 message string)
         """
-        self.ensure_connected()
-
         try:
             # ---- Build the MIME message (for the returned RFC822 string) ----
             if html_body or attachments:
@@ -638,7 +656,7 @@ class PgSMTPBackend:
 
                 for file_path in attachments:
                     filename = os.path.basename(file_path)
-                    with open(file_path, "rb") as f:
+                    with self._attachment_path(file_path).open("rb") as f:
                         file_data = f.read()
                     attachment_data_list.append((filename, "application/octet-stream", file_data))
 
@@ -650,6 +668,8 @@ class PgSMTPBackend:
 
             message_string = msg.as_string()
 
+            # Resolve/read every attachment before touching the database.
+            self.ensure_connected()
             # ---- Insert into database ----
             to_list = _comma_str_to_jsonb_list(to)
             cc_list = _comma_str_to_jsonb_list(cc)

@@ -42,7 +42,11 @@ def create_services(email_config):
     """Create service instances using PostgreSQL backends"""
     # Create PG-backed backends
     imap_backend = PgIMAPBackend(email_config)
-    smtp_backend = PgSMTPBackend(email_config)
+    attachment_upload_path = (
+        config_manager.workspace_config.attachment_upload_path
+        if config_manager.workspace_config else None
+    )
+    smtp_backend = PgSMTPBackend(email_config, attachment_upload_path=attachment_upload_path)
 
     email_export_path = config_manager.workspace_config.email_export_path if config_manager.workspace_config else None
     attachment_download_path = config_manager.workspace_config.attachment_download_path if config_manager.workspace_config else None
