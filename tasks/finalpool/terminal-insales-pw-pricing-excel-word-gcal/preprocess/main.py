@@ -8,6 +8,8 @@ import asyncio
 import glob as globmod
 import os
 import shutil
+import subprocess
+import sys
 import tarfile
 import uuid
 
@@ -22,6 +24,10 @@ DB_CONFIG = {
 }
 
 TASK_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Handle of the detached http.server; kept referenced so the Popen object is
+# not finalized while this process lives (it only warns, but stay explicit).
+_server_proc = None
 
 
 def clear_gcal(cur):
@@ -60,21 +66,26 @@ async def setup_mock_server(port=30417):
     await kill_proc.wait()
     await asyncio.sleep(0.5)
 
-    # Launch fully detached (own session via start_new_session) and bind explicitly
-    # to 0.0.0.0 so the server survives this asyncio loop tearing down and is
-    # reachable over IPv4 localhost / the container IP from the in-container
-    # Playwright (stdio) browser. Previously the bare `nohup ... &` could be reaped
-    # on loop close and bound only ::1, leaving http://localhost:30417 unreachable.
+    # The server must outlive this preprocess process: an asyncio subprocess
+    # transport owns the child and SIGKILLs it when the asyncio.run loop is
+    # torn down (start_new_session does not prevent that), so launch it fully
+    # detached via subprocess.Popen in its own session. Binding to 0.0.0.0
+    # keeps it reachable over IPv4 localhost / the container IP from the
+    # in-container Playwright (stdio) browser (an earlier bare `nohup ... &`
+    # variant could also end up bound to ::1 only, leaving
+    # http://localhost:30417 unreachable).
     log_path = os.path.join(mock_dir, "server.log")
-    proc = await asyncio.create_subprocess_exec(
-        "python3", "-m", "http.server", str(port),
-        "--bind", "0.0.0.0", "--directory", mock_dir,
-        stdout=open(log_path, "wb"),
-        stderr=asyncio.subprocess.STDOUT,
-        stdin=asyncio.subprocess.DEVNULL,
-        start_new_session=True,
-    )
-    print(f"[preprocess] Mock server pid={proc.pid} on 0.0.0.0:{port}")
+    global _server_proc
+    with open(log_path, "wb") as log_fh:
+        _server_proc = subprocess.Popen(
+            [sys.executable or "python3", "-m", "http.server", str(port),
+             "--bind", "0.0.0.0", "--directory", mock_dir],
+            stdin=subprocess.DEVNULL,
+            stdout=log_fh,
+            stderr=subprocess.STDOUT,
+            start_new_session=True,
+        )
+    print(f"[preprocess] Mock server pid={_server_proc.pid} on 0.0.0.0:{port}")
 
     # Readiness probe: poll the served page over IPv4 localhost until it answers.
     ready = False

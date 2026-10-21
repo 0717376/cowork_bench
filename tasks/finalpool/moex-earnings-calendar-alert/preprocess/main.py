@@ -4,10 +4,17 @@ import argparse
 import asyncio
 import os
 import shutil
+import subprocess
+import sys
+
 import psycopg2
 
 PORT = 30225
 DB = dict(host=os.environ.get("PGHOST", "localhost"), port=5432, dbname="cowork_gym", user="eigent", password="camel")
+
+# Handle of the detached http.server; kept referenced so the Popen object is
+# not finalized while this process lives (it only warns, but stay explicit).
+_server_proc = None
 
 
 def clear_email():
@@ -43,14 +50,21 @@ async def setup_mock_server():
     await run_command(f"kill -9 $(lsof -ti:{PORT}) 2>/dev/null")
     await asyncio.sleep(0.5)
     log_path = os.path.join(tmp_dir, "server.log")
-    # Detach the http.server into its own session so it survives preprocess exit.
-    log_fh = open(log_path, "wb")
-    await asyncio.create_subprocess_exec(
-        "python3", "-m", "http.server", str(PORT), "--directory", mock_dir,
-        stdout=log_fh, stderr=log_fh, start_new_session=True,
-    )
+    # The http.server must outlive this preprocess process. An asyncio
+    # subprocess transport owns the child and SIGKILLs it when the
+    # asyncio.run loop is torn down (start_new_session does not prevent
+    # that), so launch it fully detached via subprocess.Popen in its own
+    # session instead.
+    global _server_proc
+    with open(log_path, "wb") as log_fh:
+        _server_proc = subprocess.Popen(
+            [sys.executable or "python3", "-m", "http.server", str(PORT),
+             "--directory", mock_dir],
+            stdin=subprocess.DEVNULL, stdout=log_fh, stderr=log_fh,
+            start_new_session=True,
+        )
     await asyncio.sleep(1)
-    print(f"[preprocess] Mock server running at http://localhost:{PORT}")
+    print(f"[preprocess] Mock server running at http://localhost:{PORT} (pid={_server_proc.pid})")
 
 
 async def main():
