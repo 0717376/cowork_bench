@@ -377,6 +377,28 @@ export class PgRestRouter {
       paramIndex++;
     }
 
+    // Stock status filter (wc.products only). The woo_products_list MCP tool
+    // exposes stockStatus (enum: instock/outofstock/onbackorder) and
+    // BaseService.toSnakeCase maps it to stock_status. Validate before any
+    // pool query so a bad value fails fast instead of producing broken SQL.
+    if (table === 'wc.products') {
+      const stockStatus = params.stock_status;
+      if (stockStatus !== undefined && stockStatus !== null && stockStatus !== '') {
+        const allowed = ['instock', 'outofstock', 'onbackorder'];
+        const got = typeof stockStatus === 'string'
+          ? JSON.stringify(stockStatus)
+          : Array.isArray(stockStatus) ? 'an array' : String(stockStatus);
+        if (typeof stockStatus !== 'string' || !allowed.includes(stockStatus)) {
+          throw new Error(
+            `Invalid stock_status parameter for products: must be one of ${allowed.join(', ')}, got ${got}`
+          );
+        }
+        conditions.push(`${this.quoteIdent('stock_status')} = $${paramIndex}`);
+        values.push(stockStatus);
+        paramIndex++;
+      }
+    }
+
     const whereClause = conditions.length > 0 ? ' WHERE ' + conditions.join(' AND ') : '';
 
     // Ordering
