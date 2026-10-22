@@ -16,6 +16,10 @@ import os
 import sys
 import unicodedata
 from argparse import ArgumentParser
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
+from utils.required_email import required_sent_email
 
 import psycopg2
 
@@ -41,6 +45,9 @@ BUDGET           = 40000
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+
+# Required deliverables cannot be compensated by unrelated partial credit.
+MANDATORY_CHECKS = {"email_sent": False, "email_attachment": False}
 
 
 def record(name, passed, detail=""):
@@ -219,26 +226,11 @@ def check_gcal():
 def check_email():
     print("\n=== Email: travel@consulting.ru ===")
     conn = psycopg2.connect(**DB_CONFIG)
-    cur = conn.cursor()
-    cur.execute(
-        "SELECT m.subject, m.body_text "
-        "  FROM email.messages m "
-        "  JOIN email.sent_log s ON s.message_id = m.id "
-        " WHERE m.to_addr::text ILIKE %s "
-        "   AND m.from_addr NOT ILIKE %s ",
-        ("%travel@consulting.ru%", "%travel@consulting.ru%"),
-    )
-    rows = cur.fetchall()
-    if not rows:
-        cur.execute(
-            "SELECT subject, body_text FROM email.messages "
-            " WHERE to_addr::text ILIKE %s "
-            "   AND from_addr NOT ILIKE %s ",
-            ("%travel@consulting.ru%", "%travel@consulting.ru%"),
-        )
-        rows = cur.fetchall()
-    cur.close()
-    conn.close()
+    try:
+        rows, checks = required_sent_email(conn, 'travel@consulting.ru', 'Travel_Plan.docx')
+        MANDATORY_CHECKS.update(checks)
+    finally:
+        conn.close()
 
     record("Письмо отправлено на travel@consulting.ru", len(rows) >= 1,
            f"matched rows: {len(rows)}")
@@ -290,12 +282,18 @@ def main():
     accuracy = PASS_COUNT / total * 100 if total > 0 else 0
     print(f"\nИтого: {PASS_COUNT}/{total} проверок пройдено ({accuracy:.1f}%)")
 
-    result = {"total_passed": PASS_COUNT, "total_checks": total, "accuracy": accuracy}
+    mandatory_pass = all(MANDATORY_CHECKS.values())
+    for name, passed in MANDATORY_CHECKS.items():
+        print(f"  [MANDATORY {'PASS' if passed else 'FAIL'}] {name}")
+    accepted = accuracy >= 70 and mandatory_pass
+    result = {"total_passed": PASS_COUNT, "total_checks": total, "accuracy": accuracy,
+              "partial_score": accuracy, "mandatory_checks": dict(MANDATORY_CHECKS),
+              "mandatory_pass": mandatory_pass, "pass": accepted}
     if args.res_log_file:
         with open(args.res_log_file, "w") as f:
             json.dump(result, f, indent=2)
 
-    if accuracy >= 70:
+    if accepted:
         print("PASS")
         sys.exit(0)
     else:
