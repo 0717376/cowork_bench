@@ -9,6 +9,7 @@ regardless of accuracy. Pass threshold otherwise: accuracy >= 80%.
 """
 import argparse
 import json
+import math
 import os
 import sys
 
@@ -41,6 +42,8 @@ CRITICAL_CHECKS = {
     "Teamly hub page exists",
     "Teamly: >= 4 paper entries",
     "Summary: Total_Papers between 4-6",
+    "Abstract_Length values match canonical papers",
+    "Summary: Avg_Abstract_Length matches canonical mean",
 }
 
 
@@ -230,7 +233,10 @@ def check_excel(agent_workspace):
             break
     if avg_key:
         val = metrics[avg_key]
-        ok = val is not None and float(val) > 100
+        try:
+            ok = val is not None and float(val) > 100
+        except (TypeError, ValueError, OverflowError):
+            ok = False
         record("Summary: Avg_Abstract_Length > 100", ok, f"Got {val}")
     else:
         record("Summary: Avg_Abstract_Length exists", False, f"Keys: {list(metrics.keys())}")
@@ -251,6 +257,90 @@ def check_excel(agent_workspace):
                    f"Keys: {list(metrics.keys())}")
 
 
+def _whole_number(value):
+    """Accept finite nonnegative integral cells, including numeric text."""
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        number = float(value)
+        return int(number) if math.isfinite(number) and number >= 0 and number.is_integer() else None
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def check_abstract_lengths(agent_workspace):
+    """Mandatory semantic check, also reached after an early Excel-check return."""
+    length_check = "Abstract_Length values match canonical papers"
+    mean_check = "Summary: Avg_Abstract_Length matches canonical mean"
+    print("\n=== Checking canonical abstract lengths ===")
+    try:
+        wb = openpyxl.load_workbook(
+            os.path.join(agent_workspace, "Federated_Learning_Papers.xlsx"), data_only=True)
+        try:
+            details = load_sheet_rows(wb, "Paper Details")
+            summary = load_sheet_rows(wb, "Summary")
+        finally:
+            wb.close()
+        if not details or not summary:
+            raise ValueError("Paper Details and Summary sheets with headers are required")
+        id_col = find_col(details[0], ["Paper_ID"])
+        length_col = find_col(details[0], ["Abstract_Length"])
+        metric_col = find_col(summary[0], ["Metric"])
+        value_col = find_col(summary[0], ["Value"])
+        if any(col is None for col in [id_col, length_col, metric_col, value_col]):
+            raise ValueError("Paper_ID/Abstract_Length and Metric/Value columns are required")
+    except Exception as error:
+        record(length_check, False, f"Workbook structure/read error: {error}")
+        record(mean_check, False, "Cannot verify mean without the required workbook structure")
+        return
+
+    try:
+        conn = psycopg2.connect(**DB_CONFIG)
+        try:
+            cur = conn.cursor()
+            try:
+                cur.execute("SELECT id, summary FROM arxiv.papers")
+                papers = cur.fetchall()
+            finally:
+                cur.close()
+        finally:
+            conn.close()
+        canonical = {str(pid): len(abstract) for pid, abstract in papers
+                     if isinstance(abstract, str)}
+        if not set(EXPECTED_FL_PAPERS).issubset(canonical):
+            raise ValueError("Canonical abstracts for the required papers are missing or invalid")
+    except Exception as error:
+        record(length_check, False, f"Canonical arxiv data unavailable: {error}")
+        record(mean_check, False, "Canonical arxiv data unavailable; no agent-value fallback")
+        return
+
+    ids = []
+    mismatches = []
+    for row in details[1:]:
+        if not any(cell is not None and cell != "" for cell in row):
+            continue
+        pid = str(row[id_col]).strip() if id_col < len(row) and row[id_col] is not None else ""
+        value = row[length_col] if length_col < len(row) else None
+        ids.append(pid)
+        if pid not in canonical or _whole_number(value) != canonical.get(pid):
+            mismatches.append(f"{pid or '<missing ID>'}: got {value!r}, expected {canonical.get(pid)}")
+    mapping_ok = (len(ids) == len(set(ids)) and set(EXPECTED_FL_PAPERS).issubset(ids)
+                  and all(pid in canonical for pid in ids))
+    record(length_check, mapping_ok and not mismatches,
+           "; ".join(mismatches) or "Required Paper_IDs must each occur once and resolve to canonical data")
+
+    means = []
+    for row in summary[1:]:
+        if metric_col < len(row) and row[metric_col] is not None:
+            metric = str(row[metric_col]).strip().lower().replace(" ", "_")
+            if metric == "avg_abstract_length":
+                means.append(row[value_col] if value_col < len(row) else None)
+    expected_mean = round(sum(canonical[pid] for pid in ids) / len(ids)) if mapping_ok and ids else None
+    mean_ok = (expected_mean is not None and len(means) == 1
+               and _whole_number(means[0]) == expected_mean)
+    record(mean_check, mean_ok, f"Got {means!r}; canonical rounded mean: {expected_mean}")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--agent_workspace", required=True)
@@ -261,6 +351,7 @@ def main():
 
     check_teamly()
     check_excel(args.agent_workspace)
+    check_abstract_lengths(args.agent_workspace)
 
     total = PASS_COUNT + FAIL_COUNT
     accuracy = PASS_COUNT / total * 100 if total > 0 else 0
