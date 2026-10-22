@@ -36,6 +36,10 @@ CRITICAL_FAILS = []  # имена провалившихся обязатель�
 # Чеки, провал которых означает содержательное невыполнение задачи.
 # Если такой чек FAIL — итог всей задачи FAIL, независимо от accuracy.
 CRITICAL_CHECKS = {
+    "Supplier_Visit_Plan.xlsx exists",
+    "Excel readable",
+    "Excel has Products sheet",
+    "Excel has Travel_Plan sheet",
     "Products: Priority соответствует stock по правилу гайда",
     "Products: хотя бы 1 поставщик High приоритета (критичный stock)",
     "Travel_Plan: цена СПб Бизнес ≈ 14000₽ (±500)",
@@ -133,6 +137,12 @@ def check_excel(agent_workspace, groundtruth_workspace="."):
         data_rows = [r for r in rows[1:] if any(c is not None and c != "" for c in r)]
         record("Products: >= 5 строк", len(data_rows) >= 5, f"Found {len(data_rows)} rows")
 
+        if not rows:
+            record("Products: Priority соответствует stock по правилу гайда", False,
+                   "Products has no header row")
+            record("Products: хотя бы 1 поставщик High приоритета (критичный stock)", False,
+                   "Products has no header row")
+
         if rows:
             headers = [str(c).lower() if c else "" for c in rows[0]]
             has_id = any("id" in h or "product" in h for h in headers)
@@ -204,7 +214,10 @@ def check_excel(agent_workspace, groundtruth_workspace="."):
                        high_count >= 1,
                        f"High count: {high_count}")
             except StopIteration:
-                pass
+                record("Products: Priority соответствует stock по правилу гайда", False,
+                       "Required Supplier_City/Current_Stock/Priority columns are missing")
+                record("Products: хотя бы 1 поставщик High приоритета (критичный stock)", False,
+                       "Required Supplier_City/Current_Stock/Priority columns are missing")
 
     # ---- Travel_Plan ----
     if has_travel:
@@ -241,6 +254,12 @@ def check_excel(agent_workspace, groundtruth_workspace="."):
         # Цены билетов из системы РЖД (rzd.train_seats, класс Бизнес):
         # СПб (752А) Бизнес 14000₽, Казань (716Г) Бизнес 11000₽.
         # ±500₽ допуск на округление/округлённые источники
+        if not rows:
+            record("Travel_Plan: цена СПб Бизнес ≈ 14000₽ (±500)", False,
+                   "Travel_Plan has no header row")
+            record("Travel_Plan: цена Казань Бизнес ≈ 11000₽ (±500)", False,
+                   "Travel_Plan has no header row")
+
         if rows:
             headers_tp = [str(c).lower() if c else "" for c in rows[0]]
             try:
@@ -268,7 +287,10 @@ def check_excel(agent_workspace, groundtruth_workspace="."):
                        kzn_price is not None and 10500 <= kzn_price <= 11500,
                        f"kzn_price={kzn_price}")
             except StopIteration:
-                pass
+                record("Travel_Plan: цена СПб Бизнес ≈ 14000₽ (±500)", False,
+                       "Required city/price columns are missing")
+                record("Travel_Plan: цена Казань Бизнес ≈ 11000₽ (±500)", False,
+                       "Required city/price columns are missing")
 
     # ---- Visit_Schedule ----
     if has_schedule:
