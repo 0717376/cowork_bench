@@ -240,7 +240,13 @@ export class PgCanvasRouter {
     }
     m = path.match(/^accounts\/(\d+)\/courses$/);
     if (m) {
-      const res = await this.pool.query('SELECT * FROM canvas.courses WHERE account_id = $1', [m[1]]);
+      let query = 'SELECT * FROM canvas.courses WHERE account_id = $1';
+      const values: any[] = [m[1]];
+      if (params.search_term) {
+        query += ' AND (name ILIKE $2 OR course_code ILIKE $2)';
+        values.push(`%${params.search_term}%`);
+      }
+      const res = await this.pool.query(query, values);
       return res.rows;
     }
     // GET /accounts/:id/users — honors search_term (ILIKE name/email/login_id) + page/per_page (cap 20)
