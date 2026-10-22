@@ -40,7 +40,7 @@ export class PgCanvasRouter {
       return makeResponse(result);
     } catch (err: any) {
       console.error(`[PgCanvasRouter] GET ${path} error:`, err.message);
-      return makeResponse([], 200);
+      throw err;
     }
   }
 
@@ -53,7 +53,7 @@ export class PgCanvasRouter {
       return makeResponse(result, 201);
     } catch (err: any) {
       console.error(`[PgCanvasRouter] POST ${path} error:`, err.message);
-      return makeResponse({}, 201);
+      throw err;
     }
   }
 
@@ -66,7 +66,7 @@ export class PgCanvasRouter {
       return makeResponse(result);
     } catch (err: any) {
       console.error(`[PgCanvasRouter] PUT ${path} error:`, err.message);
-      return makeResponse({});
+      throw err;
     }
   }
 
@@ -78,7 +78,7 @@ export class PgCanvasRouter {
       return makeResponse(result);
     } catch (err: any) {
       console.error(`[PgCanvasRouter] DELETE ${path} error:`, err.message);
-      return makeResponse({});
+      throw err;
     }
   }
 
